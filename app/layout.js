@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { cordon } from "./fonts";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,14 +13,17 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Phoenix",
-  description: "Created by Gabalyno",
+  title: "Feniks - ДПСУ",
+  description:
+    "Головний відділ безпілотних авіаційних систем державної прикордонної служби України",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${cordon.variable}`}
+      >
         {children}
       </body>
     </html>

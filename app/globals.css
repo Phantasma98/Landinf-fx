@@ -40,3 +40,8 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Custom fonts */
+.font-cordon {
+  font-family: var(--font-cordon);
+}
