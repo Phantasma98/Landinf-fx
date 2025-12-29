@@ -1,29 +1,28 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./page.module.css";
+import Header from "@/components/header/Header";
+import Hero from "@/components/hero/Hero";
+import About from "@/components/about/About";
+import Commander from "@/components/commander/Commander";
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState(null);
   const [activeJobCategory, setActiveJobCategory] = useState("БПЛА");
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Image assets from Figma node 7:1154
-  const phoenixLogo = "/images/Logo_phoenix.svg";
-  const heroImage = "/images/Dron_main.svg";
-  const aboutImages = [
-    "http://localhost:3845/assets/6b2af5565f17fd4a6f7082b7dc94fa601fc17956.png",
-    "http://localhost:3845/assets/45c8bb0651b342dba5611df718ed4be487521bc3.png",
-    "http://localhost:3845/assets/cd9b1f3f623b26962393ecade12e53739662814e.png",
-  ];
+  // Image assets from Figma node 14:36
+
   const commanderImage =
     "http://localhost:3845/assets/bc0fe0338b0b7c7baf55c455d1ff2384f915de6b.png";
   const valuesImage =
     "http://localhost:3845/assets/8d0d3214066e73e89978c28c16c855cbb84a0f6b.png";
   const arrowIcon =
     "http://localhost:3845/assets/80efe2203ff376ea5c001e579a777a83b64f9baa.svg";
-  const donationImage =
-    "http://localhost:3845/assets/88811032689b124daf337e09bde5493354621ae9.png";
+  const donationImage = "/images/Mono_zbir.svg";
   const faqExpandIcon =
     "http://localhost:3845/assets/d554d532d8a39a03297afc05ca928d38946b5f01.svg";
   const faqCollapseIcon =
@@ -89,111 +88,45 @@ export default function Home() {
     },
   ];
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setIsHeaderVisible(false);
+      } else {
+        // Scrolling up
+        setIsHeaderVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
     <div className={styles.container}>
       {/* Header */}
-      <header className={styles.header}>
-        <div className={styles.headerContainer}>
-          <div className={styles.logo}>
-            <Image src={phoenixLogo} alt="Phoenix" width={40} height={55} />
-            <h2>фенікс</h2>
-          </div>
-          <nav className={styles.nav}>
-            <a href="#about">Про Фенікс</a>
-            <a href="#jobs">Вакансії</a>
-            <a href="#contract">Контракт 18-24</a>
-            <a href="#contact">Контакти</a>
-          </nav>
-          <button className={styles.joinBtn}>Приєднатися</button>
-        </div>
+      <header
+        className={`${styles.header} ${
+          !isHeaderVisible ? styles.headerHidden : ""
+        }`}
+      >
+        <Header />
       </header>
 
       {/* Hero Section */}
-      <section className={styles.hero}>
-        <div className={styles.heroBackground}>
-          <Image
-            src={heroImage}
-            alt="Hero Background"
-            fill
-            style={{ objectFit: "cover" }}
-            priority
-          />
-        </div>
-        <div className={styles.heroContent}>
-          <p className={styles.heroMeta}>
-            ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ
-          </p>
-          <p className={styles.heroMeta}>
-            державної прикордонної служби України «ФЕНІКС»
-          </p>
-          <h1 className={styles.heroTitle}>
-            спалюємо <br /> межі можливого
-          </h1>
-          <div className={styles.heroActions}>
-            <button className={styles.primaryBtn}>Приєднатися</button>
-            <button className={styles.secondaryBtn}>Підтримати</button>
-          </div>
-        </div>
-      </section>
+      <Hero />
 
       {/* About Section */}
-      <section id="about" className={styles.aboutSection}>
-        <div className={styles.aboutHeader}>
-          <h2 className={styles.sectionTitle}>про нас</h2>
-          <div className={styles.aboutText}>
-            <p className={styles.aboutDescription}>
-              Фенікс - це найрезультативніший підрозділ ДПСУ.
-            </p>
-            <p className={styles.aboutDescription}>
-              Ми створили власну екосистему безпілотних авіаційних систем, що
-              забезпечує весь процес: від створення БК до нанесення нищівних
-              ударів ворогу.
-            </p>
-          </div>
-        </div>
-        <div className={styles.carousel}>
-          {aboutImages.map((img, idx) => (
-            <div key={idx} className={styles.carouselItem}>
-              <Image
-                src={img}
-                alt={`About ${idx + 1}`}
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-          ))}
-        </div>
-        <p className={styles.statsQuote}>
-          &ldquo;ми перетворюємо службу на високотехнологічну роботу, де
-          цивільний інтелект та навички конвертуються в загальний
-          результат.&rdquo;
-        </p>
-      </section>
-
-      {/* Stats Section */}
-      <section className={styles.statsSection}>
-        <div className={styles.statsContainer}>
-          <div className={styles.statItem}>
-            <h3>ТОП-2</h3>
-            <p>В УГРУПОВАННІ СИЛ БЕЗПІЛОТНИХ СИСТЕМ</p>
-          </div>
-          <div className={styles.statItem}>
-            <h3>126500</h3>
-            <p>ВИЛЬОТІВ НА БОЙОВІ ЗАВДАННЯ</p>
-          </div>
-          <div className={styles.statItem}>
-            <h3>26500</h3>
-            <p>ПОШКОДЖЕНО ТА ЗНИЩЕНО ЦІЛЕЙ</p>
-          </div>
-          <div className={styles.statItem}>
-            <h3>5130</h3>
-            <p>ЗНИЩЕНО ОСОБОВОГО СКЛАДУ ВОРОГА</p>
-          </div>
-        </div>
-      </section>
+      <About />
 
       {/* Commander Section */}
-      <section className={styles.commanderSection}>
+      <Commander />
+      {/* <section className={styles.commanderSection}>
         <div className={styles.commanderContent}>
           <div className={styles.commanderText}>
             <h2 className={styles.sectionTitle}>КОМАНДИР</h2>
@@ -238,9 +171,10 @@ export default function Home() {
             цивільний інтелект та навички конвертуються в загальний
             результат.&rdquo;
           </p>
-          <button className={styles.primaryBtn}>приєднатися до команди</button>
+          <TeamBtn text={"приєднатися до команди"} />
+       
         </div>
-      </section>
+      </section> */}
 
       {/* Values Section */}
       <section className={styles.valuesSection}>

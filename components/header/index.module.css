@@ -1,0 +1,112 @@
+.header {
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0px;
+  left: 0px;
+  backdrop-filter: blur(10px);
+  background-color: var(--color-gray-200);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px 1px;
+  box-sizing: border-box;
+  text-align: left;
+  font-size: var(--fs-18);
+  color: var(--color-gray-100);
+  font-family: var(--font-kordon);
+}
+.container {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  padding: 21px 95px;
+  width: 100%;
+}
+.frameParent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+.layer1Parent {
+  width: 237px;
+  display: flex;
+  align-items: flex-end;
+  gap: 25px;
+  font-size: 45px;
+}
+.layer1Icon {
+  height: 55px;
+  width: 40px;
+  position: relative;
+}
+.link {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+}
+.div {
+  position: absolute;
+  /* top: 48.36%; */
+  left: 0px;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  font-family: var(--font-cordon);
+  font-weight: 500;
+  font-style: normal;
+}
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  font-family: var(--font-cordon);
+  font-weight: 500;
+  font-style: italic;
+  font-size: 18px;
+  letter-spacing: 0.09px;
+}
+.navList :hover {
+  color: #ff4f18;
+}
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-3) 0px;
+}
+.link2 {
+  position: relative;
+  letter-spacing: 0.09px;
+  line-height: var(--lh-24);
+}
+.item3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+.component2 {
+  border: 1px solid var(--color-gray-100);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 16px;
+}
+.container3 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.text {
+  position: relative;
+  line-height: 20px;
+  text-transform: uppercase;
+}

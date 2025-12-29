@@ -1,7 +1,7 @@
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -12,14 +12,8 @@
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,6 +36,29 @@ a {
 }
 
 /* Custom fonts */
-.font-cordon {
-  font-family: var(--font-cordon);
+.font-kordon {
+  font-family: var(--font-kordon);
+}
+
+body {
+  margin: 0;
+  line-height: normal;
+}
+:root {
+  /* Common Style Variables */
+
+  /* Color */
+  --color-gray: #fbfbfb;
+  --color-orangered: #ff4f18;
+  --color-orange: #ff6a3a;
+  --color-gray-100: #fbfbfb;
+  --color-gray-200: rgba(21, 20, 25, 0.3);
+  --color-gray-50: rgba(255, 255, 255, 0.1);
+
+  /* WidthHeights */
+  --height-27: 27px;
+  --height-28: 28px;
+  --max-w-140: 140px;
+  --width-27: 27px;
+  --width-28: 28px;
 }
