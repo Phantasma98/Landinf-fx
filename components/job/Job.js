@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 import styles from "./index.module.css";
 import TeamBtn from "../elements/buttons/TeamBtn";

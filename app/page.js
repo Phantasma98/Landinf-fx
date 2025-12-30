@@ -9,6 +9,8 @@ import About from "@/components/about/About";
 import Commander from "@/components/commander/Commander";
 import Values from "@/components/values/Values";
 import Job from "@/components/job/Job";
+import Recruit from "@/components/recruit/Recruit";
+import Support from "@/components/support/Support";
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState(null);
@@ -79,68 +81,10 @@ export default function Home() {
       <Job />
 
       {/* Recruitment Path */}
-      <section className={styles.recruitmentSection}>
-        <h2 className={styles.sectionTitle}>шлях РЕКРУТА</h2>
-        <div className={styles.pathSteps}>
-          {[
-            { num: "01", title: "ЗАПОВНЕННЯ АНКЕТИ" },
-            { num: "02", title: "СПІВБЕСІДА З РЕКРУТЕРАМИ" },
-            { num: "03", title: "ЗАРАХУВАННЯ ДО ПІДРОЗДІЛУ" },
-            { num: "04", title: "БАЗОВА ВІЙСЬКОВА ПІДГОТОВКА" },
-            { num: "05", title: "ФАХОВА ПІДГОТОВКА" },
-            { num: "06", title: "ВИКОНАННЯ ЗАВДАНЬ" },
-          ].map((step) => (
-            <div key={step.num} className={styles.pathStep}>
-              <h3>{step.num}</h3>
-              <p>{step.title}</p>
-            </div>
-          ))}
-        </div>
-        <p className={styles.recruitQuote}>
-          &ldquo;ми перетворюємо службу на високотехнологічну роботу, де
-          цивільний інтелект та навички конвертуються в загальний
-          результат.&rdquo;
-        </p>
-      </section>
+      <Recruit />
 
       {/* Support Section */}
-      <section className={styles.supportSection}>
-        <div className={styles.supportHeader}>
-          <h2 className={styles.sectionTitle}>ПІДТРИМАТИ</h2>
-          <div className={styles.supportInfo}>
-            <p>Збір на дрони - перехоплювачі.</p>
-            <p>Ціль: 1 500 000 грн</p>
-            <p>Зачистимо українське небо від ворожої присутності!</p>
-          </div>
-        </div>
-        <div className={styles.supportContent}>
-          {donationImage && (
-            <div className={styles.donationImage}>
-              <Image
-                src={donationImage}
-                alt="Donation"
-                fill
-                style={{ objectFit: "cover" }}
-              />
-            </div>
-          )}
-          <div className={styles.paymentMethods}>
-            <div className={styles.paymentButtons}>
-              <button className={styles.primaryBtn}>MONOBANK</button>
-              <button className={styles.secondaryBtn}>КАРТКА</button>
-              <button className={styles.secondaryBtn}>PAYPAL</button>
-              <button className={styles.secondaryBtn}>РЕКВІЗИТИ</button>
-            </div>
-            <div className={styles.bankInfo}>
-              <p>ПЕРЕЙТИ НА БАНКУ</p>
-              <p>https://send.monobank.ua/jar/2ZnCUmV6bZ</p>
-            </div>
-            <button className={styles.secondaryBtn}>
-              переглянути закриті збори
-            </button>
-          </div>
-        </div>
-      </section>
+      <Support />
 
       {/* FAQ Section */}
       <section className={styles.faqSection}>

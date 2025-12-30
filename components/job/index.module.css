@@ -70,13 +70,13 @@
 .categoryBtn.active {
   background: #ff4f18;
   border-color: #ff4f18;
-  color: #151419;
+  color: #fbfbfb;
 }
 
 .categoryBtn:hover {
-  background: #ff4f18;
+  background: #1b1a1f;
   border-color: #ff4f18;
-  color: #151419;
+  color: #fbfbfb;
 }
 
 .jobGrid {

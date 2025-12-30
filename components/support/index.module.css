@@ -1,0 +1,148 @@
+/* Support Section */
+.supportMain {
+  background: #151419;
+  padding: 120px 0;
+  font-family: var(--font-kordon);
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionTitle {
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 73px;
+  color: #ff4f18;
+  margin: 0;
+  white-space: nowrap;
+  font-weight: 700;
+  font-style: initial;
+}
+
+.supportSection {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.supportHeader {
+  display: flex;
+
+  gap: 99px;
+  max-width: 1250px;
+}
+
+.supportInfo {
+  max-width: 721px;
+}
+
+.supportInfo p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: #fbfbfb;
+}
+
+.supportContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 105px;
+  max-width: 1250px;
+}
+
+.donationImage {
+  position: relative;
+  width: 423;
+  height: 397;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.paymentButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.paymentBtn {
+  background: transparent;
+  border: 1px solid #fbfbfb;
+  color: #fbfbfb;
+  padding: 14px 22px;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 165.5;
+}
+
+.paymentBtn.active {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+
+.paymentBtn:hover {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+
+.paymentButtons .primaryBtn,
+.paymentButtons .secondaryBtn {
+  width: 100%;
+}
+
+.bankInfoContainer {
+  background: #1b1a1f;
+  padding: 30 24;
+  display: flex;
+  justify-content: space-between;
+}
+.bankInfoTitle {
+  font-size: 46px;
+  font-weight: 400;
+  font-style: normal;
+}
+.bankInfoButton {
+  margin: auto 0;
+}
+.bankInfoUrlContainer {
+  display: flex;
+}
+.bankInfoUrl {
+}
+.bankInfoSvg {
+  margin-left: 20;
+}
+.bankInfo {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bankInfo p {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  color: #fbfbfb;
+  margin: 15px 0;
+}
+
+.supportButton {
+  max-width: 1250px;
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--font-kordon);
+  font-style: italic;
+  font-weight: 700;
+}
