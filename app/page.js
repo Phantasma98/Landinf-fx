@@ -8,6 +8,7 @@ import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
 import Commander from "@/components/commander/Commander";
 import Values from "@/components/values/Values";
+import Job from "@/components/job/Job";
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState(null);
@@ -22,24 +23,6 @@ export default function Home() {
     "http://localhost:3845/assets/d554d532d8a39a03297afc05ca928d38946b5f01.svg";
   const faqCollapseIcon =
     "http://localhost:3845/assets/c9783d6ac6304100021bcccc1b881d25e985a662.svg";
-
-  const jobCategories = [
-    "БПЛА",
-    "НРК",
-    "РЕБ / РЕР",
-    "IT / ЗВʼЯЗОК",
-    "ЛОГІСТИКА",
-    "ІНЖЕНЕРІЯ / РЕМОНТ",
-    "МЕДИЦИНА",
-    "ШТАБ",
-    "МЕДІА",
-    "ІНШЕ",
-  ];
-
-  const jobListings = Array(16).fill({
-    title: "Оператор БПЛА розвідувального типу",
-    tags: ["#БПЛА", "#КОНТРАКТ 18-24"],
-  });
 
   const faqs = [
     'З ЯКОГО ВІКУ БЕРУТЬ У "ФЕНІКС"?',
@@ -93,49 +76,7 @@ export default function Home() {
       <Values />
 
       {/* Jobs Section */}
-      <section id="jobs" className={styles.jobsSection}>
-        <div className={styles.jobsHeader}>
-          <h2 className={styles.sectionTitle}>Вакансії</h2>
-          <p className={styles.jobsSubtitle}>
-            Ми будуємо екосистему, де бойова робота і забезпечення - це єдиний
-            механізм. Шукаємо тих, хто готовий привести команду до перемоги
-            своїм розумом та навичками.
-          </p>
-        </div>
-        <div className={styles.jobCategories}>
-          {jobCategories.map((cat) => (
-            <button
-              key={cat}
-              className={`${styles.categoryBtn} ${
-                activeJobCategory === cat ? styles.active : ""
-              }`}
-              onClick={() => setActiveJobCategory(cat)}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
-        <div className={styles.jobGrid}>
-          {jobListings.map((job, idx) => (
-            <div key={idx} className={styles.jobCard}>
-              <h4>{job.title}</h4>
-              <div className={styles.jobTags}>
-                {job.tags.map((tag, i) => (
-                  <span key={i}>{tag}</span>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-        <div className={styles.jobsAction}>
-          <p className={styles.jobsQuote}>
-            війна - гонка технологій та інженерних рішень. Перемога тут - це не
-            індивідуальне досягнення пілота, це результат безперебійної роботи
-            всієї команди.
-          </p>
-          <button className={styles.primaryBtn}>стати частиною команди</button>
-        </div>
-      </section>
+      <Job />
 
       {/* Recruitment Path */}
       <section className={styles.recruitmentSection}>
