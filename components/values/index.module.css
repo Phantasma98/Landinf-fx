@@ -1,0 +1,118 @@
+/* Values Section */
+.valuesMain {
+  background: #1b1a1f;
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 73px;
+  color: #ff4f18;
+  margin: 0;
+  white-space: nowrap;
+  font-family: var(--font-kordon);
+  font-weight: 700;
+  font-style: initial;
+}
+
+.valuesSection {
+  background: #1b1a1f;
+  max-width: 1250px;
+  width: 100%;
+}
+
+.valuesHeader {
+  max-width: 1250px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.valuesSubtitle {
+  font-size: 20px;
+  line-height: 28px;
+  color: #fbfbfb;
+  max-width: 700px;
+  margin: 0;
+  align-self: flex-start;
+  font-family: var(--font-kordon);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.44;
+}
+
+.valuesImage {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin: 80px 0;
+  max-width: 1250px;
+}
+
+.valuesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px 126px;
+  max-width: 1250px;
+}
+
+.valueItem h3 {
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 20px 0;
+  color: #fbfbfb;
+  font-family: var(--font-kordon);
+  font-weight: 700;
+  font-style: initial;
+}
+.valueItem1 h3 {
+  font-size: 40px;
+  min-width: 402;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 20px 0;
+  color: #fbfbfb;
+  font-family: var(--font-kordon);
+  font-weight: 700;
+  font-style: initial;
+}
+.valueItem1 p {
+  font-family: var(--font-kordon);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  color: #fbfbfb;
+  margin: 0;
+}
+.valueItem2 h3 {
+  font-size: 40px;
+  min-width: 318;
+  text-transform: uppercase;
+  line-height: 1;
+  margin: 0 0 20px 0;
+  color: #fbfbfb;
+  font-family: var(--font-kordon);
+  font-weight: 700;
+  font-style: initial;
+}
+.valueItem2 p {
+  font-family: var(--font-kordon);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  color: #fbfbfb;
+  margin: 0;
+}
+.valueItem p {
+  font-family: var(--font-kordon);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  color: #fbfbfb;
+  margin: 0;
+}

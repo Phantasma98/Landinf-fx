@@ -9,7 +9,6 @@
 }
 .sectionTitle {
   font-size: 80px;
-  font-weight: 700;
   text-transform: uppercase;
   line-height: 73px;
   color: #ff4f18;
@@ -17,7 +16,7 @@
   white-space: nowrap;
   font-family: var(--font-kordon);
   font-weight: 700;
-  font-style: italic;
+  font-style: initial;
 }
 
 .aboutSection {
@@ -41,12 +40,12 @@
 
 .aboutDescription {
   font-size: 20px;
-  font-weight: 400;
   line-height: 28px;
   color: #fbfbfb;
   margin: 0;
   font-family: var(--font-kordon);
   font-style: normal;
+  font-weight: 400;
   letter-spacing: 0.44;
 }
 
@@ -103,7 +102,7 @@
   margin: 0 0 40px 0;
   font-family: var(--font-kordon);
   font-weight: 700;
-  font-style: italic;
+  font-style: initial;
   min-width: 228;
 }
 
@@ -128,7 +127,7 @@
   margin: 0 0 40px 0;
   font-family: var(--font-kordon);
   font-weight: 700;
-  font-style: italic;
+  font-style: initial;
   min-width: 183;
 }
 

@@ -7,6 +7,7 @@ import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
 import Commander from "@/components/commander/Commander";
+import Values from "@/components/values/Values";
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState(null);
@@ -16,12 +17,6 @@ export default function Home() {
 
   // Image assets from Figma node 14:36
 
-  const commanderImage =
-    "http://localhost:3845/assets/bc0fe0338b0b7c7baf55c455d1ff2384f915de6b.png";
-  const valuesImage =
-    "http://localhost:3845/assets/8d0d3214066e73e89978c28c16c855cbb84a0f6b.png";
-  const arrowIcon =
-    "http://localhost:3845/assets/80efe2203ff376ea5c001e579a777a83b64f9baa.svg";
   const donationImage = "/images/Mono_zbir.svg";
   const faqExpandIcon =
     "http://localhost:3845/assets/d554d532d8a39a03297afc05ca928d38946b5f01.svg";
@@ -53,39 +48,6 @@ export default function Home() {
     "МОЖНА ПЕРЕВЕСТИСЯ З ІНШОГО ПІДРОЗДІЛУ?",
     "ЯКІ ДОКУМЕНТИ ПОТРІБНІ ДЛЯ ЗАРАХУВАННЯ?",
     "ЧИ Є КОТРАКТ 18-24?",
-  ];
-
-  const values = [
-    {
-      title: "Радикальна Чесність",
-      description:
-        "Ми не боїмось казати правду. Якщо існує проблема - про неї кажуть вголос миттєво. Ініціатива не карається, а заохочується. Брехня в команді наш червоний прапор.",
-    },
-    {
-      title: "культ результату",
-      description:
-        "Якщо нам треба порушити застарілу інструкцію, щоб покращити результативність і оптимізувати процеси - ми це робимо.",
-    },
-    {
-      title: "Анти-Застій",
-      description:
-        "Ми - як військовий стартап. Ми вчимося щодня. Якщо ти не розвиваєшся, команда шукає тобі заміну. Ми даємо драйв, ти даєш динаміку.",
-    },
-    {
-      title: "Екосистема Важливості",
-      description:
-        "Пілот дрона - це вершина нашої екосистеми, але без ідеального забезпечення він просто не може літати. Ми цінуємо «механіків» так само як «гонщиків».",
-    },
-    {
-      title: "Спеціалізація Піт-стоп",
-      description:
-        "У гонці механік не сідає за кермо, а пілот не крутить гайки. Ми гарантуємо: ти будеш займатися тим, у чому ти найефективніший.",
-    },
-    {
-      title: "Принцип Телеметрії",
-      description:
-        "Ми керуємось даними, а не емоціями. Ми ведемо війну спираючись на стріми, дані розвідки та аналітику. Немає даних - немає наказу.",
-    },
   ];
 
   useEffect(() => {
@@ -126,84 +88,9 @@ export default function Home() {
 
       {/* Commander Section */}
       <Commander />
-      {/* <section className={styles.commanderSection}>
-        <div className={styles.commanderContent}>
-          <div className={styles.commanderText}>
-            <h2 className={styles.sectionTitle}>КОМАНДИР</h2>
-            <div className={styles.commanderInfo}>
-              <p className={styles.commanderTitle}>герой України</p>
-              <p className={styles.commanderRank}>полковник</p>
-              <p className={styles.commanderName}>Дмитро Олексюк</p>
-              <div className={styles.commanderBio}>
-                <p>
-                  Лютий — липень 2022 року очолював підрозділ та виконував
-                  завдання з оборони Донецької та Луганської областей.
-                </p>
-                <p>
-                  У грудні 2022 року – сформував та очолив бойове з&apos;єднання
-                  Луганського прикордонного загону ДПСУ.
-                </p>
-                <p>
-                  У січні 2024 року очолив 2-гу комендатуру швидкого реагування
-                  «Фенікс», яка продовжувала стримувати ворога на Бахмутському
-                  напрямку.
-                </p>
-                <p>
-                  Наразі полковник активно займається впровадженням нового
-                  формату організації підрозділу полкового типу
-                  &quot;Фенікс&quot;.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className={styles.commanderImage}>
-            <Image
-              src={commanderImage}
-              alt="Commander Dmitro Oleksiuk"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        </div>
-        <div className={styles.commanderQuote}>
-          <p>
-            &ldquo;перетворюємо службу на високотехнологічну роботу, де
-            цивільний інтелект та навички конвертуються в загальний
-            результат.&rdquo;
-          </p>
-          <TeamBtn text={"приєднатися до команди"} />
-       
-        </div>
-      </section> */}
 
       {/* Values Section */}
-      <section className={styles.valuesSection}>
-        <div className={styles.valuesHeader}>
-          <h2 className={styles.sectionTitle}>ЦІННості</h2>
-          <p className={styles.valuesSubtitle}>
-            Фенікс - сучасний підрозділ з культурою та динамікою команди
-            Формули-1. Ключова цінність - збереження життя наших бійців.
-          </p>
-        </div>
-        {valuesImage && (
-          <div className={styles.valuesImage}>
-            <Image
-              src={valuesImage}
-              alt="Values"
-              fill
-              style={{ objectFit: "cover" }}
-            />
-          </div>
-        )}
-        <div className={styles.valuesGrid}>
-          {values.map((value, idx) => (
-            <div key={idx} className={styles.valueItem}>
-              <h3>{value.title}</h3>
-              <p>{value.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+      <Values />
 
       {/* Jobs Section */}
       <section id="jobs" className={styles.jobsSection}>
