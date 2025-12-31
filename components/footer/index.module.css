@@ -1,0 +1,282 @@
+/* Footer */
+
+.footerMain {
+  background: #151419;
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-kordon);
+}
+.sectionTitle {
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 73px;
+  color: #fbfbfb;
+  margin: 0;
+  white-space: nowrap;
+  font-family: var(--font-kordon);
+  font-weight: 700;
+  font-style: initial;
+}
+.footer {
+  max-width: 1250;
+  width: 100%;
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 145;
+  margin-bottom: 80;
+}
+
+.footerBranding {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footerOrganization {
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  line-height: 25.2px;
+  margin: 0;
+}
+.footerLogo {
+  width: 384px;
+  height: 87px;
+}
+
+.footerSections {
+  display: flex;
+  gap: 20;
+}
+.footerColumnContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 40;
+  min-width: 332;
+}
+.footerColumn h4 {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fbfbfb;
+  margin: 0 0 10px 0;
+  min-width: 298;
+}
+
+.footerColumn ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footerColumn li {
+  margin-bottom: 10px;
+}
+
+.footerColumn a {
+  color: #fbfbfb;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.44px;
+  transition: color 0.3s;
+}
+
+.footerColumn a:hover {
+  color: #ff4f18;
+}
+
+.footerColumn p {
+  color: #fbfbfb;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.44px;
+  margin: 10px 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 25px;
+}
+
+.socialLinks a {
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  font-size: 11px;
+  color: #fbfbfb;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.socialLinks a:hover {
+  color: #ff4f18;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  max-width: 1197px;
+}
+
+.footerBottom p {
+  color: #878787;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.32px;
+  margin: 0;
+}
+
+.footerLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.footerLinks a {
+  color: #878787;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.32px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footerLinks a:hover {
+  color: #fbfbfb;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .headerContainer {
+    padding: 0 50px;
+    gap: 30px;
+  }
+
+  .heroContent {
+    padding: 0 50px;
+  }
+
+  .heroTitle {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .aboutSection,
+  .statsSection,
+  .commanderSection,
+  .valuesSection,
+  .jobsSection,
+  .recruitmentPath,
+  .supportSection,
+  .faqSection,
+  .footer {
+    padding: 100px 50px;
+  }
+
+  .carousel {
+    gap: 12px;
+  }
+
+  .carouselItem {
+    width: 350px;
+    height: 300px;
+  }
+
+  .valuesGrid,
+  .statsContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .jobGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pathSteps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    padding: 20px 30px;
+    height: auto;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .heroTitle {
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 50px;
+  }
+
+  .heroActions {
+    flex-direction: column;
+  }
+
+  .primaryBtn,
+  .secondaryBtn {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .statsContainer,
+  .valuesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .jobGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .footerContent {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main {
+    padding: 48px 24px;
+  }
+
+  .intro {
+    gap: 16px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --background: #000;
+    --foreground: #000;
+
+    --text-primary: #ededed;
+    --text-secondary: #999;
+
+    --button-primary-hover: #ccc;
+    --button-secondary-hover: #1a1a1a;
+    --button-secondary-border: #1a1a1a;
+  }
+}
