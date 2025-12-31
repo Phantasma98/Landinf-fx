@@ -88,9 +88,12 @@
   border-color: #ff4f18;
   color: #fbfbfb;
 }
-
-.paymentBtn:hover {
+.categoryBtn.active :hover {
   background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+.paymentBtn:hover {
   border-color: #ff4f18;
   color: #fbfbfb;
 }
@@ -118,6 +121,9 @@
   display: flex;
 }
 .bankInfoUrl {
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
 }
 .bankInfoSvg {
   margin-left: 20;
@@ -125,9 +131,6 @@
 .bankInfo {
   display: flex;
   flex-direction: column;
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
 }
 
 .bankInfo p {

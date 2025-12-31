@@ -68,10 +68,6 @@ const Support = () => {
             <div className={styles.supportButton}>
               <SecondaryBtn text={"переглянути закриті збори"} />
             </div>
-
-            {/* <button className={styles.secondaryBtn}>
-              переглянути закриті збори
-            </button> */}
           </div>
         </div>
       </div>

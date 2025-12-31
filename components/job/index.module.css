@@ -72,9 +72,13 @@
   border-color: #ff4f18;
   color: #fbfbfb;
 }
+.categoryBtn.active :hover {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
 
 .categoryBtn:hover {
-  background: #1b1a1f;
   border-color: #ff4f18;
   color: #fbfbfb;
 }

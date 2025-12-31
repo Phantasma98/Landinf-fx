@@ -11,6 +11,7 @@ import Values from "@/components/values/Values";
 import Job from "@/components/job/Job";
 import Recruit from "@/components/recruit/Recruit";
 import Support from "@/components/support/Support";
+import Faq from "@/components/faq/Faq";
 
 export default function Home() {
   const [expandedFaq, setExpandedFaq] = useState(null);
@@ -87,7 +88,8 @@ export default function Home() {
       <Support />
 
       {/* FAQ Section */}
-      <section className={styles.faqSection}>
+      <Faq />
+      {/* <section className={styles.faqSection}>
         <div className={styles.faqHeader}>
           <h2 className={styles.sectionTitle}>FAQ</h2>
           <p className={styles.faqSubtitle}>
@@ -118,7 +120,7 @@ export default function Home() {
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* Footer */}
       <footer className={styles.footer}>
