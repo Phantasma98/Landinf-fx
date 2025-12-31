@@ -44,7 +44,7 @@ const Header = () => {
             </a>
           </div>
         </div>
-        <SecondaryBtn text={"приєднатися"} size={"m"} />
+        <SecondaryBtn text={"приєднатися"} size={"m"} href={"#jobs"} />
       </div>
     </div>
   );

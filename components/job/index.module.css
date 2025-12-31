@@ -92,7 +92,7 @@
 
 .jobCard {
   background: #1b1a1f;
-  border: 1px solid #fbfbfb;
+  /* border: 1px solid #fbfbfb; */
   padding: 20px;
   min-height: 150px;
   display: flex;
@@ -101,12 +101,21 @@
   position: relative;
 }
 
+.jobCardContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.jobCardContainerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 .jobCard h4 {
   font-size: 18px;
   font-weight: 500;
   line-height: 1;
   color: #fbfbfb;
-  margin: 0 0 20px 0;
 }
 
 .jobTags {
@@ -122,7 +131,11 @@
   text-transform: uppercase;
   text-decoration: none;
 }
-
+.jobArrowSvg {
+  margin-top: 60;
+  width: 54;
+  height: 54;
+}
 .jobsAction {
   max-width: 1250px;
   display: flex;

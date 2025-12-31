@@ -8,7 +8,7 @@ import PrimaryBtn from "../elements/buttons/PrimaryBtn";
 const Job = () => {
   const [activeJobCategory, setActiveJobCategory] = useState("БПЛА");
 
-  const heroImage = "/images/Dron_main.svg";
+  const jobArrow = "/images/JobArrow45.svg";
   const Social1 = "/images/Component1.svg";
 
   const jobCategories = [
@@ -57,11 +57,23 @@ const Job = () => {
           <div className={styles.jobGrid}>
             {jobListings.map((job, idx) => (
               <div key={idx} className={styles.jobCard}>
-                <h4>{job.title}</h4>
-                <div className={styles.jobTags}>
-                  {job.tags.map((tag, i) => (
-                    <span key={i}>{tag}</span>
-                  ))}
+                <div className={styles.jobCardContainer}>
+                  <div className={styles.jobCardContainerTitle}>
+                    <div className={styles.jobTags}>
+                      {job.tags.map((tag, i) => (
+                        <span key={i}>{tag}</span>
+                      ))}
+                    </div>
+                    <h4>{job.title}</h4>
+                  </div>
+                  <div className={styles.jobArrowSvg}>
+                    <Image
+                      src={jobArrow}
+                      alt="jobArrow"
+                      width={54}
+                      height={54}
+                    />
+                  </div>
                 </div>
               </div>
             ))}

@@ -13,7 +13,7 @@ const Support = () => {
 
   const paymentMethods = ["MONOBANK", "КАРТКА", "PAYPAL", "РЕКВІЗИТИ"];
   return (
-    <section className={styles.supportMain}>
+    <section id="support" className={styles.supportMain}>
       <div className={styles.supportSection}>
         <div className={styles.supportHeader}>
           <h2 className={styles.sectionTitle}>ПІДТРИМАТИ</h2>

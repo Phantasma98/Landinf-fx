@@ -71,7 +71,7 @@ const Faq = () => {
     },
   ];
   return (
-    <section className={styles.faqMain}>
+    <section id="contract" className={styles.faqMain}>
       <div className={styles.faqSection}>
         <div className={styles.faqHeader}>
           <h2 className={styles.sectionTitle}>FAQ</h2>

@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 const Footer = () => {
   const phoenixLogo = "/images/Icon_Phoenix_text.svg";
   return (
-    <div className={styles.footerMain}>
+    <section id="contact" className={styles.footerMain}>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerBranding}>
@@ -42,7 +42,7 @@ const Footer = () => {
                   <a href="#contract">Контракт 18-24</a>
                 </li>
                 <li>
-                  <a href="#contact">Підтримати Фенікс</a>
+                  <a href="#support">Підтримати Фенікс</a>
                 </li>
                 <li>
                   <a href="#contact">Контакти</a>
@@ -85,7 +85,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </section>
   );
 };
 

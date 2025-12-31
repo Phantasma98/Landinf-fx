@@ -1,13 +1,21 @@
+import { useRouter } from "next/navigation";
 import styles from "./primaryBtn.module.css";
 
 const PrimaryBtn = (props) => {
-  const { text } = props;
+  const { text, href } = props;
+  const router = useRouter();
+
+  const handleClick = () => {
+    if (href) {
+      router.push(href);
+    }
+  };
   return (
-    <div className={styles.component2}>
+    <button className={styles.component2} onClick={handleClick}>
       <div className={styles.container2}>
         <b className={styles.text}>{text}</b>
       </div>
-    </div>
+    </button>
   );
 };
 

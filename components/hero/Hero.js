@@ -9,7 +9,7 @@ const Hero = () => {
   const heroImage = "/images/Dron_main.svg";
   const Social1 = "/images/Component1.svg";
   return (
-    <section className={styles.hero}>
+    <section id="home" className={styles.hero}>
       <div className={styles.heroBackground}>
         <Image
           src={heroImage}
@@ -31,8 +31,8 @@ const Hero = () => {
             спалюємо <br /> межі можливого
           </h1>
           <div className={styles.heroActions}>
-            <PrimaryBtn text={"Приєднатися"} />
-            <SecondaryBtn text={"Підтримати"} />
+            <PrimaryBtn text={"Приєднатися"} href={"#jobs"} />
+            <SecondaryBtn text={"Підтримати"} href={"#support"} />
           </div>
         </div>
         <div className={styles.containerSocials}>

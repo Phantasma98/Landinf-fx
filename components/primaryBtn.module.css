@@ -16,6 +16,7 @@
   align-items: flex-start;
 }
 .component2 {
+  border: none;
   background-color: var(--color-orangered);
   display: flex;
   align-items: center;
