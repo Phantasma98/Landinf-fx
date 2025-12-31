@@ -7,7 +7,16 @@ import SecondaryBtn from "../SecondaryBtn";
 
 const Hero = () => {
   const heroImage = "/images/Dron_main.svg";
-  const Social1 = "/images/Component1.svg";
+
+  const socialArray = [
+    { icon: "/images/Component1.svg" },
+    { icon: "/images/TelegramIcon.svg" },
+    { icon: "/images/InstagramIcon.svg" },
+    { icon: "/images/YoutubeIcon.svg" },
+    { icon: "/images/TiktokIcon.svg" },
+    { icon: "/images/ExIcon.svg" },
+    ,
+  ];
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.heroBackground}>
@@ -36,67 +45,18 @@ const Hero = () => {
           </div>
         </div>
         <div className={styles.containerSocials}>
-          <div className={styles.component1}>
-            <Image
-              className={styles.vectorIcon}
-              src={Social1}
-              width={26.7}
-              height={26.5}
-              sizes="100vw"
-              alt=""
-            />
-          </div>
-
-          <div className={styles.component1}>
-            <Image
-              className={styles.vectorIcon3}
-              src={Social1}
-              width={26.7}
-              height={26.5}
-              sizes="100vw"
-              alt=""
-            />
-          </div>
-          <div className={styles.component1}>
-            <Image
-              className={styles.vectorIcon3}
-              src={Social1}
-              width={26.7}
-              height={26.5}
-              sizes="100vw"
-              alt=""
-            />
-          </div>
-          <div className={styles.component1}>
-            <Image
-              className={styles.vectorIcon3}
-              src={Social1}
-              width={26.7}
-              height={26.5}
-              sizes="100vw"
-              alt=""
-            />
-          </div>
-          <div className={styles.component1}>
-            <Image
-              className={styles.vectorIcon3}
-              src={Social1}
-              width={26.7}
-              height={26.5}
-              sizes="100vw"
-              alt=""
-            />
-          </div>
-          <div className={styles.component1}>
-            <Image
-              className={styles.vectorIcon3}
-              src={Social1}
-              width={26.7}
-              height={26.5}
-              sizes="100vw"
-              alt=""
-            />
-          </div>
+          {socialArray.map((soc, idx) => (
+            <div key={idx} className={styles.component1}>
+              <Image
+                className={styles.vectorIcon1}
+                src={soc.icon}
+                width={26.7}
+                height={26.5}
+                sizes="100vw"
+                alt=""
+              />
+            </div>
+          ))}
         </div>
       </div>
     </section>

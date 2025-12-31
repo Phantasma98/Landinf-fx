@@ -2,14 +2,12 @@ import Image from "next/image";
 import { useState } from "react";
 
 import styles from "./index.module.css";
-import TeamBtn from "../elements/buttons/TeamBtn";
-import PrimaryBtn from "../elements/buttons/PrimaryBtn";
+import PrimaryBtn from "../PrimaryBtn";
 
 const Job = () => {
   const [activeJobCategory, setActiveJobCategory] = useState("БПЛА");
 
   const jobArrow = "/images/JobArrow45.svg";
-  const Social1 = "/images/Component1.svg";
 
   const jobCategories = [
     "БПЛА",

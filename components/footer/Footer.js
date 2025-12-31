@@ -4,6 +4,24 @@ import styles from "./index.module.css";
 
 const Footer = () => {
   const phoenixLogo = "/images/Icon_Phoenix_text.svg";
+
+  const navLinks = [
+    { text: "Головна", href: "#home" },
+    { text: "Про Фенікс", href: "#about" },
+    { text: "Вакансії", href: "#jobs" },
+    { text: "Контракт 18-24", href: "#contract" },
+    { text: "Підтримати Фенікс", href: "#support" },
+    { text: "Контакти", href: "#contact" },
+  ];
+
+  const socialLinks = [
+    { icon: "/images/InstaIcon.svg", text: "IG", href: "#instagram" },
+    { icon: "/images/TelegramIcon.svg", text: "TG", href: "#telegram" },
+    { icon: "/images/FacebookIcon.svg", text: "FB", href: "#facebook" },
+    { icon: "/images/YoutubeIcon.svg", text: "YU", href: "#youtube" },
+    { icon: "/images/TiktokIcon.svg", text: "TK", href: "#tiktok" },
+    { icon: "/images/ExIcon.svg", text: "X", href: "#twitter" },
+  ];
   return (
     <section id="contact" className={styles.footerMain}>
       <footer className={styles.footer}>
@@ -29,24 +47,11 @@ const Footer = () => {
             <div className={styles.footerColumn}>
               <h4>НАВІГАЦІЯ</h4>
               <ul>
-                <li>
-                  <a href="#home">Головна</a>
-                </li>
-                <li>
-                  <a href="#about">Про Фенікс</a>
-                </li>
-                <li>
-                  <a href="#jobs">Вакансії</a>
-                </li>
-                <li>
-                  <a href="#contract">Контракт 18-24</a>
-                </li>
-                <li>
-                  <a href="#support">Підтримати Фенікс</a>
-                </li>
-                <li>
-                  <a href="#contact">Контакти</a>
-                </li>
+                {navLinks.map((item, idx) => (
+                  <li key={idx}>
+                    <a href={item.href}>{item.text}</a>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className={styles.footerColumnContainer}>
@@ -65,12 +70,18 @@ const Footer = () => {
               <div className={styles.footerColumn}>
                 <h4>НАШІ СОЦМЕРЕЖІ</h4>
                 <div className={styles.socialLinks}>
-                  <a href="#facebook">FB</a>
-                  <a href="#twitter">TW</a>
-                  <a href="#instagram">IG</a>
-                  <a href="#youtube">YT</a>
-                  <a href="#tiktok">TK</a>
-                  <a href="#twitter">X</a>
+                  {socialLinks.map((link, idx) => (
+                    <a key={idx} href={link.href}>
+                      <Image
+                        className={styles.vectorIcon1}
+                        src={link.icon}
+                        width={26.7}
+                        height={26.5}
+                        sizes="100vw"
+                        alt=""
+                      />
+                    </a>
+                  ))}
                 </div>
               </div>
             </div>

@@ -1,8 +1,9 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
+
 import styles from "./page.module.css";
+
 import Header from "@/components/header/Header";
 import Hero from "@/components/hero/Hero";
 import About from "@/components/about/About";
@@ -15,8 +16,6 @@ import Faq from "@/components/faq/Faq";
 import Footer from "@/components/footer/Footer";
 
 export default function Home() {
-  const [expandedFaq, setExpandedFaq] = useState(null);
-  const [activeJobCategory, setActiveJobCategory] = useState("БПЛА");
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 

@@ -8,6 +8,12 @@ const About = () => {
     "/images/2_carusel.png",
     "/images/3_carusel.png",
   ];
+
+  const statItems = [
+    { title: "126500", text: "ВИЛЬОТІВ НА БОЙОВІ ЗАВДАННЯ" },
+    { title: "26500", text: "ПОШКОДЖЕНО ТА ЗНИЩЕНО ЦІЛЕЙ" },
+    { title: "5130", text: "ЗНИЩЕНО ОСОБОВОГО СКЛАДУ ВОРОГА" },
+  ];
   return (
     <>
       <section id="about" className={styles.sectionMain}>
@@ -48,18 +54,12 @@ const About = () => {
             <p>В УГРУПОВАННІ СИЛ БЕЗПІЛОТНИХ СИСТЕМ</p>
           </div>
           <div className={styles.statsContainer}>
-            <div className={styles.statItem}>
-              <h3>126500</h3>
-              <p>ВИЛЬОТІВ НА БОЙОВІ ЗАВДАННЯ</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3>26500</h3>
-              <p>ПОШКОДЖЕНО ТА ЗНИЩЕНО ЦІЛЕЙ</p>
-            </div>
-            <div className={styles.statItem}>
-              <h3>5130</h3>
-              <p>ЗНИЩЕНО ОСОБОВОГО СКЛАДУ ВОРОГА</p>
-            </div>
+            {statItems.map((item, idx) => (
+              <div key={idx} className={styles.statItem}>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
           </div>
         </section>
       </section>
