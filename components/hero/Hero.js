@@ -9,9 +9,9 @@ const Hero = () => {
   const heroImage = "/images/Dron_main.svg";
 
   const socialArray = [
-    { icon: "/images/Component1.svg" },
+    { icon: "/images/InstaIcon.svg" },
     { icon: "/images/TelegramIcon.svg" },
-    { icon: "/images/InstagramIcon.svg" },
+    { icon: "/images/FacebookIcon.svg" },
     { icon: "/images/YoutubeIcon.svg" },
     { icon: "/images/TiktokIcon.svg" },
     { icon: "/images/ExIcon.svg" },
