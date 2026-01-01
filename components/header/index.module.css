@@ -72,11 +72,17 @@
 .navList :hover {
   color: #ff4f18;
 }
+@media (max-width: 1270px) {
+  .navList {
+    gap: 15px;
+  }
+}
 .item {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--padding-3) 0px;
+  white-space: nowrap;
 }
 .link2 {
   position: relative;

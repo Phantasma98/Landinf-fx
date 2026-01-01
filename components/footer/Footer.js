@@ -5,15 +5,17 @@ import styles from "./index.module.css";
 const Footer = () => {
   const phoenixLogo = "/images/Icon_Phoenix_text.svg";
 
-  const navLinks = [
+  const navLinks1 = [
     { text: "Головна", href: "#home" },
     { text: "Про Фенікс", href: "#about" },
     { text: "Вакансії", href: "#jobs" },
+  ];
+
+  const navLinks2 = [
     { text: "Контракт 18-24", href: "#contract" },
     { text: "Підтримати Фенікс", href: "#support" },
     { text: "Контакти", href: "#contact" },
   ];
-
   const socialLinks = [
     { icon: "/images/InstaIcon.svg", text: "IG", href: "#instagram" },
     { icon: "/images/TelegramIcon.svg", text: "TG", href: "#telegram" },
@@ -46,13 +48,22 @@ const Footer = () => {
           <div className={styles.footerSections}>
             <div className={styles.footerColumn}>
               <h4>НАВІГАЦІЯ</h4>
-              <ul>
-                {navLinks.map((item, idx) => (
-                  <li key={idx}>
-                    <a href={item.href}>{item.text}</a>
-                  </li>
-                ))}
-              </ul>
+              <div className={styles.footerColumnList}>
+                <ul>
+                  {navLinks1.map((item, idx) => (
+                    <li key={idx}>
+                      <a href={item.href}>{item.text}</a>
+                    </li>
+                  ))}
+                </ul>
+                <ul>
+                  {navLinks2.map((item, idx) => (
+                    <li key={idx}>
+                      <a href={item.href}>{item.text}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
             <div className={styles.footerColumnContainer}>
               <div className={styles.footerColumn}>
@@ -86,13 +97,15 @@ const Footer = () => {
               </div>
             </div>
           </div>
-        </div>
+          <div className={styles.footerBottom}>
+            <div>
+              <p>© ФЕНІКС 2026. ВСІ ПРАВА ЗАХИЩЕНІ</p>
+            </div>
 
-        <div className={styles.footerBottom}>
-          <p>© ФЕНІКС 2026. ВСІ ПРАВА ЗАХИЩЕНІ</p>
-          <div className={styles.footerLinks}>
-            <a href="#privacy">Політика конфіденційності</a>
-            <a href="#cookies">Використання cookies</a>
+            <div className={styles.footerLinks}>
+              <a href="#privacy">Політика конфіденційності</a>
+              <a href="#cookies">Використання cookies</a>
+            </div>
           </div>
         </div>
       </footer>
