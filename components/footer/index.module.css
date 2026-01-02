@@ -146,19 +146,6 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
-  .aboutSection,
-  .statsSection,
-  .commanderSection,
-  .valuesSection,
-  .jobsSection,
-  .recruitmentPath,
-  .supportSection,
-  .faqSection,
-  .footer {
-    padding: 100px 50px;
-  }
-}
 
 @media (max-width: 768px) {
   .headerContainer {
@@ -251,50 +238,11 @@
     flex-direction: row;
     gap: 40;
   }
-  .footerBottom {
-    flex-direction: column;
-    align-items: start;
-    margin-top: 289;
-  }
-  .footerBottom > div:first-child {
-    order: 2;
-  }
 
-  .footerBottom > div:last-child {
-    order: 1;
-    max-width: 233;
-  }
-  .footerLinks {
-    flex-direction: column;
-    gap: 5px;
-    margin-bottom: 20px;
-  }
   .footerColumnContainer {
     gap: 30;
   }
-  .footerContent > div:nth-child(2) {
-    order: 3;
-  }
-
-  .footerContent > div:last-child {
-    order: 2;
-    max-width: 233;
-  }
-  .footerContent {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* grid-template-columns: 1fr 2fr; */
-    gap: 145;
-    row-gap: 80px;
-    margin-bottom: 80;
-    max-height: 600px;
-    overflow: hidden;
-  }
-  .socialLinks {
-    display: flex;
-    justify-content: space-between;
-    max-width: 235;
-    gap: 0px;
+  .footerBottom {
+    margin-top: 230;
   }
 }
