@@ -74,8 +74,10 @@ const Faq = () => {
     <section id="contract" className={styles.faqMain}>
       <div className={styles.faqSection}>
         <div className={styles.faqHeader}>
-          <h2 className={styles.sectionTitle}>FAQ</h2>
-          <p className={styles.faqSubtitle}>
+          <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
+            FAQ
+          </h2>
+          <p className={`${styles.faqSubtitle} font-text-l-s `}>
             Якщо виникають додаткові запитання - залишай заявку і наш рекрутер з
             тобою звʼяжеться.
           </p>
@@ -84,7 +86,7 @@ const Faq = () => {
           {faqs.map((faq, idx) => (
             <div key={idx} className={styles.faqItem}>
               <button
-                className={styles.faqQuestion}
+                className={`${styles.faqQuestion} font-headline-l headline-l-m  `}
                 onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
               >
                 {expandedFaq === idx ? (
@@ -105,7 +107,9 @@ const Faq = () => {
                 )}
               </button>
               {expandedFaq === idx && (
-                <div className={styles.faqAnswer}>{faq.answer}</div>
+                <div className={`${styles.faqAnswer} font-text-l-s  `}>
+                  {faq.answer}
+                </div>
               )}
             </div>
           ))}

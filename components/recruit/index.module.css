@@ -2,7 +2,6 @@
 .recruitmentMain {
   background: #1b1a1f;
   padding: 120px 0;
-  font-family: var(--font-kordon);
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -10,19 +9,15 @@
 }
 .recruitmentSection {
   max-width: 1250px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: 124;
 }
 
 .sectionTitle {
-  font-size: 80px;
-  text-transform: uppercase;
-  line-height: 73px;
-  color: #fbfbfb;
+  color: var(--color-orangered);
   margin: 0;
-  font-weight: 700;
-  font-style: initial;
   max-width: 403;
 }
 
@@ -34,20 +29,13 @@
 }
 
 .pathStep h3 {
-  font-size: 80px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 73px;
   color: #fbfbfb;
   margin: 0 0 20px 0;
 }
 
 .pathStep p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 28px;
   color: #fbfbfb;
-  text-transform: uppercase;
   letter-spacing: 0.44px;
   margin: 0;
+  max-width: 194px;
 }

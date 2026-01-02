@@ -7,7 +7,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: var(--font-kordon);
 }
 
 .faqSection {
@@ -15,15 +14,9 @@
   width: 100%;
 }
 .sectionTitle {
-  font-size: 80px;
-  text-transform: uppercase;
-  line-height: 73px;
-  color: #fbfbfb;
+  color: var(--color-orangered);
   margin: 0;
   white-space: nowrap;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: initial;
 }
 
 .faqHeader {
@@ -34,9 +27,6 @@
 }
 
 .faqSubtitle {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 28px;
   color: #fbfbfb;
   max-width: 721px;
   margin: 0;
@@ -58,15 +48,9 @@
   background: transparent;
   border: none;
   text-align: left;
-  font-family: var(--font-kordon);
-  font-size: 40px;
-  font-weight: 700;
-  font-style: initial;
-  text-transform: uppercase;
   color: #fbfbfb;
   cursor: pointer;
   transition: all 0.3s;
-  line-height: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,9 +68,6 @@
 
 .faqAnswer {
   padding: 0 0 28 40px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: normal;
   color: #fbfbfb;
   border-bottom: 1px solid #fbfbfb;
   max-width: 1016;

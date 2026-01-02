@@ -10,15 +10,9 @@
   font-family: var(--font-kordon);
 }
 .sectionTitle {
-  font-size: 80px;
-  text-transform: uppercase;
-  line-height: 73px;
   color: #fbfbfb;
   margin: 0;
   white-space: nowrap;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: initial;
 }
 .footer {
   max-width: 1250;
@@ -27,11 +21,11 @@
 
 .footerContent {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  /* grid-template-columns: 1fr 2fr; */
-  gap: 145;
+  gap: 45px;
   row-gap: 80px;
-  margin-bottom: 80;
+  max-height: 600;
 }
 
 .footerBranding {
@@ -41,13 +35,9 @@
 }
 
 .footerOrganization {
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
   color: #fbfbfb;
-  line-height: 25.2px;
   margin: 0;
+  text-transform: uppercase;
 }
 .footerLogo {
   width: 384px;
@@ -66,11 +56,8 @@
   min-width: 332;
 }
 .footerColumn h4 {
-  font-size: 32px;
-  font-weight: 700;
-  text-transform: uppercase;
   color: #fbfbfb;
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   min-width: 298;
 }
 
@@ -87,9 +74,6 @@
 .footerColumn a {
   color: #fbfbfb;
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: normal;
   letter-spacing: 0.44px;
   transition: color 0.3s;
 }
@@ -100,9 +84,6 @@
 
 .footerColumn p {
   color: #fbfbfb;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: normal;
   letter-spacing: 0.44px;
   margin: 10px 0;
 }
@@ -113,14 +94,15 @@
 
 .socialLinks {
   display: flex;
-  gap: 25px;
+  justify-content: space-between;
+  max-width: 235;
+  gap: 0px;
 }
 
 .socialLinks a {
   display: inline-block;
   width: 27px;
   height: 27px;
-  font-size: 11px;
   color: #fbfbfb;
   text-decoration: none;
   transition: all 0.3s;
@@ -132,33 +114,28 @@
 
 .footerBottom {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
-  max-width: 1197px;
-  width: 100%;
+  align-items: start;
+  max-width: 386px;
+  gap: 40;
+  margin-top: 80;
 }
 
 .footerBottom p {
   color: #878787;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: normal;
   letter-spacing: 0.32px;
   margin: 0;
 }
 
 .footerLinks {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .footerLinks a {
   color: #878787;
-  font-size: 12px;
-  font-weight: 500;
   letter-spacing: 0.32px;
   text-decoration: none;
   transition: color 0.3s;

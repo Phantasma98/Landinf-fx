@@ -19,12 +19,12 @@ const About = () => {
       <section id="about" className={styles.sectionMain}>
         <section className={styles.aboutSection}>
           <div className={styles.aboutHeader}>
-            <h2 className={styles.sectionTitle}>про нас</h2>
+            <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
+              про нас
+            </h2>
             <div className={styles.aboutText}>
-              <p className={styles.aboutDescription}>
-                Фенікс - це найрезультативніший підрозділ ДПСУ.
-              </p>
-              <p className={styles.aboutDescription}>
+              <p className={`${styles.aboutDescription} font-text-l-s`}>
+                Фенікс - це найрезультативніший підрозділ ДПСУ. <br />
                 Ми створили власну екосистему безпілотних авіаційних систем, що
                 забезпечує весь процес: від створення БК до нанесення нищівних
                 ударів ворогу.
@@ -50,14 +50,16 @@ const About = () => {
         {/* Stats Section */}
         <section className={styles.statsSection}>
           <div className={styles.statItemTop}>
-            <h3>ТОП-2</h3>
-            <p>В УГРУПОВАННІ СИЛ БЕЗПІЛОТНИХ СИСТЕМ</p>
+            <h3 className="font-title-l title-l-s ">ТОП-2</h3>
+            <p className="font-subtitle-l ">
+              В УГРУПОВАННІ СИЛ БЕЗПІЛОТНИХ СИСТЕМ
+            </p>
           </div>
           <div className={styles.statsContainer}>
             {statItems.map((item, idx) => (
               <div key={idx} className={styles.statItem}>
-                <h3>{item.title}</h3>
-                <p>{item.text}</p>
+                <h3 className="font-title-l title-l-s ">{item.title}</h3>
+                <p className="font-subtitle-l ">{item.text}</p>
               </div>
             ))}
           </div>

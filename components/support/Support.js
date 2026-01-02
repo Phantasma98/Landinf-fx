@@ -16,8 +16,10 @@ const Support = () => {
     <section id="support" className={styles.supportMain}>
       <div className={styles.supportSection}>
         <div className={styles.supportHeader}>
-          <h2 className={styles.sectionTitle}>ПІДТРИМАТИ</h2>
-          <div className={styles.supportInfo}>
+          <h2 className={`${styles.sectionTitle} font-title-l  title-l-m `}>
+            ПІДТРИМАТИ
+          </h2>
+          <div className={`${styles.supportInfo} font-text-l-s  `}>
             <p>Збір на дрони - перехоплювачі.</p>
             <p>Ціль: 1 500 000 грн</p>
             <p>Зачистимо українське небо від ворожої присутності!</p>
@@ -39,7 +41,7 @@ const Support = () => {
               {paymentMethods.map((cat) => (
                 <button
                   key={cat}
-                  className={`${styles.paymentBtn} ${
+                  className={`${styles.paymentBtn} font-jobButton-l ${
                     activePaymentMethods === cat ? styles.active : ""
                   }`}
                   onClick={() => setActivePaymentMethods(cat)}
@@ -50,9 +52,11 @@ const Support = () => {
             </div>
             <div className={styles.bankInfoContainer}>
               <div className={styles.bankInfo}>
-                <div className={styles.bankInfoTitle}>ПЕРЕЙТИ НА БАНКУ</div>
+                <div className={`${styles.bankInfoTitle} font-text-l-l  `}>
+                  ПЕРЕЙТИ НА БАНКУ
+                </div>
                 <div className={styles.bankInfoUrlContainer}>
-                  <div className={styles.bankInfoUrl}>
+                  <div className={`${styles.bankInfoUrl} font-jobButton-l`}>
                     https://send.monobank.ua/jar/2ZnCUmV6bZ
                   </div>
                   <div className={styles.bankInfoSvg}>

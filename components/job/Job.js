@@ -31,8 +31,10 @@ const Job = () => {
     <section id="jobs" className={styles.jobMain}>
       <div className={styles.jobsSection}>
         <div className={styles.jobsHeader}>
-          <h2 className={styles.sectionTitle}>Вакансії</h2>
-          <p className={styles.jobsSubtitle}>
+          <h2 className={`${styles.sectionTitle} font-title-l title-l-m  `}>
+            Вакансії
+          </h2>
+          <p className={`${styles.jobsSubtitle} font-text-l-s `}>
             Ми будуємо екосистему, де бойова робота і забезпечення - це єдиний
             механізм. Шукаємо тих, хто готовий привести команду до перемоги
             своїм розумом та навичками.
@@ -43,7 +45,7 @@ const Job = () => {
             {jobCategories.map((cat) => (
               <button
                 key={cat}
-                className={`${styles.categoryBtn} ${
+                className={`${styles.categoryBtn} font-jobButton-l  ${
                   activeJobCategory === cat ? styles.active : ""
                 }`}
                 onClick={() => setActiveJobCategory(cat)}
@@ -57,12 +59,12 @@ const Job = () => {
               <div key={idx} className={styles.jobCard}>
                 <div className={styles.jobCardContainer}>
                   <div className={styles.jobCardContainerTitle}>
-                    <div className={styles.jobTags}>
+                    <div className={`${styles.jobTags} font-jobButton-l `}>
                       {job.tags.map((tag, i) => (
                         <span key={i}>{tag}</span>
                       ))}
                     </div>
-                    <h4>{job.title}</h4>
+                    <h4 className={`font-text-l-s`}>{job.title}</h4>
                   </div>
                   <div className={styles.jobArrowSvg}>
                     <Image
@@ -79,7 +81,7 @@ const Job = () => {
         </div>
 
         <div className={styles.jobsAction}>
-          <p className={styles.jobsQuote}>
+          <p className={`${styles.jobsQuote} font-headline-l headline-l-m `}>
             війна - гонка технологій та інженерних рішень. Перемога тут - це не
             індивідуальне досягнення пілота, це результат безперебійної роботи
             всієї команди.

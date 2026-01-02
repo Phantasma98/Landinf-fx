@@ -29,7 +29,7 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerBranding}>
-            <p className={styles.footerOrganization}>
+            <p className={`${styles.footerOrganization} font-text-l-xs`}>
               ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> державної
               прикордонної служби України
             </p>
@@ -44,11 +44,19 @@ const Footer = () => {
               />
             </div>
           </div>
-
+          <div className={`${styles.footerBottom} font-text-l-xs`}>
+            <div className={styles.footerLinks}>
+              <a href="#privacy">Політика конфіденційності</a>
+              <a href="#cookies">Використання cookies</a>
+            </div>
+            <div>
+              <p>© ФЕНІКС 2026. ВСІ ПРАВА ЗАХИЩЕНІ</p>
+            </div>
+          </div>
           <div className={styles.footerSections}>
             <div className={styles.footerColumn}>
-              <h4>НАВІГАЦІЯ</h4>
-              <div className={styles.footerColumnList}>
+              <h4 className="font-headline-l headline-l-s  ">НАВІГАЦІЯ</h4>
+              <div className={`${styles.footerColumnList} font-text-l-s`}>
                 <ul>
                   {navLinks1.map((item, idx) => (
                     <li key={idx}>
@@ -67,19 +75,31 @@ const Footer = () => {
             </div>
             <div className={styles.footerColumnContainer}>
               <div className={styles.footerColumn}>
-                <h4>РЕКРУТИНГ</h4>
-                <p>+38 (095) 8888 011</p>
-                <p>+38 (097) 8888 011</p>
+                <h4 className="font-headline-l headline-l-s  ">РЕКРУТИНГ</h4>
+                <p className={`${styles.footerColumnList} font-text-l-s`}>
+                  +38 (095) 8888 011
+                </p>
+                <p className={`${styles.footerColumnList} font-text-l-s`}>
+                  +38 (097) 8888 011
+                </p>
               </div>
 
               <div className={styles.footerColumn}>
-                <h4>ДЛЯ МЕДІА ТА СПІВПРАЦІ</h4>
-                <p>Медіа: media@feniks.army</p>
-                <p>Співпраця: info@feniks.army</p>
+                <h4 className="font-headline-l headline-l-s  ">
+                  ДЛЯ МЕДІА ТА СПІВПРАЦІ
+                </h4>
+                <p className={`${styles.footerColumnList} font-text-l-s`}>
+                  Медіа: media@feniks.army
+                </p>
+                <p className={`${styles.footerColumnList} font-text-l-s`}>
+                  Співпраця: info@feniks.army
+                </p>
               </div>
 
               <div className={styles.footerColumn}>
-                <h4>НАШІ СОЦМЕРЕЖІ</h4>
+                <h4 className="font-headline-l headline-l-s  ">
+                  НАШІ СОЦМЕРЕЖІ
+                </h4>
                 <div className={styles.socialLinks}>
                   {socialLinks.map((link, idx) => (
                     <a key={idx} href={link.href}>
@@ -95,16 +115,6 @@ const Footer = () => {
                   ))}
                 </div>
               </div>
-            </div>
-          </div>
-          <div className={styles.footerBottom}>
-            <div>
-              <p>© ФЕНІКС 2026. ВСІ ПРАВА ЗАХИЩЕНІ</p>
-            </div>
-
-            <div className={styles.footerLinks}>
-              <a href="#privacy">Політика конфіденційності</a>
-              <a href="#cookies">Використання cookies</a>
             </div>
           </div>
         </div>

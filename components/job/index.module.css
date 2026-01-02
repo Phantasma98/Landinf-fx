@@ -2,21 +2,15 @@
 .jobMain {
   background: #151419;
   padding: 120px 0;
-  font-family: var(--font-kordon);
-  justify-content: center;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 }
 .sectionTitle {
-  font-size: 80px;
-  text-transform: uppercase;
-  line-height: 73px;
   color: #ff4f18;
   margin: 0;
   white-space: nowrap;
-  font-weight: 700;
-  font-style: initial;
 }
 .jobsSection {
   max-width: 1250px;
@@ -30,14 +24,10 @@
 }
 
 .jobsSubtitle {
-  font-size: 20px;
-  line-height: 28px;
   color: #fbfbfb;
   max-width: 721px;
   margin: 0;
   align-self: flex-start;
-  font-style: normal;
-  font-weight: 400;
 }
 
 .jobCategoriesContainer {
@@ -59,10 +49,7 @@
   border: 1px solid #fbfbfb;
   color: #fbfbfb;
   padding: 14px 22px;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
+  letter-spacing: 0.32px;
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -92,7 +79,6 @@
 
 .jobCard {
   background: #1b1a1f;
-  /* border: 1px solid #fbfbfb; */
   padding: 20px;
   min-height: 150px;
   display: flex;
@@ -110,10 +96,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  max-width: 182;
 }
 .jobCard h4 {
   font-size: 18px;
-  font-weight: 500;
   line-height: 1;
   color: #fbfbfb;
 }
@@ -126,7 +112,6 @@
 
 .jobTags span {
   font-size: 14px;
-  font-weight: 400;
   color: #878787;
   text-transform: uppercase;
   text-decoration: none;
@@ -144,8 +129,6 @@
 }
 
 .jobsQuote {
-  font-size: 60px;
-  font-weight: 700;
   text-transform: uppercase;
   color: #ff4f18;
   line-height: 1;
@@ -159,4 +142,5 @@
   align-items: flex-start;
   justify-content: flex-start;
   text-align: left;
+  text-transform: uppercase;
 }

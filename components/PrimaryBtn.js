@@ -11,9 +11,9 @@ const PrimaryBtn = (props) => {
     }
   };
   return (
-    <button className={styles.component2} onClick={handleClick}>
-      <div className={styles.container2}>
-        <b className={styles.text}>{text}</b>
+    <button className={styles.component} onClick={handleClick}>
+      <div className={styles.container}>
+        <b className={`${styles.text} font-button-l `}>{text}</b>
       </div>
     </button>
   );

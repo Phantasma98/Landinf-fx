@@ -9,15 +9,9 @@
 }
 
 .sectionTitle {
-  font-size: 80px;
-  text-transform: uppercase;
-  line-height: 73px;
   color: #ff4f18;
   margin: 0;
   white-space: nowrap;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: initial;
 }
 
 .valuesSection {
@@ -32,16 +26,10 @@
 }
 
 .valuesSubtitle {
-  font-size: 20px;
-  line-height: 28px;
   color: #fbfbfb;
   max-width: 710px;
   margin: 0;
   align-self: flex-start;
-  font-family: var(--font-kordon);
-  font-style: normal;
-  font-weight: 400;
-  letter-spacing: 0.44;
 }
 
 .valuesImage {
@@ -60,58 +48,32 @@
 }
 
 .valueItem h3 {
-  font-size: 40px;
   text-transform: uppercase;
   line-height: 1;
   margin: 0 0 20px 0;
   color: #fbfbfb;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: initial;
 }
 .valueItem1 h3 {
-  font-size: 40px;
-  min-width: 402;
-  text-transform: uppercase;
+  min-width: 422;
   line-height: 1;
   margin: 0 0 20px 0;
   color: #fbfbfb;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: initial;
 }
 .valueItem1 p {
-  font-family: var(--font-kordon);
-  font-size: 18px;
-  font-weight: 500;
-  line-height: normal;
   color: #fbfbfb;
   margin: 0;
 }
 .valueItem2 h3 {
-  font-size: 40px;
   min-width: 318;
-  text-transform: uppercase;
   line-height: 1;
   margin: 0 0 20px 0;
   color: #fbfbfb;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: initial;
 }
 .valueItem2 p {
-  font-family: var(--font-kordon);
-  font-size: 18px;
-  font-weight: 500;
-  line-height: normal;
   color: #fbfbfb;
   margin: 0;
 }
 .valueItem p {
-  font-family: var(--font-kordon);
-  font-size: 18px;
-  font-weight: 500;
-  line-height: normal;
   color: #fbfbfb;
   margin: 0;
 }

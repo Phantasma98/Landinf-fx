@@ -13,11 +13,11 @@ const SecondaryBtn = (props) => {
 
   return (
     <button
-      className={size === "m" ? styles.component2m : styles.component2l}
+      className={size === "m" ? styles.componentM : styles.componentL}
       onClick={handleClick}
     >
-      <div className={styles.container2}>
-        <b className={styles.text}>{text}</b>
+      <div className={styles.container}>
+        <b className={`${styles.text} font-button-l `}>{text}</b>
       </div>
     </button>
   );

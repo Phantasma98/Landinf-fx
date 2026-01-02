@@ -48,8 +48,10 @@ const Values = () => {
     <section className={styles.valuesMain}>
       <div className={styles.valuesSection}>
         <div className={styles.valuesHeader}>
-          <h2 className={styles.sectionTitle}>цінності</h2>
-          <p className={styles.valuesSubtitle}>
+          <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
+            цінності
+          </h2>
+          <p className={`${styles.valuesSubtitle} font-text-l-s `}>
             Фенікс - сучасний підрозділ з культурою та динамікою команди
             Формули-1. Ключова цінність - збереження життя наших бійців.
           </p>
@@ -67,8 +69,8 @@ const Values = () => {
         <div className={styles.valuesGrid}>
           {values.map((value, idx) => (
             <div key={idx} className={value.style}>
-              <h3>{value.title}</h3>
-              <p>{value.description}</p>
+              <h3 className="font-headline-l headline-l-m">{value.title}</h3>
+              <p className="font-text-l-s">{value.description}</p>
             </div>
           ))}
         </div>

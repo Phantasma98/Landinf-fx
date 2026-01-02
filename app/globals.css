@@ -3,6 +3,16 @@
   --foreground: #171717;
 } */
 
+/* .container {
+  padding: 24px;
+  border: 1px solid black;
+}
+
+.specialContainer {
+  composes: container; 
+  background-color: blue; 
+} */
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -40,6 +50,9 @@ a {
   font-family: var(--font-kordon);
 }
 
+.font-kordon-cond {
+  font-family: var(--font-kordon-cond);
+}
 body {
   margin: 0;
   line-height: normal;
@@ -61,4 +74,92 @@ body {
   --max-w-140: 140px;
   --width-27: 27px;
   --width-28: 28px;
+}
+/* Fonts =======sets============*/
+/* Fonts L */
+.font-title-l {
+  font-family: var(--font-kordon-cond);
+  font-weight: 700;
+  line-height: 90%;
+  text-transform: uppercase;
+}
+.title-l-l {
+  font-size: 120px;
+}
+.title-l-m {
+  font-size: 80px;
+}
+.title-l-s {
+  font-size: 60px;
+}
+
+.font-headline-l {
+  font-family: var(--font-kordon-cond);
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.headline-l-m {
+  font-size: 40px;
+}
+
+.headline-l-s {
+  font-size: 32px;
+}
+.font-subtitle-l {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+.font-text-l-l {
+  font-family: var(--font-kordon);
+  text-transform: uppercase;
+  line-height: 100%;
+  font-size: 32px;
+  font-weight: 700;
+}
+.font-text-l-m {
+  font-family: var(--font-kordon);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 100%;
+  font-size: 24px;
+}
+.font-text-l-s {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 18px;
+}
+.font-text-l-xs {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 14px;
+}
+.font-link-l {
+  font-family: var(--font-kordon);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.font-button-l {
+  font-family: var(--font-kordon);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+}
+
+.font-jobButton-l {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
 }

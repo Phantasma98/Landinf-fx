@@ -17,6 +17,7 @@ const Hero = () => {
     { icon: "/images/ExIcon.svg" },
     ,
   ];
+  const screenSize = "l";
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.heroBackground}>
@@ -30,13 +31,13 @@ const Hero = () => {
       </div>
       <div className={styles.frameParent}>
         <div className={styles.heroContent}>
-          <p className={styles.heroMeta}>
-            ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ
+          <p className={`${styles.heroMeta} font-subtitle-l `}>
+            ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> державної
+            прикордонної служби України «ФЕНІКС»
           </p>
-          <p className={styles.heroMeta}>
-            державної прикордонної служби України «ФЕНІКС»
-          </p>
-          <h1 className={styles.heroTitle}>
+          <h1
+            className={`${styles.heroTitle} font-title-${screenSize} title-${screenSize}-l`}
+          >
             спалюємо <br /> межі можливого
           </h1>
           <div className={styles.heroActions}>
@@ -46,9 +47,8 @@ const Hero = () => {
         </div>
         <div className={styles.containerSocials}>
           {socialArray.map((soc, idx) => (
-            <div key={idx} className={styles.component1}>
+            <div key={idx} className={styles.component}>
               <Image
-                className={styles.vectorIcon1}
                 src={soc.icon}
                 width={26.7}
                 height={26.5}

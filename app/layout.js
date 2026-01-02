@@ -1,4 +1,4 @@
-import { kordon } from "./fonts";
+import { kordon, kordonCond } from "./fonts";
 import "./globals.css";
 
 export const metadata = {
@@ -10,7 +10,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${kordon.variable}`}>{children}</body>
+      <body className={`${kordon.variable} ${kordonCond.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

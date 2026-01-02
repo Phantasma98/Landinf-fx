@@ -2,7 +2,6 @@
 
 .commanderSection {
   background: #151419;
-
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -10,26 +9,17 @@
 }
 
 .commanderContent {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   max-width: 1250px;
   margin: 120 0;
-  gap: 20;
-  height: 636;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .sectionTitle {
-  font-size: 80px;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 73px;
-
   margin: 0;
   white-space: nowrap;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: initial;
+  color: var(--color-orangered);
 }
 
 .commanderText {
@@ -46,33 +36,18 @@
   margin: 80 0;
 }
 .commanderTitle {
-  font-size: 32px;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: italic;
-  text-transform: uppercase;
   color: #fbfbfb;
   margin: 0;
   padding-bottom: 32;
 }
 
 .commanderRank {
-  font-size: 24px;
-  font-family: var(--font-kordon);
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
   color: #fbfbfb;
   margin: 0;
   line-height: 1;
 }
 
 .commanderName {
-  font-size: 24px;
-  font-family: var(--font-kordon);
-  font-weight: 400;
-  font-style: normal;
-  text-transform: uppercase;
   color: #fbfbfb;
   margin: 0;
   line-height: 1;
@@ -80,32 +55,24 @@
 
 .commanderImage {
   position: relative;
-  width: 100%;
-  height: 100%;
+  width: 721;
+  height: 688;
 }
 
 .commanderQuote {
-  max-width: 1250px;
+  max-width: 470px;
   display: flex;
   flex-direction: column;
 }
 
 .commanderButton {
-  max-width: 1250px;
   display: flex;
   align-items: flex-start;
   margin-top: 40;
-  font-family: var(--font-kordon);
-  font-style: italic;
-  font-weight: 700;
 }
+
 .commanderQuote p {
   text-transform: uppercase;
   color: #ff4f18;
-  line-height: 1;
   margin: 0;
-  font-family: var(--font-kordon);
-  font-weight: 700;
-  font-style: initial;
-  font-size: 40px;
 }

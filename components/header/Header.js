@@ -5,7 +5,7 @@ import styles from "./index.module.css";
 import SecondaryBtn from "../SecondaryBtn";
 
 const Header = () => {
-  const phoenixLogo = "/images/Logo_phoenix.svg";
+  const phoenixLogo = "/images/Logo_phoenix_top.svg";
 
   const navItems = [
     { text: "Про Фенікс", href: "#about" },
@@ -20,14 +20,11 @@ const Header = () => {
           <Image
             className={styles.layer1Icon}
             src={phoenixLogo}
-            width={40}
+            width={237}
             height={55}
             sizes="100vw"
             alt="icon"
           />
-          <div className={styles.link}>
-            <div className={styles.div}>фенікс</div>
-          </div>
         </div>
         <div className={styles.navList}>
           {navItems.map((item, idx) => (

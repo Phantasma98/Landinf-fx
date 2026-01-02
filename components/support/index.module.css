@@ -2,21 +2,15 @@
 .supportMain {
   background: #151419;
   padding: 120px 0;
-  font-family: var(--font-kordon);
   justify-content: center;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .sectionTitle {
-  font-size: 80px;
-  text-transform: uppercase;
-  line-height: 73px;
   color: #ff4f18;
   margin: 0;
   white-space: nowrap;
-  font-weight: 700;
-  font-style: initial;
 }
 
 .supportSection {
@@ -29,7 +23,6 @@
 
 .supportHeader {
   display: flex;
-
   gap: 99px;
   max-width: 1250px;
 }
@@ -39,9 +32,6 @@
 }
 
 .supportInfo p {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 28px;
   color: #fbfbfb;
 }
 
@@ -74,9 +64,6 @@
   border: 1px solid #fbfbfb;
   color: #fbfbfb;
   padding: 14px 22px;
-  font-size: 14px;
-  font-weight: 400;
-  font-style: normal;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s;
@@ -110,9 +97,7 @@
   justify-content: space-between;
 }
 .bankInfoTitle {
-  font-size: 46px;
-  font-weight: 400;
-  font-style: normal;
+  margin-bottom: 15;
 }
 .bankInfoButton {
   margin: auto 0;
@@ -121,9 +106,6 @@
   display: flex;
 }
 .bankInfoUrl {
-  font-size: 18px;
-  font-weight: 400;
-  font-style: normal;
 }
 .bankInfoSvg {
   margin-left: 20;
@@ -134,9 +116,6 @@
 }
 
 .bankInfo p {
-  font-size: 18px;
-  font-weight: 500;
-  line-height: normal;
   color: #fbfbfb;
   margin: 15px 0;
 }
@@ -145,7 +124,4 @@
   max-width: 1250px;
   display: flex;
   align-items: flex-start;
-  font-family: var(--font-kordon);
-  font-style: italic;
-  font-weight: 700;
 }

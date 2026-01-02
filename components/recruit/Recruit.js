@@ -13,12 +13,14 @@ const Recruit = () => {
   return (
     <section className={styles.recruitmentMain}>
       <div className={styles.recruitmentSection}>
-        <h2 className={styles.sectionTitle}>шлях рекрута</h2>
+        <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
+          шлях рекрута
+        </h2>
         <div className={styles.pathSteps}>
           {recruitmentItems.map((step) => (
             <div key={step.num} className={styles.pathStep}>
-              <h3>{step.num}</h3>
-              <p>{step.title}</p>
+              <h3 className="font-title-l title-l-s">{step.num}</h3>
+              <p className="font-subtitle-l">{step.title}</p>
             </div>
           ))}
         </div>
