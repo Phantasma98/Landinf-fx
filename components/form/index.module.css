@@ -1,0 +1,92 @@
+/* Support Section */
+.formMain {
+  background: #151419;
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formTitle {
+  color: #ff4f18;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.formSection {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.formHeader {
+  display: flex;
+  gap: 99px;
+  max-width: 1250px;
+}
+
+.formInfo {
+  max-width: 721px;
+}
+
+.formInfo p {
+  color: #fbfbfb;
+}
+
+.formContent {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1250px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.inputContainer {
+  border: 1px solid #fbfbfb;
+  width: 722px;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputField {
+  width: 686px;
+  height: 22px;
+  color: var(--color-gray-300);
+}
+.formButton {
+  margin: auto 0;
+}
+.inputContainer1 {
+  width: 722px;
+  height: 56px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.inputBottomText {
+  color: var(--color-gray-300);
+}
+
+.formButton {
+  width: 722px;
+}
+.inputContainer2 {
+  width: 722px;
+  height: 56px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin-bottom: 18;
+}
+.formLink {
+  color: var(--color-orangered);
+  cursor: pointer;
+}

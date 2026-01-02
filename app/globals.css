@@ -67,6 +67,7 @@ body {
   --color-gray-100: #fbfbfb;
   --color-gray-200: rgba(21, 20, 25, 0.3);
   --color-gray-50: rgba(255, 255, 255, 0.1);
+  --color-gray-300: #878787;
 
   /* WidthHeights */
   --height-27: 27px;

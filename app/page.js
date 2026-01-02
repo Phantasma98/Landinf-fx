@@ -14,6 +14,7 @@ import Recruit from "@/components/recruit/Recruit";
 import Support from "@/components/support/Support";
 import Faq from "@/components/faq/Faq";
 import Footer from "@/components/footer/Footer";
+import Form from "@/components/form/Form";
 
 export default function Home() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
@@ -72,7 +73,8 @@ export default function Home() {
 
       {/* FAQ Section */}
       <Faq />
-
+      {/* FORM Section */}
+      <Form />
       {/* Footer */}
       <Footer />
     </div>
