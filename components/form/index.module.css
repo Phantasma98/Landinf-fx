@@ -39,6 +39,7 @@
   display: flex;
   justify-content: flex-end;
   max-width: 1250px;
+  margin-right: 110px;
 }
 
 .formContainer {
@@ -49,7 +50,7 @@
 }
 .inputContainer {
   border: 1px solid #fbfbfb;
-  width: 722px;
+  width: 598px;
   height: 56px;
   display: flex;
   justify-content: center;
@@ -57,15 +58,40 @@
 }
 
 .inputField {
-  width: 686px;
+  width: 562px;
   height: 22px;
   color: var(--color-gray-300);
+  display: flex;
 }
+.checkField {
+  color: var(--color-gray-300);
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+}
+.checkPoint {
+  background-color: var(--color-gray-300);
+  border: 3px solid var(--color-gray-300);
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.checkPoint :active {
+  background-color: var(--color-orangered);
+  border: 3px solid #fbfbfb;
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
 .formButton {
   margin: auto 0;
 }
 .inputContainer1 {
-  width: 722px;
+  width: 598px;
   height: 56px;
   display: flex;
   justify-content: start;
@@ -76,17 +102,59 @@
 }
 
 .formButton {
-  width: 722px;
+  width: 598px;
 }
 .inputContainer2 {
-  width: 722px;
+  width: 598px;
   height: 56px;
   display: flex;
   justify-content: start;
   align-items: end;
   margin-bottom: 18;
 }
-.formLink {
+.inputContainer2 a {
   color: var(--color-orangered);
   cursor: pointer;
+}
+.inputContainer2 a:hover {
+  color: var(--color-gray);
+}
+
+/* Radio Input Styles */
+.radioInput {
+  display: none;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.radioCircle {
+  width: 19px;
+  height: 19px;
+  border: 3px solid var(--color-gray-300);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.radioInput:checked + .radioLabel .radioCircle {
+  background-color: var(--color-orangered);
+  border-color: var(--color-gray);
+}
+
+.radioInput:checked + .radioLabel .radioCircle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+}
+
+.radioLabel:hover .radioCircle {
+  border-color: var(--color-orangered);
 }
