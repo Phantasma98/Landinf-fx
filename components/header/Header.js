@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import styles from "./index.module.css";
 
@@ -8,23 +9,28 @@ const Header = () => {
   const phoenixLogo = "/images/Logo_phoenix_top.svg";
 
   const navItems = [
-    { text: "Про Фенікс", href: "#about" },
-    { text: "Вакансії", href: "#jobs" },
-    { text: "Контракт 18-24", href: "#contract" },
-    { text: "Контакти", href: "#contact" },
+    { text: "Про Фенікс", href: process.env.NEXT_PUBLIC_MAIN_URL + "#about" },
+    { text: "Вакансії", href: process.env.NEXT_PUBLIC_MAIN_URL + "#jobs" },
+    {
+      text: "Контракт 18-24",
+      href: process.env.NEXT_PUBLIC_MAIN_URL + "#contract",
+    },
+    { text: "Контакти", href: process.env.NEXT_PUBLIC_MAIN_URL + "#contact" },
   ];
   return (
     <div className={styles.container}>
       <div className={styles.frameParent}>
         <div className={styles.layer1Parent}>
-          <Image
-            className={styles.layer1Icon}
-            src={phoenixLogo}
-            width={237}
-            height={55}
-            sizes="100vw"
-            alt="icon"
-          />
+          <Link href={process.env.NEXT_PUBLIC_MAIN_URL + "#home"}>
+            <Image
+              className={styles.layer1Icon}
+              src={phoenixLogo}
+              width={237}
+              height={55}
+              sizes="100vw"
+              alt="icon"
+            />
+          </Link>
         </div>
         <div className={styles.navList}>
           {navItems.map((item, idx) => (
@@ -35,7 +41,11 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <SecondaryBtn text={"приєднатися"} size={"m"} href={"#jobs"} />
+        <SecondaryBtn
+          text={"приєднатися"}
+          size={"m"}
+          href={process.env.NEXT_PUBLIC_MAIN_URL + "#jobs"}
+        />
       </div>
     </div>
   );

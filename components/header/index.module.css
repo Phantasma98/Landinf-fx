@@ -37,6 +37,7 @@
   display: flex;
   align-items: flex-end;
   gap: 25px;
+  cursor: pointer;
 }
 .layer1Icon {
   height: 55px;

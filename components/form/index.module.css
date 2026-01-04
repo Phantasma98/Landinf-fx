@@ -120,6 +120,32 @@
   color: var(--color-gray);
 }
 
+.textInput {
+  background-color: #151419;
+  width: 100%;
+  border: 0px;
+  color: var(--color-gray);
+}
+
+.selectInput {
+  background-color: #151419;
+  width: 100%;
+  border: 0px;
+  color: var(--color-gray-300);
+  appearance: none;
+  background-image: url("/images/Arrow_Form.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px 20px;
+  padding-right: 35px;
+}
+
+.selectValue {
+  background-color: #151419;
+  width: 100%;
+  border: 1px solid #fbfbfb;
+  color: var(--color-gray-300);
+}
 /* Radio Input Styles */
 .radioInput {
   display: none;
@@ -132,6 +158,10 @@
   gap: 10px;
 }
 
+.radioInput:checked + .radioLabel {
+  color: var(--color-gray);
+}
+
 .radioCircle {
   width: 19px;
   height: 19px;
@@ -142,6 +172,7 @@
   justify-content: center;
   transition: all 0.3s ease;
   flex-shrink: 0;
+  background-color: var(--color-gray-300);
 }
 
 .radioInput:checked + .radioLabel .radioCircle {
@@ -156,5 +187,9 @@
 }
 
 .radioLabel:hover .radioCircle {
-  border-color: var(--color-orangered);
+  border-color: var(--color-gray);
+}
+
+.radioLabel:hover {
+  color: var(--color-gray);
 }

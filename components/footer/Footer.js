@@ -6,15 +6,21 @@ const Footer = () => {
   const phoenixLogo = "/images/Icon_Phoenix_text.svg";
 
   const navLinks1 = [
-    { text: "Головна", href: "#home" },
-    { text: "Про Фенікс", href: "#about" },
-    { text: "Вакансії", href: "#jobs" },
+    { text: "Головна", href: process.env.NEXT_PUBLIC_MAIN_URL + "#home" },
+    { text: "Про Фенікс", href: process.env.NEXT_PUBLIC_MAIN_URL + "#about" },
+    { text: "Вакансії", href: process.env.NEXT_PUBLIC_MAIN_URL + "#jobs" },
   ];
 
   const navLinks2 = [
-    { text: "Контракт 18-24", href: "#contract" },
-    { text: "Підтримати Фенікс", href: "#support" },
-    { text: "Контакти", href: "#contact" },
+    {
+      text: "Контракт 18-24",
+      href: process.env.NEXT_PUBLIC_MAIN_URL + "#contract",
+    },
+    {
+      text: "Підтримати Фенікс",
+      href: process.env.NEXT_PUBLIC_MAIN_URL + "#support",
+    },
+    { text: "Контакти", href: process.env.NEXT_PUBLIC_MAIN_URL + "#contact" },
   ];
   const socialLinks = [
     { icon: "/images/InstaIcon.svg", text: "IG", href: "#instagram" },
@@ -46,7 +52,7 @@ const Footer = () => {
           </div>
           <div className={`${styles.footerBottom} font-text-l-xs`}>
             <div className={styles.footerLinks}>
-              <a href="#privacy">Політика конфіденційності</a>
+              <a href="/policy">Політика конфіденційності</a>
               <a href="#cookies">Використання cookies</a>
             </div>
             <div>
