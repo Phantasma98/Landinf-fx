@@ -10,18 +10,18 @@ const Header = () => {
 
   const navItems = [
     { text: "Про Фенікс", href: "#about" },
-    { text: "Вакансії", href: process.env.NEXT_PUBLIC_MAIN_URL + "#jobs" },
+    { text: "Вакансії", href: "#jobs" },
     {
       text: "Контракт 18-24",
-      href: process.env.NEXT_PUBLIC_MAIN_URL + "#contract",
+      href: "#contract",
     },
-    { text: "Контакти", href: process.env.NEXT_PUBLIC_MAIN_URL + "#contact" },
+    { text: "Контакти", href: "#contact" },
   ];
   return (
     <div className={styles.container}>
       <div className={styles.frameParent}>
         <div className={styles.layer1Parent}>
-          <Link href={process.env.NEXT_PUBLIC_MAIN_URL + "#home"}>
+          <Link href={"#home"}>
             <Image
               className={styles.layer1Icon}
               src={phoenixLogo}
@@ -41,11 +41,7 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <SecondaryBtn
-          text={"приєднатися"}
-          size={"m"}
-          href={process.env.NEXT_PUBLIC_MAIN_URL + "#jobs"}
-        />
+        <SecondaryBtn text={"приєднатися"} size={"m"} href={"#jobs"} />
       </div>
     </div>
   );
