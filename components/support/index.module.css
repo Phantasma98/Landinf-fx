@@ -102,6 +102,9 @@
 .bankInfoButton {
   margin: auto 0;
 }
+.bankInfoButton :hover {
+  cursor: pointer;
+}
 .bankInfoUrlContainer {
   display: flex;
 }
@@ -109,6 +112,9 @@
 }
 .bankInfoSvg {
   margin-left: 20;
+}
+.bankInfoSvg :hover {
+  cursor: pointer;
 }
 .bankInfo {
   display: flex;

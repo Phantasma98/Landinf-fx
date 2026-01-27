@@ -61,12 +61,12 @@ body {
   /* Common Style Variables */
 
   /* Color */
-  --color-gray: #fbfbfb;
+
   --color-orangered: #ff4f18;
   --color-orange: #ff6a3a;
-  --color-gray-100: #fbfbfb;
-  --color-gray-200: rgba(21, 20, 25, 0.3);
+  --color-gray: #fbfbfb;
   --color-gray-50: rgba(255, 255, 255, 0.1);
+  --color-gray-200: rgba(21, 20, 25, 0.3);
   --color-gray-300: #878787;
 
   /* WidthHeights */
@@ -78,6 +78,7 @@ body {
 }
 /* Fonts =======sets============*/
 /* Fonts L */
+/* title L */
 .font-title-l {
   font-family: var(--font-kordon-cond);
   font-weight: 700;
@@ -93,7 +94,7 @@ body {
 .title-l-s {
   font-size: 60px;
 }
-
+/* headline L */
 .font-headline-l {
   font-family: var(--font-kordon-cond);
   font-weight: 700;
@@ -108,6 +109,8 @@ body {
 .headline-l-s {
   font-size: 32px;
 }
+
+/* subtitle L */
 .font-subtitle-l {
   font-family: var(--font-kordon);
   font-weight: 500;
@@ -116,6 +119,7 @@ body {
   text-transform: uppercase;
 }
 
+/* text L */
 .font-text-l-l {
   font-family: var(--font-kordon);
   text-transform: uppercase;
@@ -163,4 +167,145 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 120%;
+}
+
+/* Fonts M */
+/* title M */
+.font-title-m {
+  font-family: var(--font-kordon-cond);
+  font-weight: 700;
+  line-height: 90%;
+  text-transform: uppercase;
+}
+.title-m-l {
+  font-size: 100px;
+}
+.title-m-m {
+  font-size: 80px;
+}
+.title-m-s {
+  font-size: 60px;
+}
+
+/* headline M */
+.font-headline-m {
+  font-family: var(--font-kordon-cond);
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.headline-m-m {
+  font-size: 40px;
+}
+
+.headline-m-s {
+  font-size: 32px;
+}
+
+/* subtitle M */
+.font-subtitle-m {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+/* text M */
+.font-text-m-l {
+  font-family: var(--font-kordon);
+  text-transform: uppercase;
+  line-height: 100%;
+  font-size: 32px;
+  font-weight: 700;
+}
+.font-text-m-m {
+  font-family: var(--font-kordon);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 100%;
+  font-size: 24px;
+}
+.font-text-m-s {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 16px;
+}
+.font-text-m-xs {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 12px;
+}
+
+/* Fonts S */
+/* title S */
+.font-title-s {
+  font-family: var(--font-kordon-cond);
+  font-weight: 700;
+  line-height: 90%;
+  text-transform: uppercase;
+}
+.title-s-l {
+  font-size: 60px;
+}
+.title-m-m {
+  font-size: 40px;
+}
+.title-m-s {
+  font-size: 32px;
+}
+
+/* headline S */
+.font-headline-s {
+  font-family: var(--font-kordon-cond);
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+.headline-s-m {
+  font-size: 24px;
+}
+
+.headline-s-s {
+  font-size: 24px;
+}
+
+/* subtitle S */
+.font-subtitle-s {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 120%;
+  text-transform: uppercase;
+}
+
+/* text S */
+.font-text-s-l {
+  font-family: var(--font-kordon);
+  text-transform: uppercase;
+  line-height: 100%;
+  font-size: 24px;
+  font-weight: 700;
+}
+.font-text-s-m {
+  font-family: var(--font-kordon);
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 100%;
+  font-size: 18px;
+}
+.font-text-s-s {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 14px;
+}
+.font-text-s-xs {
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  line-height: 120%;
+  font-size: 12px;
 }
