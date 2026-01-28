@@ -7,8 +7,8 @@ import PrimaryBtn from "../PrimaryBtn";
 const Job = () => {
   const [activeJobCategory, setActiveJobCategory] = useState("БПЛА");
 
-  const jobArrow = "/images/JobArrow45.svg";
-
+  // const jobArrow = "/images/JobArrow45.svg";
+  const arrow = "/images/Arrow45.svg";
   const jobCategories = [
     "БПЛА",
     "НРК",
@@ -66,14 +66,15 @@ const Job = () => {
                     </div>
                     <h4 className={`font-text-l-s`}>{job.title}</h4>
                   </div>
-                  <div className={styles.jobArrowSvg}>
+                  <button className={styles.jobArrowButton}>
                     <Image
-                      src={jobArrow}
-                      alt="jobArrow"
+                      src={arrow}
+                      alt="arrow"
                       width={54}
                       height={54}
+                      className={styles.arrowImage}
                     />
-                  </div>
+                  </button>
                 </div>
               </div>
             ))}

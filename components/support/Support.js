@@ -9,7 +9,7 @@ const Support = () => {
   const [activePaymentMethods, setActivePaymentMethods] = useState("MONOBANK");
   const QRimage = "/images/Mono_zbir.svg";
   const copyUrl = "/images/CopyUrl.svg";
-  const arrow = "/images/orangeArrow.svg";
+  const arrow = "/images/Arrow45.svg";
 
   const paymentMethods = ["MONOBANK", "КАРТКА", "PAYPAL", "РЕКВІЗИТИ"];
   return (
@@ -64,9 +64,15 @@ const Support = () => {
                   </div>
                 </div>
               </div>
-              <div className={styles.bankInfoButton}>
-                <Image src={arrow} alt="arrow" width={54} height={54} />
-              </div>
+              <button className={styles.bankInfoButton}>
+                <Image
+                  src={arrow}
+                  alt="arrow"
+                  width={54}
+                  height={54}
+                  className={styles.arrowImage}
+                />
+              </button>
             </div>
 
             <div className={styles.supportButton}>
