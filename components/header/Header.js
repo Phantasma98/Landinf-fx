@@ -9,19 +9,19 @@ const Header = () => {
   const phoenixLogo = "/images/Logo_phoenix_top.svg";
 
   const navItems = [
-    { text: "Про Фенікс", href: "#about" },
-    { text: "Вакансії", href: "#jobs" },
+    { text: "Про Фенікс", href: "/#about" },
+    { text: "Вакансії", href: "/#jobs" },
     {
       text: "Контракт 18-24",
-      href: "#contract",
+      href: "/#contract",
     },
-    { text: "Контакти", href: "#contact" },
+    { text: "Контакти", href: "/#contact" },
   ];
   return (
     <div className={styles.container}>
       <div className={styles.frameParent}>
         <div className={styles.layer1Parent}>
-          <Link href={"#home"}>
+          <Link href={"/#main"}>
             <Image
               className={styles.layer1Icon}
               src={phoenixLogo}
@@ -41,7 +41,7 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <SecondaryBtn text={"приєднатися"} size={"m"} href={"#jobs"} />
+        <SecondaryBtn text={"приєднатися"} size={"m"} href={"/#jobs"} />
       </div>
     </div>
   );

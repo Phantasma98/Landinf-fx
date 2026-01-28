@@ -53,7 +53,7 @@ const Footer = () => {
           <div className={`${styles.footerBottom} font-text-l-xs`}>
             <div className={styles.footerLinks}>
               <a href="/policy">Політика конфіденційності</a>
-              <a href="#cookies">Використання cookies</a>
+              <a href="/cookies">Використання cookies</a>
             </div>
             <div>
               <p>© ФЕНІКС 2026. ВСІ ПРАВА ЗАХИЩЕНІ</p>
