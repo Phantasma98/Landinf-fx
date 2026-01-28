@@ -1,11 +1,11 @@
 import Image from "next/image";
 import { useState } from "react";
 
-import styles from "./index.module.css";
+import styles from "./indexS.module.css";
 
 import SecondaryBtn from "../SecondaryBtn";
 
-const Support = () => {
+const SupportNow = () => {
   const [activePaymentMethods, setActivePaymentMethods] = useState("MONOBANK");
   const QRimage = "/images/Mono_zbir.svg";
   const copyUrl = "/images/CopyUrl.svg";
@@ -17,7 +17,7 @@ const Support = () => {
       <div className={styles.supportSection}>
         <div className={styles.supportHeader}>
           <h2 className={`${styles.sectionTitle} font-title-l  title-l-m `}>
-            ПІДТРИМАТИ
+            відкритий збір
           </h2>
           <div className={`${styles.supportInfo} font-text-l-s  `}>
             <p>Збір на дрони - перехоплювачі.</p>
@@ -77,7 +77,7 @@ const Support = () => {
 
             <div className={styles.supportButton}>
               <SecondaryBtn
-                text={"переглянути закриті збори"}
+                text={"дізнатись більше про збір"}
                 href={"/donations"}
               />
             </div>
@@ -88,4 +88,4 @@ const Support = () => {
   );
 };
 
-export default Support;
+export default SupportNow;
