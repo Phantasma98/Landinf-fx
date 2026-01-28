@@ -6,21 +6,21 @@ const Footer = () => {
   const phoenixLogo = "/images/Icon_Phoenix_text.svg";
 
   const navLinks1 = [
-    { text: "Головна", href: "#home" },
-    { text: "Про Фенікс", href: "#about" },
-    { text: "Вакансії", href: "#jobs" },
+    { text: "Головна", href: "/#home" },
+    { text: "Про Фенікс", href: "/#about" },
+    { text: "Вакансії", href: "/#jobs" },
   ];
 
   const navLinks2 = [
     {
       text: "Контракт 18-24",
-      href: "#contract",
+      href: "/#contract",
     },
     {
       text: "Підтримати Фенікс",
-      href: "#support",
+      href: "/#support",
     },
-    { text: "Контакти", href: "#contact" },
+    { text: "Контакти", href: "/#contact" },
   ];
   const socialLinks = [
     { icon: "/images/InstaIcon.svg", text: "IG", href: "#instagram" },
