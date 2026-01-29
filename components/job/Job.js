@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import styles from "./index.module.css";
 import PrimaryBtn from "../PrimaryBtn";
+import ArrowButton from "../elements/ArrowButton";
 
 const Job = () => {
   const [activeJobCategory, setActiveJobCategory] = useState("БПЛА");
@@ -23,8 +24,9 @@ const Job = () => {
   ];
 
   const jobListings = Array(16).fill({
-    title: "Оператор БПЛА розвідувального типу",
-    tags: ["#БПЛА", "#КОНТРАКТ 18-24"],
+    title: "Інженер мережевих інтеграцій",
+    tags: ["#IT", "#КОНТРАКТ 18-24"],
+    link: "/vacancy/1",
   });
 
   return (
@@ -66,15 +68,9 @@ const Job = () => {
                     </div>
                     <h4 className={`font-text-l-s`}>{job.title}</h4>
                   </div>
-                  <button className={styles.jobArrowButton}>
-                    <Image
-                      src={arrow}
-                      alt="arrow"
-                      width={54}
-                      height={54}
-                      className={styles.arrowImage}
-                    />
-                  </button>
+                  <div className={styles.arrowButtonContainer}>
+                    <ArrowButton link={job.link} />
+                  </div>
                 </div>
               </div>
             ))}

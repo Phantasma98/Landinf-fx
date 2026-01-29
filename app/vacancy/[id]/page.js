@@ -5,18 +5,12 @@ import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
 import Header from "@/components/header/Header";
-import Hero from "@/components/hero/Hero";
-import About from "@/components/about/About";
-import Commander from "@/components/commander/Commander";
-import Values from "@/components/values/Values";
-import Job from "@/components/job/Job";
-import Recruit from "@/components/recruit/Recruit";
-import Support from "@/components/support/Support";
-import Faq from "@/components/faq/Faq";
 import Footer from "@/components/footer/Footer";
-import SectionForm from "@/components/form/SectionForm";
+import SectionVacancy from "@/components/vacancy/Vacancy";
+import Job from "@/components/vacancy/Job";
+import Form from "@/components/vacancy/Form";
 
-export default function Home() {
+export default function Cookies() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -50,33 +44,14 @@ export default function Home() {
         <Header />
       </header>
 
-      {/* Hero Section */}
-      <Hero />
+      {/* Vacancy Section */}
+      <SectionVacancy />
 
-      {/* About Section */}
-      <About />
-
-      {/* Commander Section */}
-      <Commander />
-
-      {/* Values Section */}
-      <Values />
-
-      {/* Jobs Section */}
+      {/* Job Section */}
       <Job />
 
-      {/* Recruitment Path */}
-      <Recruit />
-
-      {/* Support Section */}
-      <Support />
-
-      {/* FAQ Section */}
-      <Faq />
-
-      {/* FORM Section */}
-      <SectionForm />
-
+      {/* Job Section */}
+      <Form />
       {/* Footer */}
       <Footer />
     </div>

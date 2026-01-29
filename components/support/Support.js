@@ -4,6 +4,7 @@ import { useState } from "react";
 import styles from "./index.module.css";
 
 import SecondaryBtn from "../SecondaryBtn";
+import ArrowButton from "../elements/ArrowButton";
 
 const Support = () => {
   const [activePaymentMethods, setActivePaymentMethods] = useState("MONOBANK");
@@ -64,15 +65,7 @@ const Support = () => {
                   </div>
                 </div>
               </div>
-              <button className={styles.bankInfoButton}>
-                <Image
-                  src={arrow}
-                  alt="arrow"
-                  width={54}
-                  height={54}
-                  className={styles.arrowImage}
-                />
-              </button>
+              <ArrowButton />
             </div>
 
             <div className={styles.supportButton}>
