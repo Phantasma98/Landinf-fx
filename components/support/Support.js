@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import styles from "./index.module.css";
 
-import SecondaryBtn from "../SecondaryBtn";
+import SecondaryBtn from "../elements/SecondaryBtn";
 import ArrowButton from "../elements/ArrowButton";
 
 const Support = () => {

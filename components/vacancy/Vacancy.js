@@ -1,11 +1,8 @@
 import styles from "./index.module.css";
 
-import Image from "next/image";
-import PrimaryBtn from "../PrimaryBtn";
+import PrimaryBtn from "../elements/PrimaryBtn";
 
 const SectionVacancy = () => {
-  const video1 = "/images/Video1.png";
-
   return (
     <section id="vacancy" className={styles.main}>
       <div className={styles.section}>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import styles from "./index.module.css";
 
-import SecondaryBtn from "../SecondaryBtn";
+import SecondaryBtn from "../elements/SecondaryBtn";
 
 const Header = () => {
   const phoenixLogo = "/images/Logo_phoenix_top.svg";

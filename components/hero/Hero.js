@@ -2,8 +2,8 @@ import Image from "next/image";
 
 import styles from "./index.module.css";
 
-import PrimaryBtn from "../PrimaryBtn";
-import SecondaryBtn from "../SecondaryBtn";
+import PrimaryBtn from "../elements/PrimaryBtn";
+import SecondaryBtn from "../elements/SecondaryBtn";
 
 const Hero = () => {
   const heroImage = "/images/Dron_main.svg";

@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import styles from "./index.module.css";
-import PrimaryBtn from "../PrimaryBtn";
+import PrimaryBtn from "../elements/PrimaryBtn";
 
 const Commander = () => {
   const commanderImage = "/images/oleksiuyk.png";

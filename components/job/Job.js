@@ -2,14 +2,12 @@ import Image from "next/image";
 import { useState } from "react";
 
 import styles from "./index.module.css";
-import PrimaryBtn from "../PrimaryBtn";
+import PrimaryBtn from "../elements/PrimaryBtn";
 import ArrowButton from "../elements/ArrowButton";
 
 const Job = () => {
-  const [activeJobCategory, setActiveJobCategory] = useState("БПЛА");
+  const [activeJobCategory, setActiveJobCategory] = useState("IT / ЗВʼЯЗОК");
 
-  // const jobArrow = "/images/JobArrow45.svg";
-  const arrow = "/images/Arrow45.svg";
   const jobCategories = [
     "БПЛА",
     "НРК",
@@ -29,6 +27,10 @@ const Job = () => {
     link: "/vacancy/1",
   });
 
+  const onClickHandler = (cat) => {
+    setActiveJobCategory(cat);
+    //get jobListings from api with cat option
+  };
   return (
     <section id="jobs" className={styles.jobMain}>
       <div className={styles.jobsSection}>
@@ -50,7 +52,7 @@ const Job = () => {
                 className={`${styles.categoryBtn} font-jobButton-l  ${
                   activeJobCategory === cat ? styles.active : ""
                 }`}
-                onClick={() => setActiveJobCategory(cat)}
+                onClick={() => onClickHandler(cat)}
               >
                 {cat}
               </button>

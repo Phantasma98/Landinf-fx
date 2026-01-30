@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import styles from "./indexS.module.css";
 
-import SecondaryBtn from "../SecondaryBtn";
+import SecondaryBtn from "../elements/SecondaryBtn";
 
 const SupportNow = () => {
   const [activePaymentMethods, setActivePaymentMethods] = useState("MONOBANK");

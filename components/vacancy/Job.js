@@ -1,5 +1,5 @@
 import styles from "./indexJ.module.css";
-import SecondaryBtn from "../SecondaryBtn";
+import SecondaryBtn from "../elements/SecondaryBtn";
 import ArrowButton from "../elements/ArrowButton";
 
 const Job = () => {
