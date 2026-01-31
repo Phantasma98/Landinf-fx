@@ -13,7 +13,7 @@ const Header = () => {
     { text: "Вакансії", href: "/#jobs" },
     {
       text: "Контракт 18-24",
-      href: "/#contract",
+      href: "/contract",
     },
     { text: "Контакти", href: "/#contact" },
   ];
