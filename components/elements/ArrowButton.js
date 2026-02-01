@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from "./index.module.css";
 
 const ArrowButton = ({ link }) => {
-  const arrow = "/images/Arrow_left.svg";
+  const arrow = "/images/Arrow45.svg";
 
   if (link) {
     return (
