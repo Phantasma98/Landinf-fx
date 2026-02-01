@@ -52,8 +52,9 @@ export default function Cookies() {
 
       {/* Job Section */}
       <Form />
+
       {/* Footer */}
-      <Footer />
+      <Footer backgroundDark={true} />
     </div>
   );
 }

@@ -3,8 +3,8 @@ import { useState } from "react";
 
 import styles from "./index.module.css";
 
-import SecondaryBtn from "../elements/SecondaryBtn";
-import ArrowButton from "../elements/ArrowButton";
+import SecondaryBtn from "../../elements/SecondaryBtn";
+import ArrowButton from "../../elements/ArrowButton";
 
 const Support = () => {
   const [activePaymentMethods, setActivePaymentMethods] = useState("MONOBANK");

@@ -2,8 +2,8 @@ import Image from "next/image";
 import { useState } from "react";
 
 import styles from "./index.module.css";
-import PrimaryBtn from "../elements/PrimaryBtn";
-import ArrowButton from "../elements/ArrowButton";
+import PrimaryBtn from "../../elements/PrimaryBtn";
+import ArrowButton from "../../elements/ArrowButton";
 
 const Job = () => {
   const [activeJobCategory, setActiveJobCategory] = useState("IT / ЗВʼЯЗОК");

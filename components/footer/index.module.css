@@ -9,6 +9,15 @@
   align-items: center;
   font-family: var(--font-kordon);
 }
+.footerMainDark {
+  background: #151419;
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-kordon);
+}
 .sectionTitle {
   color: #fbfbfb;
   margin: 0;

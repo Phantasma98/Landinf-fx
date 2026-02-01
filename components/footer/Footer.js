@@ -2,9 +2,12 @@ import Image from "next/image";
 
 import styles from "./index.module.css";
 
-const Footer = () => {
+const Footer = ({ backgroundDark }) => {
   const phoenixLogo = "/images/Icon_Phoenix_text.svg";
 
+  const backgroundFooter = backgroundDark
+    ? styles.footerMainDark
+    : styles.footerMain;
   const navLinks1 = [
     { text: "Головна", href: "/#home" },
     { text: "Про Фенікс", href: "/#about" },
@@ -14,7 +17,7 @@ const Footer = () => {
   const navLinks2 = [
     {
       text: "Контракт 18-24",
-      href: "/#contract",
+      href: "/contract",
     },
     {
       text: "Підтримати Фенікс",
@@ -31,7 +34,7 @@ const Footer = () => {
     { icon: "/images/ExIcon.svg", text: "X", href: "#twitter" },
   ];
   return (
-    <section id="contact" className={styles.footerMain}>
+    <section id="contact" className={backgroundFooter}>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerBranding}>

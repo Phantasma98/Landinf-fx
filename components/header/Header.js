@@ -9,7 +9,7 @@ const Header = () => {
   const phoenixLogo = "/images/Logo_phoenix_top.svg";
 
   const navItems = [
-    { text: "Про Фенікс", href: "/#about" },
+    { text: "Про Фенікс", href: "/about" },
     { text: "Вакансії", href: "/#jobs" },
     {
       text: "Контракт 18-24",

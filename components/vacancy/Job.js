@@ -1,4 +1,4 @@
-import styles from "./indexJ.module.css";
+import styles from "./index.module.css";
 import SecondaryBtn from "../elements/SecondaryBtn";
 import ArrowButton from "../elements/ArrowButton";
 

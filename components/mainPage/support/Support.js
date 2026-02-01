@@ -3,9 +3,10 @@ import { useState } from "react";
 
 import styles from "./index.module.css";
 
-import SecondaryBtn from "../elements/SecondaryBtn";
+import SecondaryBtn from "../../elements/SecondaryBtn";
+import ArrowButton from "../../elements/ArrowButton";
 
-const SupportNow = () => {
+const Support = () => {
   const [activePaymentMethods, setActivePaymentMethods] = useState("MONOBANK");
   const QRimage = "/images/Mono_zbir.svg";
   const copyUrl = "/images/CopyUrl.svg";
@@ -17,7 +18,7 @@ const SupportNow = () => {
       <div className={styles.supportSection}>
         <div className={styles.supportHeader}>
           <h2 className={`${styles.sectionTitle} font-title-l  title-l-m `}>
-            відкритий збір
+            ПІДТРИМАТИ
           </h2>
           <div className={`${styles.supportInfo} font-text-l-s  `}>
             <p>Збір на дрони - перехоплювачі.</p>
@@ -64,20 +65,12 @@ const SupportNow = () => {
                   </div>
                 </div>
               </div>
-              <button className={styles.bankInfoButton}>
-                <Image
-                  src={arrow}
-                  alt="arrow"
-                  width={54}
-                  height={54}
-                  className={styles.arrowImage}
-                />
-              </button>
+              <ArrowButton />
             </div>
 
             <div className={styles.supportButton}>
               <SecondaryBtn
-                text={"дізнатись більше про збір"}
+                text={"переглянути закриті збори"}
                 href={"/donations"}
               />
             </div>
@@ -88,4 +81,4 @@ const SupportNow = () => {
   );
 };
 
-export default SupportNow;
+export default Support;

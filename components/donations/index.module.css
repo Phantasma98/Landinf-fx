@@ -1,4 +1,4 @@
-/*  Section */
+/* Donation Section */
 .main {
   background: #1b1a1f;
   padding: 220px 0 120px 0;
@@ -175,3 +175,153 @@
   text-align: left;
   text-transform: uppercase;
 }
+
+/* Donation Section */
+/* Support Section */
+
+.supportMain {
+  background: #151419;
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionTitle {
+  color: #ff4f18;
+  margin: 0;
+  max-width: 423;
+}
+
+.supportSection {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.supportHeader {
+  display: flex;
+  gap: 99px;
+  max-width: 1250px;
+}
+
+.supportInfo {
+  max-width: 721px;
+}
+
+.supportInfo p {
+  color: #fbfbfb;
+}
+
+.supportContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 105px;
+  max-width: 1250px;
+}
+
+.donationImage {
+  position: relative;
+  width: 423;
+  height: 397;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.paymentButtons {
+  display: flex;
+  gap: 20px;
+}
+
+.paymentBtn {
+  background: transparent;
+  border: 1px solid #fbfbfb;
+  color: #fbfbfb;
+  padding: 14px 22px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 165.5;
+}
+
+.paymentBtn.active {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+.categoryBtn.active :hover {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+.paymentBtn:hover {
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+
+.paymentButtons .primaryBtn,
+.paymentButtons .secondaryBtn {
+  width: 100%;
+}
+
+.bankInfoContainer {
+  background: #1b1a1f;
+  padding: 30 24;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bankInfoTitle {
+  margin-bottom: 15;
+}
+.bankInfoButton {
+  width: 54;
+  height: 54;
+  border: 1px solid var(--color-gray);
+  background: transparent;
+}
+.bankInfoButton:hover {
+  cursor: pointer;
+  background: var(--color-orangered);
+  border-color: var(--color-orangered);
+  color: var(--color-gray);
+}
+.arrowImage {
+  transition: filter 0.3s;
+}
+.bankInfoButton:hover .arrowImage {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(0%)
+    hue-rotate(0deg);
+}
+.bankInfoUrlContainer {
+  display: flex;
+}
+
+.bankInfoSvg {
+  margin-left: 20;
+}
+.bankInfoSvg :hover {
+  cursor: pointer;
+}
+.bankInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.bankInfo p {
+  color: #fbfbfb;
+  margin: 15px 0;
+}
+
+.supportButton {
+  max-width: 1250px;
+  display: flex;
+  align-items: flex-start;
+}
+/* Support Section */

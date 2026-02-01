@@ -5,18 +5,17 @@ import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
 import Header from "@/components/header/Header";
-import Hero from "@/components/mainPage/hero/Hero";
-import About from "@/components/mainPage/about/About";
-import Commander from "@/components/mainPage/commander/Commander";
-import Values from "@/components/mainPage/values/Values";
-import Job from "@/components/mainPage/job/Job";
-import Recruit from "@/components/mainPage/recruit/Recruit";
-import Support from "@/components/mainPage/support/Support";
-import Faq from "@/components/mainPage/faq/Faq";
+import Hero from "@/components/about/Hero";
+import About from "@/components/about/About";
+import Statistic from "@/components/about/Statistic";
+import Arsenal from "@/components/about/Arsenal";
+import Commander from "@/components/about/Commander";
+import Values from "@/components/about/Values";
+import Faq from "@/components/about/Faq";
+import SectionForm from "@/components/about/SectionForm";
 import Footer from "@/components/footer/Footer";
-import SectionForm from "@/components/form/SectionForm";
 
-export default function Home() {
+export default function Main() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -53,26 +52,23 @@ export default function Home() {
       {/* Hero Section */}
       <Hero />
 
+      {/* Statistic Section */}
+      <Statistic />
+
       {/* About Section */}
       <About />
+
+      {/* FAQ Section */}
+      <Faq />
+
+      {/* Arsenal Section */}
+      <Arsenal />
 
       {/* Commander Section */}
       <Commander />
 
       {/* Values Section */}
       <Values />
-
-      {/* Jobs Section */}
-      <Job />
-
-      {/* Recruitment Path */}
-      <Recruit />
-
-      {/* Support Section */}
-      <Support />
-
-      {/* FAQ Section */}
-      <Faq />
 
       {/* FORM Section */}
       <SectionForm />

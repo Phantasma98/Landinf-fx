@@ -2,11 +2,11 @@ import Image from "next/image";
 
 import styles from "./index.module.css";
 
-import PrimaryBtn from "../elements/PrimaryBtn";
-import SecondaryBtn from "../elements/SecondaryBtn";
+import PrimaryBtn from "@/components/elements/PrimaryBtn";
+import SecondaryBtn from "@/components/elements/SecondaryBtn";
 
 const Hero = () => {
-  const heroImage = "/images/Dron_main.svg";
+  const heroImage = "/images/About_hero_image.png";
 
   const socialArray = [
     { icon: "/images/InstaIcon.svg" },
@@ -31,18 +31,16 @@ const Hero = () => {
       </div>
       <div className={styles.frameParent}>
         <div className={styles.heroContent}>
-          <p className={`${styles.heroMeta} font-subtitle-l `}>
-            ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> державної
-            прикордонної служби України «ФЕНІКС»
-          </p>
+          <p className={`${styles.heroMeta} font-subtitle-l `}>про фенікс</p>
           <h1
             className={`${styles.heroTitle} font-title-${screenSize} title-${screenSize}-l`}
           >
-            спалюємо <br /> межі можливого
+            крила, що <br />
+            спепеляють
           </h1>
           <div className={styles.heroActions}>
-            <PrimaryBtn text={"Приєднатися"} href={"#jobs"} />
-            <SecondaryBtn text={"Підтримати"} href={"#support"} />
+            <PrimaryBtn text={"приєднатися"} href={"#jobs"} />
+            <SecondaryBtn text={"підтримати"} href={"#support"} />
           </div>
         </div>
         <div className={styles.containerSocials}>

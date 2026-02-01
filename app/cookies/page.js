@@ -46,7 +46,7 @@ export default function Cookies() {
       <SectionCookies />
 
       {/* Footer */}
-      <Footer />
+      <Footer backgroundDark={true} />
     </div>
   );
 }
