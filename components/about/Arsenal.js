@@ -4,6 +4,8 @@ import styles from "./index.module.css";
 
 import PrimaryBtn from "@/components/elements/PrimaryBtn";
 import SecondaryBtn from "@/components/elements/SecondaryBtn";
+import ArrowLeftButton from "../elements/ArrowLeftButton";
+import ArrowRightButton from "../elements/ArrowRightButton";
 
 const Arsenal = () => {
   const arsenalImage = "/images/Arsenal_image.png";
@@ -62,14 +64,26 @@ const Arsenal = () => {
             />
           </div>
         )}
-        <div className={styles.arsenalGrid}>
-          {values.map((value, idx) => (
-            <div key={idx} className={value.style}>
-              <h3 className="font-headline-l headline-l-m">{value.title}</h3>
-              <p className="font-text-l-s">{value.description}</p>
+        {/* Text Carousel Section */}
+        <section className={styles.textCarouselSection}>
+          <div className={styles.textCarouselItem}>
+            <div className={styles.textCarouselTitle}>
+              <h3 className="font-title-l title-l-s ">FPV ДРОНИ</h3>
+              <div className={styles.textCarouselTitleButtonBlock}>
+                <ArrowLeftButton />
+
+                <ArrowRightButton />
+              </div>
             </div>
-          ))}
-        </div>
+            <p className={`${styles.sectionTitleText} font-text-l-s `}>
+              FPV дрон - БПЛА, керування яким здійснюється від першої особи.
+              Відеосигнал з дрону може передаватись через радіохвилі або через
+              оптоволоконний кабель. FPV використовуються у ролі камікадзе з
+              різними бойовими частинами або для скиду боєприпасів на
+              противника.
+            </p>
+          </div>
+        </section>
         <div className={styles.arsenalButtons}>
           <PrimaryBtn text={"долучитись до команди"} href={"#jobs"} />
           <SecondaryBtn text={"переглянути вакансії"} href={"#jobs"} />
