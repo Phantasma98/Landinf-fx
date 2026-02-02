@@ -86,7 +86,7 @@ const Job = () => {
             всієї команди.
           </p>
           <div className={styles.jobsButton}>
-            <PrimaryBtn text={"стати частиною команди"} />
+            <PrimaryBtn text={"стати частиною команди"} href={"/vacancies"} />
           </div>
         </div>
       </div>

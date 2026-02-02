@@ -37,9 +37,21 @@
   display: flex;
   align-items: flex-end;
   gap: 25px;
+}
+
+.layer1Parent:hover {
   cursor: pointer;
 }
+.layer1Parent:hover .layer1Icon {
+  filter: brightness(0) saturate(100%) invert(46%) sepia(86%) saturate(2160%)
+    hue-rotate(347deg) brightness(103%) contrast(101%);
+}
+
 .layer1Icon {
+  transition: filter 0.2s ease;
+}
+
+.layer1Icon:hover {
   height: 55px;
   width: 237px;
   position: relative;

@@ -31,7 +31,10 @@ const Commander = () => {
               </p>
             </div>
             <div className={styles.commanderButton}>
-              <PrimaryBtn text={"дізнатись більше про фенікс"} />
+              <PrimaryBtn
+                text={"дізнатись більше про фенікс"}
+                href={"/about"}
+              />
             </div>
           </div>
         </div>
