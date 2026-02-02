@@ -10,8 +10,8 @@ const Footer = ({ backgroundDark }) => {
     : styles.footerMain;
   const navLinks1 = [
     { text: "Головна", href: "/#home" },
-    { text: "Про Фенікс", href: "/#about" },
-    { text: "Вакансії", href: "/#jobs" },
+    { text: "Про Фенікс", href: "/about" },
+    { text: "Вакансії", href: "/vacancies" },
   ];
 
   const navLinks2 = [
@@ -23,7 +23,7 @@ const Footer = ({ backgroundDark }) => {
       text: "Підтримати Фенікс",
       href: "/#support",
     },
-    { text: "Контакти", href: "/#contact" },
+    { text: "Контакти", href: "/contacts" },
   ];
   const socialLinks = [
     { icon: "/images/InstaIcon.svg", text: "IG", href: "#instagram" },

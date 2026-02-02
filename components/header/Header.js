@@ -15,7 +15,7 @@ const Header = () => {
       text: "Контракт 18-24",
       href: "/contract",
     },
-    { text: "Контакти", href: "/#contact" },
+    { text: "Контакти", href: "/contacts" },
   ];
   return (
     <div className={styles.container}>

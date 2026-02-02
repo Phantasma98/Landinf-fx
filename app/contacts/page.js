@@ -5,14 +5,13 @@ import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 
 import Header from "@/components/header/Header";
-import Hero from "@/components/vacancies/Hero";
-import Job from "@/components/vacancies/Job";
-import Recruit from "@/components/vacancies/Recruit";
-import Faq from "@/components/vacancies/Faq";
+import Hero from "@/components/contacts/Hero";
+import Statistic from "@/components/contacts/Statistic";
+import Support from "@/components/contacts/Support";
 import SectionForm from "@/components/vacancies/Form";
 import Footer from "@/components/footer/Footer";
 
-export default function Vacancies() {
+export default function Contacts() {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -50,13 +49,10 @@ export default function Vacancies() {
       <Hero />
 
       {/* Jobs Section */}
-      <Job />
+      <Statistic />
 
       {/* Recruitment Path */}
-      <Recruit />
-
-      {/* FAQ Section */}
-      <Faq />
+      <Support />
 
       {/* FORM Section */}
       <SectionForm />

@@ -522,7 +522,7 @@
 /* Statistic Section */
 
 .statisticMain {
-  background: #151419;
+  background: #1b1a1f;
   padding: 120px 0;
   justify-content: center;
   display: flex;
@@ -796,7 +796,7 @@
 
 .supportHeader {
   display: flex;
-  gap: 99px;
+  gap: 120px;
   max-width: 1250px;
 }
 
@@ -945,7 +945,7 @@
 .pathSteps {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  gap: 60px;
+  gap: 40px;
   max-width: 723px;
 }
 
