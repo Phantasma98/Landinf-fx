@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import styles from "./index.module.css";
 
-import SecondaryBtn from "../elements/SecondaryBtn";
+import SecondaryBtn from "@/components/elements/SecondaryBtn";
 
 const Header = () => {
   const phoenixLogo = "/images/Logo_phoenix_top.svg";
@@ -28,7 +28,7 @@ const Header = () => {
               width={237}
               height={55}
               sizes="100vw"
-              alt="icon"
+              alt="logo"
             />
           </Link>
         </div>
@@ -41,7 +41,7 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <SecondaryBtn text={"приєднатися"} size={"m"} href={"/#jobs"} />
+        <SecondaryBtn text={"приєднатися"} size={"m"} href={"/vacancies"} />
       </div>
     </div>
   );

@@ -42,7 +42,7 @@ const Hero = () => {
             скілів
           </h1>
           <div className={styles.heroActions}>
-            <PrimaryBtn text={"приєднатися"} href={"#jobs"} />
+            <PrimaryBtn text={"приєднатися"} href={"/vacancies"} />
           </div>
         </div>
         <div className={styles.containerSocials}>
