@@ -945,8 +945,8 @@
 .pathSteps {
   display: grid;
   grid-template-columns: repeat(3, 2fr);
-  gap: 60px;
-  max-width: 723px;
+  gap: 60px 0;
+  width: 723px;
 }
 
 .pathStep h3 {
