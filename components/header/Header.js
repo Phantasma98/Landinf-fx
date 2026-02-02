@@ -10,7 +10,7 @@ const Header = () => {
 
   const navItems = [
     { text: "Про Фенікс", href: "/about" },
-    { text: "Вакансії", href: "/#jobs" },
+    { text: "Вакансії", href: "/vacancies" },
     {
       text: "Контракт 18-24",
       href: "/contract",

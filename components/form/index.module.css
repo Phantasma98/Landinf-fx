@@ -27,9 +27,6 @@
   max-width: 1250px;
 }
 
-.formInfo {
-}
-
 .formInfo p {
   color: #fbfbfb;
 }
@@ -39,6 +36,7 @@
   justify-content: flex-end;
 }
 
+/* Component Section */
 .formContainer {
   display: flex;
   flex-direction: column;
