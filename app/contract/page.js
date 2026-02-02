@@ -70,7 +70,7 @@ export default function Home() {
       <SectionForm />
 
       {/* Footer */}
-      <Footer />
+      <Footer backgroundDark={true} />
     </div>
   );
 }

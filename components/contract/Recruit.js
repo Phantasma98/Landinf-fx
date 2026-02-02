@@ -14,7 +14,8 @@ const Recruit = () => {
     <section className={styles.recruitmentMain}>
       <div className={styles.recruitmentSection}>
         <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
-          шлях рекрута
+          шлях <br />
+          рекрута
         </h2>
         <div className={styles.pathSteps}>
           {recruitmentItems.map((step) => (

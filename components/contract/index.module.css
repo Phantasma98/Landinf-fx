@@ -70,7 +70,7 @@
 
 /* About Section */
 .sectionMain {
-  background: #1b1a1f;
+  background: #151419;
   padding: 120px 0;
   justify-content: center;
   display: flex;
@@ -129,7 +129,7 @@
 
 /* Stats Section */
 .statsSection {
-  background: #1b1a1f;
+  background: #151419;
   max-width: 100%;
   display: flex;
   justify-content: space-between;
@@ -193,7 +193,7 @@
 /* Values Section */
 
 .valuesMain {
-  background: #151419;
+  background: #1b1a1f;
   padding: 120px 0;
   justify-content: center;
   display: flex;
@@ -279,7 +279,7 @@
 /* Jobs Section */
 
 .jobMain {
-  background: #1b1a1f;
+  background: #151419;
   padding: 120px 0;
   display: flex;
   justify-content: center;
@@ -357,7 +357,7 @@
 }
 
 .jobCard {
-  background: #151419;
+  background: #1b1a1f;
   padding: 20px;
   min-height: 150px;
   display: flex;
@@ -454,7 +454,7 @@
 /* Recruitment Path Section */
 
 .recruitmentMain {
-  background: #151419;
+  background: #1b1a1f;
   padding: 120px 0;
   justify-content: center;
   display: flex;
@@ -497,7 +497,7 @@
 /* FAQ Section */
 
 .faqMain {
-  background: #1b1a1f;
+  background: #151419;
   padding: 120px 0;
   justify-content: center;
   display: flex;
@@ -581,7 +581,7 @@
 /* Form Section */
 
 .formMain {
-  background: #151419;
+  background: #1b1a1f;
   padding: 120px 0;
   justify-content: center;
   display: flex;

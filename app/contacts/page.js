@@ -58,7 +58,7 @@ export default function Contacts() {
       <SectionForm />
 
       {/* Footer */}
-      <Footer backgroundDark={true} />
+      <Footer />
     </div>
   );
 }
