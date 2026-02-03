@@ -1,5 +1,6 @@
 "use client";
 import { useState, useCallback, useEffect } from "react";
+import toast from "react-hot-toast";
 
 import styles from "./index.module.css";
 import PrimaryBtn from "@/components/elements/PrimaryBtn";

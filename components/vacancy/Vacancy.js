@@ -1,13 +1,16 @@
+"use client";
+import { useState, useCallback, useEffect } from "react";
+
 import styles from "./index.module.css";
-
 import PrimaryBtn from "../elements/PrimaryBtn";
+import { customFetch } from "@/components/Functions";
 
-const SectionVacancy = () => {
+const SectionVacancy = ({ vacancy }) => {
   return (
     <section id="vacancy" className={styles.main}>
       <div className={styles.section}>
         <div className={`${styles.title} font-title-l title-l-m `}>
-          Інженер мережевих інтеграцій
+          {vacancy.title}
         </div>
         <div className={styles.block}>
           <div
@@ -17,21 +20,9 @@ const SectionVacancy = () => {
           </div>
           <div className={`${styles.blockText} font-text-l-s `}>
             <ul>
-              <li>
-                налаштування локальних мереж (LAN) та бездротових мостів на
-                пунктах керування для передачі відеопотоків та даних телеметрії
-                в режимі реального часу
-              </li>
-              <li>
-                налаштування та обслуговування супутникового зв&apos;язку
-                (Starlink), радіомостів (Ubiquiti, Mikrotik) та їхня інтеграція
-                в єдину мережу підрозділу
-              </li>{" "}
-              <li>
-                налаштування локальних мереж (LAN) та бездротових мостів на
-                пунктах керування для передачі відеопотоків та даних телеметрії
-                в режимі реального часу
-              </li>
+              {vacancy.duties.map((vac, idx) => (
+                <li key={idx}>{vac}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -43,21 +34,9 @@ const SectionVacancy = () => {
           </div>
           <div className={`${styles.blockText} font-text-l-s `}>
             <ul>
-              <li>
-                налаштування локальних мереж (LAN) та бездротових мостів на
-                пунктах керування для передачі відеопотоків та даних телеметрії
-                в режимі реального часу
-              </li>
-              <li>
-                налаштування та обслуговування супутникового зв&apos;язку
-                (Starlink), радіомостів (Ubiquiti, Mikrotik) та їхня інтеграція
-                в єдину мережу підрозділу
-              </li>{" "}
-              <li>
-                налаштування локальних мереж (LAN) та бездротових мостів на
-                пунктах керування для передачі відеопотоків та даних телеметрії
-                в режимі реального часу
-              </li>
+              {vacancy.require.map((vac, idx) => (
+                <li key={idx}>{vac}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -69,21 +48,9 @@ const SectionVacancy = () => {
           </div>
           <div className={`${styles.blockText} font-text-l-s `}>
             <ul>
-              <li>
-                налаштування локальних мереж (LAN) та бездротових мостів на
-                пунктах керування для передачі відеопотоків та даних телеметрії
-                в режимі реального часу
-              </li>
-              <li>
-                налаштування та обслуговування супутникового зв&apos;язку
-                (Starlink), радіомостів (Ubiquiti, Mikrotik) та їхня інтеграція
-                в єдину мережу підрозділу
-              </li>{" "}
-              <li>
-                налаштування локальних мереж (LAN) та бездротових мостів на
-                пунктах керування для передачі відеопотоків та даних телеметрії
-                в режимі реального часу
-              </li>
+              {vacancy.conditions.map((vac, idx) => (
+                <li key={idx}>{vac}</li>
+              ))}
             </ul>
           </div>
         </div>

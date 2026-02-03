@@ -1,18 +1,42 @@
 "use client";
 
-import { useState, useEffect } from "react";
-
+import { useState, useEffect, useCallback } from "react";
+import { useParams } from "next/navigation";
 import styles from "./page.module.css";
+import { toast } from "react-hot-toast";
 
 import Header from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import SectionVacancy from "@/components/vacancy/Vacancy";
 import Job from "@/components/vacancy/Job";
 import Form from "@/components/vacancy/Form";
+import { customFetch } from "@/components/Functions";
 
-export default function Cookies() {
+export default function Vacancy({ params }) {
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const { id } = useParams();
+  const [unit, setUnit] = useState();
+
+  const fetchData = useCallback(async () => {
+    try {
+      await customFetch(
+        `/api/vacancy/${id}`,
+        (data) => {
+          setUnit(data.unit || {});
+        },
+        (err) => {
+          console.log(`API /api/vacancy/${id} error:`, err);
+        },
+      );
+    } catch (error) {
+      toast.error("Помилка серверу!");
+    }
+  }, [id]); // Dependencies for useCallback
+
+  useEffect(() => {
+    fetchData();
+  }, [fetchData]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,27 +58,33 @@ export default function Cookies() {
   }, [lastScrollY]);
 
   return (
-    <div className={styles.container}>
-      {/* Header */}
-      <header
-        className={`${styles.header} ${
-          !isHeaderVisible ? styles.headerHidden : ""
-        }`}
-      >
-        <Header />
-      </header>
+    <>
+      {unit ? (
+        <div className={styles.container}>
+          {/* Header */}
+          <header
+            className={`${styles.header} ${
+              !isHeaderVisible ? styles.headerHidden : ""
+            }`}
+          >
+            <Header />
+          </header>
 
-      {/* Vacancy Section */}
-      <SectionVacancy />
+          {/* Vacancy Section */}
+          <SectionVacancy vacancy={unit} />
 
-      {/* Job Section */}
-      <Job />
+          {/* Job Section */}
+          <Job />
 
-      {/* Job Section */}
-      <Form />
+          {/* Job Section */}
+          <Form />
 
-      {/* Footer */}
-      <Footer backgroundDark={true} />
-    </div>
+          {/* Footer */}
+          <Footer backgroundDark={true} />
+        </div>
+      ) : (
+        <div>Loading...</div>
+      )}
+    </>
   );
 }

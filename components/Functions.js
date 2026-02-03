@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 // Function to fetch data from an API with authentication
 export const customFetch = async (
   path,

@@ -1,3 +1,5 @@
+import { Toaster } from "react-hot-toast";
+
 import { kordon, kordonCond } from "./fonts";
 import "./globals.css";
 
@@ -12,6 +14,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${kordon.variable} ${kordonCond.variable}`}>
         {children}
+        <Toaster position="top-center" />
       </body>
     </html>
   );
