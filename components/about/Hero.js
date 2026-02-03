@@ -39,8 +39,8 @@ const Hero = () => {
             спепеляють
           </h1>
           <div className={styles.heroActions}>
-            <PrimaryBtn text={"приєднатися"} href={"#jobs"} />
-            <SecondaryBtn text={"підтримати"} href={"#support"} />
+            <PrimaryBtn text={"приєднатися"} href={"/vacancies"} />
+            <SecondaryBtn text={"підтримати"} href={"/#support"} />
           </div>
         </div>
         <div className={styles.containerSocials}>
