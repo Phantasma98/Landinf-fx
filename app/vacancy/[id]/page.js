@@ -12,10 +12,11 @@ import Job from "@/components/vacancy/Job";
 import Form from "@/components/vacancy/Form";
 import { customFetch } from "@/components/Functions";
 
-export default function Vacancy({ params }) {
+export default function Vacancy() {
+  const { id } = useParams();
+
   const [isHeaderVisible, setIsHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const { id } = useParams();
   const [unit, setUnit] = useState();
 
   const fetchData = useCallback(async () => {
@@ -74,9 +75,9 @@ export default function Vacancy({ params }) {
           <SectionVacancy vacancy={unit} />
 
           {/* Job Section */}
-          <Job />
+          <Job category={unit.category} />
 
-          {/* Job Section */}
+          {/* Form Section */}
           <Form />
 
           {/* Footer */}

@@ -1,4 +1,4 @@
-//app/api/vacancy/route.jsx
+//app/api/vacancy/jobs/route.jsx
 
 import { NextResponse } from "next/server";
 import { headers } from "next/headers";
