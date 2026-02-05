@@ -7,7 +7,7 @@ import ArrowButton from "../elements/ArrowButton";
 import { customFetch } from "@/components/Functions";
 
 const Job = () => {
-  const [activeJobCategory, setActiveJobCategory] = useState("IT / ЗВʼЯЗОК");
+  const [activeJobCategory, setActiveJobCategory] = useState("ЗВʼЯЗОК");
   const [loadingData, setLoadingData] = useState(true);
   const [units, setUnits] = useState([]);
   const [jobListings, setjobListings] = useState([]);
@@ -153,7 +153,10 @@ const Job = () => {
                         <h4 className={`font-text-l-s`}>{job.title}</h4>
                       </div>
                       <div className={styles.arrowButtonContainer}>
-                        <ArrowButton link={job.link} />
+                        <ArrowButton
+                          link={job.link}
+                          buttonWhite={job.buttonWhite}
+                        />
                       </div>
                     </div>
                   </div>

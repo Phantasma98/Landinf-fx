@@ -27,18 +27,33 @@ export async function GET(request) {
     let units;
     switch (category) {
       case "БПЛА":
-        units = Array(8).fill({
+        units = Array(7).fill({
           title: "Оператор БПЛА розвідувального  типу",
           tags: ["#БПЛА", "#КОНТРАКТ 18-24"],
           link: "/vacancy/2",
+          buttonWhite: false,
         });
+        units.push({
+          title: "ВСІ ВАКАНСІЇ В КАТЕГОРІЇ",
+          tags: ["#БПЛА"],
+          link: "/vacancy",
+          buttonWhite: true,
+        });
+
         break;
 
       default:
-        units = Array(8).fill({
+        units = Array(7).fill({
           title: "Інженер мережевих інтеграцій",
           tags: ["#IT", "#КОНТРАКТ 18-24"],
           link: "/vacancy/1",
+          buttonWhite: false,
+        });
+        units.push({
+          title: "ВСІ ВАКАНСІЇ В КАТЕГОРІЇ",
+          tags: ["#IT"],
+          link: "/vacancy",
+          buttonWhite: true,
         });
         break;
     }

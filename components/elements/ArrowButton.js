@@ -3,12 +3,17 @@ import Link from "next/link";
 
 import styles from "./index.module.css";
 
-const ArrowButton = ({ link }) => {
+const ArrowButton = (props) => {
   const arrow = "/images/Arrow45.svg";
 
-  if (link) {
+  if (props.link) {
     return (
-      <Link href={link} className={styles.arrowButton}>
+      <Link
+        href={props.link}
+        className={
+          props.buttonWhite ? styles.arrowButtonWhite : styles.arrowButton
+        }
+      >
         <Image
           src={arrow}
           alt="arrow"
@@ -21,7 +26,9 @@ const ArrowButton = ({ link }) => {
   }
 
   return (
-    <button className={styles.arrowButton}>
+    <button
+      className={props.button ? styles.arrowButtonWhite : styles.arrowButton}
+    >
       <Image
         src={arrow}
         alt="arrow"

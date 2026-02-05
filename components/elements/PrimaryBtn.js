@@ -11,7 +11,11 @@ const PrimaryBtn = (props) => {
     }
   };
   return (
-    <button className={styles.component} onClick={handleClick}>
+    <button
+      className={styles.component}
+      onClick={handleClick}
+      type={props.type}
+    >
       <div className={styles.container}>
         <b className={`${styles.text} font-button-l `}>{text}</b>
       </div>
