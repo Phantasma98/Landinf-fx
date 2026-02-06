@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "./index.module.css";
 
 import SecondaryBtn from "@/components/elements/SecondaryBtn";
+import Dropdown from "../elements/dropdown/Dropdown";
 
 const Header = () => {
   const phoenixLogo = "/images/Logo_phoenix_top.svg";
@@ -41,7 +42,12 @@ const Header = () => {
             </div>
           ))}
         </div>
-        <SecondaryBtn text={"приєднатися"} size={"m"} href={"/vacancies"} />
+        <div className={styles.langButtonContainer}>
+          <div className={styles.langContainer}>
+            <Dropdown />
+          </div>
+          <SecondaryBtn text={"приєднатися"} size={"m"} href={"/vacancies"} />
+        </div>
       </div>
     </div>
   );

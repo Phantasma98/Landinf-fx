@@ -79,6 +79,14 @@
 .navList :hover {
   color: #ff4f18;
 }
+.langButtonContainer {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.langContainer {
+}
+/* media */
 @media (max-width: 1270px) {
   .navList {
     gap: 15px;

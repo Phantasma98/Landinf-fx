@@ -1,0 +1,66 @@
+/* Dropdown */
+.dropdown {
+  position: relative; /* Required for positioning the dropdown content */
+  display: inline-block;
+}
+
+.dropdownButton {
+  display: flex;
+  gap: 10px;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dropdownButton:hover {
+  color: var(--color-orangered);
+}
+.dropdownButton:hover .svgIcon,
+.dropdownButton:hover .svgIcon svg,
+.dropdownButton:hover .svgIcon path {
+  color: var(--color-orangered);
+}
+.arrowButton:hover {
+  cursor: pointer;
+  background: var(--color-orangered);
+  border-color: var(--color-orangered);
+  color: var(--color-gray);
+}
+.arrowImage {
+  transition: filter 0.1s;
+}
+.dropdownButton:hover .arrowImage {
+  filter: brightness(0) saturate(100%) invert(39%) sepia(87%) saturate(4313%)
+    hue-rotate(4deg) brightness(103%) contrast(105%);
+}
+.dropdownContent {
+  display: block;
+  position: absolute;
+  background-color: transparent;
+  min-width: 48px;
+  z-index: 1;
+}
+
+.dropdownItem {
+  color: var(--color-gray);
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block; /* Each link on its own line */
+}
+
+.dropdownItem:hover {
+  /* background-color: #1b1a1f; */
+  color: var(--color-orangered);
+}
+
+/* .divider {
+  height: 1px;
+  background-color: #ddd;
+  margin: 8px 0;
+} */
+
+/*  Section */
