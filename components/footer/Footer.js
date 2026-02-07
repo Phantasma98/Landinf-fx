@@ -33,14 +33,26 @@ const Footer = ({ backgroundDark }) => {
     { icon: "/images/TiktokIcon.svg", text: "TK", href: "#tiktok" },
     { icon: "/images/ExIcon.svg", text: "X", href: "#twitter" },
   ];
+  const content = {
+    footerOrganization1: "ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ",
+    footerOrganization2: "державної прикордонної служби України",
+    footerLinkConf: "Політика конфіденційності",
+    footerLinkCookies: "Використання cookies",
+    footerC: "© ФЕНІКС 2026. ВСІ ПРАВА ЗАХИЩЕНІ",
+    footerTitle1: "НАВІГАЦІЯ",
+    footerTitle2: "РЕКРУТИНГ",
+    footerTitle3: "ДЛЯ МЕДІА ТА СПІВПРАЦІ",
+    footerTitle3item1: "Медіа",
+    footerTitle3item2: "Співпраця",
+    footerTitle4: "НАШІ СОЦМЕРЕЖІ",
+  };
   return (
     <section id="contact" className={backgroundFooter}>
       <footer className={styles.footer}>
         <div className={styles.footerContent}>
           <div className={styles.footerBranding}>
             <p className={`${styles.footerOrganization} font-text-l-xs`}>
-              ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> державної
-              прикордонної служби України
+              {content.footerOrganization1} <br /> {content.footerOrganization2}
             </p>
 
             <div className={styles.footerLogo}>
@@ -55,16 +67,18 @@ const Footer = ({ backgroundDark }) => {
           </div>
           <div className={`${styles.footerBottom} font-text-l-xs`}>
             <div className={styles.footerLinks}>
-              <a href="/policy">Політика конфіденційності</a>
-              <a href="/cookies">Використання cookies</a>
+              <a href="/policy">{content.footerLinkConf}</a>
+              <a href="/cookies">{content.footerLinkCookies}</a>
             </div>
             <div>
-              <p>© ФЕНІКС 2026. ВСІ ПРАВА ЗАХИЩЕНІ</p>
+              <p>{content.footerC}</p>
             </div>
           </div>
           <div className={styles.footerSections}>
             <div className={styles.footerColumn}>
-              <h4 className="font-headline-l headline-l-s  ">НАВІГАЦІЯ</h4>
+              <h4 className="font-headline-l headline-l-s  ">
+                {content.footerTitle1}
+              </h4>
               <div className={`${styles.footerColumnList} font-text-l-s`}>
                 <ul>
                   {navLinks1.map((item, idx) => (
@@ -84,7 +98,9 @@ const Footer = ({ backgroundDark }) => {
             </div>
             <div className={styles.footerColumnContainer}>
               <div className={styles.footerColumn}>
-                <h4 className="font-headline-l headline-l-s  ">РЕКРУТИНГ</h4>
+                <h4 className="font-headline-l headline-l-s  ">
+                  {content.footerTitle2}
+                </h4>
                 <p className={`${styles.footerColumnList} font-text-l-s`}>
                   +38 (095) 8888 011
                 </p>
@@ -95,19 +111,19 @@ const Footer = ({ backgroundDark }) => {
 
               <div className={styles.footerColumn}>
                 <h4 className="font-headline-l headline-l-s  ">
-                  ДЛЯ МЕДІА ТА СПІВПРАЦІ
+                  {content.footerTitle3}
                 </h4>
                 <p className={`${styles.footerColumnList} font-text-l-s`}>
-                  Медіа: media@feniks.army
+                  {content.footerTitle3item1}: media@feniks.army
                 </p>
                 <p className={`${styles.footerColumnList} font-text-l-s`}>
-                  Співпраця: info@feniks.army
+                  {content.footerTitle3item2}: info@feniks.army
                 </p>
               </div>
 
               <div className={styles.footerColumn}>
                 <h4 className="font-headline-l headline-l-s  ">
-                  НАШІ СОЦМЕРЕЖІ
+                  {content.footerTitle4}
                 </h4>
                 <div className={styles.socialLinks}>
                   {socialLinks.map((link, idx) => (
@@ -118,7 +134,7 @@ const Footer = ({ backgroundDark }) => {
                         width={26.7}
                         height={26.5}
                         sizes="100vw"
-                        alt=""
+                        alt="icon"
                       />
                     </a>
                   ))}

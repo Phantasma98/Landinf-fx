@@ -45,29 +45,10 @@ const Job = () => {
     fetchData();
   }, [fetchData]);
 
-  // const jobCategories = [
-  //   "БПЛА",
-  //   "НРК",
-  //   "РЕБ / РЕР",
-  //   "IT / ЗВʼЯЗОК",
-  //   "ЛОГІСТИКА",
-  //   "ІНЖЕНЕРІЯ / РЕМОНТ",
-  //   "МЕДИЦИНА",
-  //   "ШТАБ",
-  //   "МЕДІА",
-  //   "ІНШЕ",
-  // ];
-
-  // const jobListings = Array(8).fill({
-  //   title: "Інженер мережевих інтеграцій",
-  //   tags: ["#IT", "#КОНТРАКТ 18-24"],
-  //   link: "/vacancy/1",
-  // });
-
   const onClickHandler = async (cat) => {
     setActiveJobCategory(cat);
-    //get jobListings from api with cat option
 
+    //get jobListings from api with cat option
     try {
       await customFetch(
         `/api/vacancy?category=${cat}`,
@@ -83,17 +64,24 @@ const Job = () => {
     }
   };
 
+  const content = {
+    jobsHeader: "Вакансії",
+    jobsSubtitle:
+      "Ми будуємо екосистему, де бойова робота і забезпечення - це єдиний механізм. Шукаємо тих, хто готовий привести команду до перемоги своїм розумом та навичками.",
+    jobsText:
+      "війна - гонка технологій та інженерних рішень. Перемога тут - це не індивідуальне досягнення пілота, це результат безперебійної роботи всієї команди.",
+    PrimaryBtn: "стати частиною команди",
+  };
+
   return (
     <section id="jobs" className={styles.jobMain}>
       <div className={styles.jobsSection}>
         <div className={styles.jobsHeader}>
           <h2 className={`${styles.sectionTitle} font-title-l title-l-m  `}>
-            Вакансії
+            {content.jobsHeader}
           </h2>
           <p className={`${styles.jobsSubtitle} font-text-l-s `}>
-            Ми будуємо екосистему, де бойова робота і забезпечення - це єдиний
-            механізм. Шукаємо тих, хто готовий привести команду до перемоги
-            своїм розумом та навичками.
+            {content.jobsSubtitle}
           </p>
         </div>
         <div className={styles.jobCategoriesContainer}>
@@ -168,12 +156,10 @@ const Job = () => {
 
         <div className={styles.jobsAction}>
           <p className={`${styles.jobsQuote} font-headline-l headline-l-m `}>
-            війна - гонка технологій та інженерних рішень. Перемога тут - це не
-            індивідуальне досягнення пілота, це результат безперебійної роботи
-            всієї команди.
+            {content.jobsText}
           </p>
           <div className={styles.jobsButton}>
-            <PrimaryBtn text={"стати частиною команди"} href={"/vacancies"} />
+            <PrimaryBtn text={content.PrimaryBtn} href={"/vacancies"} />
           </div>
         </div>
       </div>

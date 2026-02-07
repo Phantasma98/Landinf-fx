@@ -9,12 +9,15 @@ const Recruit = () => {
     { num: "05", title: "ФАХОВА ПІДГОТОВКА" },
     { num: "06", title: "ВИКОНАННЯ ЗАВДАНЬ" },
   ];
+  const content = {
+    recruitmentTitle: "шлях рекрута",
+  };
 
   return (
     <section className={styles.recruitmentMain}>
       <div className={styles.recruitmentSection}>
         <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
-          шлях рекрута
+          {content.recruitmentTitle}
         </h2>
         <div className={styles.pathSteps}>
           {recruitmentItems.map((step) => (

@@ -44,16 +44,21 @@ const Values = () => {
     },
   ];
 
+  const content = {
+    valuesHeader: "цінності",
+    valuesSubtitle:
+      "Фенікс - сучасний підрозділ з культурою та динамікою команди Формули-1. Ключова цінність - збереження життя наших бійців.",
+  };
+
   return (
     <section className={styles.valuesMain}>
       <div className={styles.valuesSection}>
         <div className={styles.valuesHeader}>
           <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
-            цінності
+            {content.valuesHeader}
           </h2>
           <p className={`${styles.valuesSubtitle} font-text-l-s `}>
-            Фенікс - сучасний підрозділ з культурою та динамікою команди
-            Формули-1. Ключова цінність - збереження життя наших бійців.
+            {content.valuesSubtitle}
           </p>
         </div>
         {valuesImage && (

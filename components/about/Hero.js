@@ -18,6 +18,14 @@ const Hero = () => {
     ,
   ];
   const screenSize = "l";
+
+  const content = {
+    heroMeta: "про фенікс",
+    heroTitle1: "крила, що",
+    heroTitle2: "спепеляють",
+    PrimaryBtn: "Приєднатися",
+    SecondaryBtn: "Підтримати",
+  };
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.heroBackground}>
@@ -31,16 +39,19 @@ const Hero = () => {
       </div>
       <div className={styles.frameParent}>
         <div className={styles.heroContent}>
-          <p className={`${styles.heroMeta} font-subtitle-l `}>про фенікс</p>
+          <p className={`${styles.heroMeta} font-subtitle-l `}>
+            {content.heroMeta}
+          </p>
           <h1
             className={`${styles.heroTitle} font-title-${screenSize} title-${screenSize}-l`}
           >
-            крила, що <br />
-            спепеляють
+            {content.heroTitle1}
+            <br />
+            {content.heroTitle2}
           </h1>
           <div className={styles.heroActions}>
-            <PrimaryBtn text={"приєднатися"} href={"/vacancies"} />
-            <SecondaryBtn text={"підтримати"} href={"/#support"} />
+            <PrimaryBtn text={content.PrimaryBtn} href={"/vacancies"} />
+            <SecondaryBtn text={content.SecondaryBtn} href={"/#support"} />
           </div>
         </div>
         <div className={styles.containerSocials}>

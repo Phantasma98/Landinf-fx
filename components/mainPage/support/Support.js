@@ -13,17 +13,31 @@ const Support = () => {
   const arrow = "/images/Arrow45.svg";
 
   const paymentMethods = ["MONOBANK", "КАРТКА", "PAYPAL", "РЕКВІЗИТИ"];
+
+  const content = {
+    supportHeader: "ПІДТРИМАТИ",
+    supportInfo1: "Збір на дрони - перехоплювачі.",
+    supportInfo2: "Ціль: 1 500 000 грн",
+    supportInfo3: "Зачистимо українське небо від ворожої присутності!",
+    bankInfoTitle: "ПЕРЕЙТИ НА БАНКУ",
+    SecondaryBtn: "переглянути закриті збори",
+  };
+
   return (
     <section id="support" className={styles.supportMain}>
       <div className={styles.supportSection}>
         <div className={styles.supportHeader}>
           <h2 className={`${styles.sectionTitle} font-title-l  title-l-m `}>
-            ПІДТРИМАТИ
+            {content.supportHeader}
           </h2>
           <div className={`${styles.supportInfo} font-text-l-s  `}>
-            <p>Збір на дрони - перехоплювачі.</p>
-            <p>Ціль: 1 500 000 грн</p>
-            <p>Зачистимо українське небо від ворожої присутності!</p>
+            <p>
+              {content.supportInfo1}
+              <br />
+              {content.supportInfo2}
+              <br />
+              {content.supportInfo3}
+            </p>
           </div>
         </div>
         <div className={styles.supportContent}>
@@ -54,7 +68,7 @@ const Support = () => {
             <div className={styles.bankInfoContainer}>
               <div className={styles.bankInfo}>
                 <div className={`${styles.bankInfoTitle} font-text-l-l  `}>
-                  ПЕРЕЙТИ НА БАНКУ
+                  {content.bankInfoTitle}
                 </div>
                 <div className={styles.bankInfoUrlContainer}>
                   <div className={`${styles.bankInfoUrl} font-jobButton-l`}>
@@ -69,10 +83,7 @@ const Support = () => {
             </div>
 
             <div className={styles.supportButton}>
-              <SecondaryBtn
-                text={"переглянути закриті збори"}
-                href={"/donations"}
-              />
+              <SecondaryBtn text={content.SecondaryBtn} href={"/donations"} />
             </div>
           </div>
         </div>

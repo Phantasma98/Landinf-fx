@@ -42,16 +42,26 @@ const Arsenal = () => {
     },
   ];
 
+  const content = {
+    arsenalHeader: "озброєння",
+    arsenalSubtitle:
+      "Полк Фенікс має найефективніші засоби для ураження ворогу, розвідки та логістики: від FVP до БПЛА літакового типу та НРК.",
+    textCarouselTitle: "FPV ДРОНИ",
+    textCarouselItem:
+      "FPV дрон - БПЛА, керування яким здійснюється від першої особи. Відеосигнал з дрону може передаватись через радіохвилі або через оптоволоконний кабель. FPV використовуються у ролі камікадзе з різними бойовими частинами або для скиду боєприпасів на противника.",
+    PrimaryBtn: "долучитись до команди",
+    SecondaryBtn: "переглянути вакансії",
+  };
+
   return (
     <section className={styles.arsenalMain}>
       <div className={styles.arsenalSection}>
         <div className={styles.arsenalHeader}>
           <h2 className={`${styles.arsenalTitle} font-title-l title-l-m `}>
-            озброєння
+            {content.arsenalHeader}
           </h2>
           <p className={`${styles.arsenalSubtitle} font-text-l-s `}>
-            Полк Фенікс має найефективніші засоби для ураження ворогу, розвідки
-            та логістики: від FVP до БПЛА літакового типу та НРК.
+            {content.arsenalSubtitle}
           </p>
         </div>
         {arsenalImage && (
@@ -68,7 +78,9 @@ const Arsenal = () => {
         <section className={styles.textCarouselSection}>
           <div className={styles.textCarouselItem}>
             <div className={styles.textCarouselTitle}>
-              <h3 className="font-title-l title-l-s ">FPV ДРОНИ</h3>
+              <h3 className="font-title-l title-l-s ">
+                {content.textCarouselTitle}
+              </h3>
               <div className={styles.textCarouselTitleButtonBlock}>
                 <ArrowLeftButton />
 
@@ -76,17 +88,13 @@ const Arsenal = () => {
               </div>
             </div>
             <p className={`${styles.sectionTitleText} font-text-l-s `}>
-              FPV дрон - БПЛА, керування яким здійснюється від першої особи.
-              Відеосигнал з дрону може передаватись через радіохвилі або через
-              оптоволоконний кабель. FPV використовуються у ролі камікадзе з
-              різними бойовими частинами або для скиду боєприпасів на
-              противника.
+              {content.textCarouselItem}
             </p>
           </div>
         </section>
         <div className={styles.arsenalButtons}>
-          <PrimaryBtn text={"долучитись до команди"} href={"#jobs"} />
-          <SecondaryBtn text={"переглянути вакансії"} href={"#jobs"} />
+          <PrimaryBtn text={content.PrimaryBtn} href={"#jobs"} />
+          <SecondaryBtn text={content.SecondaryBtn} href={"#jobs"} />
         </div>
       </div>
     </section>

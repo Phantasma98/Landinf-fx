@@ -14,20 +14,27 @@ const About = () => {
     { title: "26500", text: "ПОШКОДЖЕНО ТА ЗНИЩЕНО ЦІЛЕЙ" },
     { title: "5130", text: "ЗНИЩЕНО ОСОБОВОГО СКЛАДУ ВОРОГА" },
   ];
+
+  const content = {
+    aboutTitle1: "про нас",
+    aboutDescription1: "Фенікс - це найрезультативніший підрозділ ДПСУ.",
+    aboutDescription2:
+      "Ми створили власну екосистему безпілотних авіаційних систем, що забезпечує весь процес: від створення БК до нанесення нищівних ударів ворогу.",
+    aboutTitle2: "ТОП-2",
+    aboutTitle3: "В УГРУПОВАННІ СИЛ БЕЗПІЛОТНИХ СИСТЕМ",
+  };
   return (
     <>
       <section id="about" className={styles.sectionMain}>
         <section className={styles.aboutSection}>
           <div className={styles.aboutHeader}>
             <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
-              про нас
+              {content.aboutTitle1}
             </h2>
             <div className={styles.aboutText}>
               <p className={`${styles.aboutDescription} font-text-l-s`}>
-                Фенікс - це найрезультативніший підрозділ ДПСУ. <br />
-                Ми створили власну екосистему безпілотних авіаційних систем, що
-                забезпечує весь процес: від створення БК до нанесення нищівних
-                ударів ворогу.
+                {content.aboutDescription1} <br />
+                {content.aboutDescription2}
               </p>
             </div>
           </div>
@@ -50,10 +57,8 @@ const About = () => {
         {/* Stats Section */}
         <section className={styles.statsSection}>
           <div className={styles.statItemTop}>
-            <h3 className="font-title-l title-l-s ">ТОП-2</h3>
-            <p className="font-subtitle-l ">
-              В УГРУПОВАННІ СИЛ БЕЗПІЛОТНИХ СИСТЕМ
-            </p>
+            <h3 className="font-title-l title-l-s "> {content.aboutTitle2} </h3>
+            <p className="font-subtitle-l ">{content.aboutTitle3}</p>
           </div>
           <div className={styles.statsContainer}>
             {statItems.map((item, idx) => (

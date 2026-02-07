@@ -14,10 +14,19 @@ const ComponentForm = () => {
   ];
 
   const options = [
-    // { value: "choose", label: "БАЖАНИЙ СПОСІБ ЗВʼЯЗКУ" },
     { value: "whatsapp", label: "Whatsapp" },
     { value: "viber", label: "Viber" },
   ];
+
+  const content = {
+    inputName: "ІМʼЯ",
+    inputPhone: "ТЕЛЕФОН",
+    inputConnect: "БАЖАНИЙ СПОСІБ ЗВʼЯЗКУ",
+    PrimaryBtn: "відправити заявку",
+    inputBottomText1: "Відправляючи заявку, ти погоджуєшся з нашою",
+    inputBottomText2: "Політикою конфіденційності",
+  };
+
   const handleOptionChange = (event) => {
     setSelectedOption(event.target.value);
   };
@@ -49,7 +58,7 @@ const ComponentForm = () => {
             <input
               className={`${styles.textInput} font-subtitle-l`}
               type="text"
-              placeholder="ІМʼЯ"
+              placeholder={content.inputName}
               name="name"
             />
           </div>
@@ -59,7 +68,7 @@ const ComponentForm = () => {
             <input
               className={`${styles.textInput} font-subtitle-l`}
               type="text"
-              placeholder="ТЕЛЕФОН"
+              placeholder={content.inputPhone}
               name="phone"
             />
           </div>
@@ -69,7 +78,7 @@ const ComponentForm = () => {
             <select
               name="contact"
               id="contact"
-              placeholder="БАЖАНИЙ СПОСІБ ЗВʼЯЗКУ"
+              placeholder={content.inputConnect}
               value={selectedOption}
               onChange={handleOptionChange}
               className={`${styles.selectInput} font-subtitle-l`}
@@ -80,7 +89,7 @@ const ComponentForm = () => {
                 disabled
                 hidden
               >
-                БАЖАНИЙ СПОСІБ ЗВʼЯЗКУ
+                {content.inputConnect}
               </option>
               {options.map((option, idx) => (
                 <option
@@ -116,12 +125,12 @@ const ComponentForm = () => {
           </div>
         </div>
 
-        <PrimaryBtn text={"відправити заявку"} type="submit" />
+        <PrimaryBtn text={content.PrimaryBtn} type="submit" />
 
         <div className={styles.inputContainer2}>
           <div className={`${styles.inputBottomText} font-text-l-xs  `}>
-            Відправляючи заявку, ти погоджуєшся з нашою{" "}
-            <a href="/policy"> Політикою конфіденційності</a>
+            {content.inputBottomText1}
+            <a href="/policy"> {content.inputBottomText2}</a>
           </div>
         </div>
       </form>

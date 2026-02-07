@@ -18,6 +18,8 @@ const Header = () => {
     },
     { text: "Контакти", href: "/contacts" },
   ];
+  const content = { SecondaryBtn: "приєднатися" };
+
   return (
     <div className={styles.container}>
       <div className={styles.frameParent}>
@@ -46,7 +48,11 @@ const Header = () => {
           <div className={styles.langContainer}>
             <Dropdown />
           </div>
-          <SecondaryBtn text={"приєднатися"} size={"m"} href={"/vacancies"} />
+          <SecondaryBtn
+            text={content.SecondaryBtn}
+            size={"m"}
+            href={"/vacancies"}
+          />
         </div>
       </div>
     </div>

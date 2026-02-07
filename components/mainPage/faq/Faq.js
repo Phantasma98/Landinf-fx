@@ -70,16 +70,22 @@ const Faq = () => {
                   `,
     },
   ];
+
+  const content = {
+    faqHeader: "FAQ",
+    faqSubtitle:
+      "Якщо виникають додаткові запитання - залишай заявку і наш рекрутер з тобою звʼяжеться.",
+  };
+
   return (
     <section id="contract" className={styles.faqMain}>
       <div className={styles.faqSection}>
         <div className={styles.faqHeader}>
           <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
-            FAQ
+            {content.faqHeader}
           </h2>
           <p className={`${styles.faqSubtitle} font-text-l-s `}>
-            Якщо виникають додаткові запитання - залишай заявку і наш рекрутер з
-            тобою звʼяжеться.
+            {content.faqSubtitle}
           </p>
         </div>
         <div className={styles.faqList}>

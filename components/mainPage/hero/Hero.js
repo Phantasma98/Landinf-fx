@@ -18,6 +18,16 @@ const Hero = () => {
     ,
   ];
   const screenSize = "l";
+
+  const content = {
+    heroMeta1: "ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ",
+    heroMeta2: "державної прикордонної служби України «ФЕНІКС»",
+    heroTitle1: "спалюємо",
+    heroTitle2: "межі можливого",
+    PrimaryBtn: "Приєднатися",
+    SecondaryBtn: "Підтримати",
+  };
+
   return (
     <section id="home" className={styles.hero}>
       <div className={styles.heroBackground}>
@@ -32,17 +42,16 @@ const Hero = () => {
       <div className={styles.frameParent}>
         <div className={styles.heroContent}>
           <p className={`${styles.heroMeta} font-subtitle-l `}>
-            ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> державної
-            прикордонної служби України «ФЕНІКС»
+            {content.heroMeta1} <br /> {content.heroMeta2}
           </p>
           <h1
             className={`${styles.heroTitle} font-title-${screenSize} title-${screenSize}-l`}
           >
-            спалюємо <br /> межі можливого
+            {content.heroTitle1} <br /> {content.heroTitle2}
           </h1>
           <div className={styles.heroActions}>
-            <PrimaryBtn text={"Приєднатися"} href={"#jobs"} />
-            <SecondaryBtn text={"Підтримати"} href={"#support"} />
+            <PrimaryBtn text={content.PrimaryBtn} href={"#jobs"} />
+            <SecondaryBtn text={content.SecondaryBtn} href={"#support"} />
           </div>
         </div>
         <div className={styles.containerSocials}>

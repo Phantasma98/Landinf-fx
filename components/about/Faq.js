@@ -34,16 +34,21 @@ const Faq = () => {
                   `,
     },
   ];
+  const content = {
+    faqHeader: "Екосистема",
+    faqSubtitle:
+      "Ми створили цілісну структуру безпілотних авіаційних систем яка працює як годинник.",
+  };
+
   return (
     <section id="contract" className={styles.faqMain}>
       <div className={styles.faqSection}>
         <div className={styles.faqHeader}>
           <h2 className={`${styles.sectionTitle} font-title-l title-l-m `}>
-            Екосистема
+            {content.faqHeader}
           </h2>
           <p className={`${styles.faqSubtitle} font-text-l-s `}>
-            Ми створили цілісну структуру безпілотних авіаційних систем яка
-            працює як годинник.
+            {content.faqSubtitle}
           </p>
         </div>
         <div className={styles.faqList}>

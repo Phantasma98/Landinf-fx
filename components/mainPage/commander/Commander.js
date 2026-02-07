@@ -5,36 +5,42 @@ import PrimaryBtn from "../../elements/PrimaryBtn";
 
 const Commander = () => {
   const commanderImage = "/images/oleksiuyk.png";
+
+  const content = {
+    commanderTitle1: "КОМАНДИР",
+    commanderTitle2: "герой України",
+    commanderTitle3: "полковник",
+    commanderTitle4: "Дмитро Олексюк",
+    commanderText:
+      "перетворюємо службу на високотехнологічну роботу, де цивільний інтелект та навички конвертуються в загальний результат.",
+    PrimaryBtn: "дізнатись більше про фенікс",
+  };
+
   return (
     <section className={styles.commanderSection}>
       <div className={styles.commanderContent}>
         <div className={styles.commanderText}>
           <h2 className={`${styles.sectionTitle} font-title-l title-l-m`}>
-            КОМАНДИР
+            {content.commanderTitle1}
           </h2>
           <div className={styles.commanderInfo}>
             <div className={styles.commanderTitleBlock}>
               <p className={`${styles.commanderTitle} font-text-l-l `}>
-                герой України
+                {content.commanderTitle2}
               </p>
               <p className={`${styles.commanderRank} font-text-l-m`}>
-                полковник <br />
-                Дмитро Олексюк
+                {content.commanderTitle3} <br />
+                {content.commanderTitle4}
               </p>
             </div>
 
             <div className={styles.commanderQuote}>
               <p className=" font-headline-l headline-l-m">
-                &ldquo;перетворюємо службу на високотехнологічну роботу, де
-                цивільний інтелект та навички конвертуються в загальний
-                результат.&rdquo;
+                “{content.commanderText}”
               </p>
             </div>
             <div className={styles.commanderButton}>
-              <PrimaryBtn
-                text={"дізнатись більше про фенікс"}
-                href={"/about"}
-              />
+              <PrimaryBtn text={content.PrimaryBtn} href={"/about"} />
             </div>
           </div>
         </div>

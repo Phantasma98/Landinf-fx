@@ -9,11 +9,16 @@ const Statistic = () => {
     { num: "$ 2,2 МлРД", title: "ЗАГАЛЬНО ЗАВДАНО ЗБИТКІВ ВОРОГУ" },
   ];
 
+  const content = {
+    statisticTitle1: "фенікс",
+    statisticTitle2: "сьогодні",
+  };
+
   return (
     <section className={styles.statisticMain}>
       <div className={styles.statisticSection}>
         <h2 className={`${styles.statisticTitle} font-title-l title-l-m `}>
-          фенікс <br /> сьогодні
+          {content.statisticTitle1} <br /> {content.statisticTitle2}
         </h2>
         <div className={styles.statisticSteps}>
           {recruitmentItems.map((step) => (
