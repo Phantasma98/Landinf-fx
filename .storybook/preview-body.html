@@ -1,0 +1,13 @@
+<style>
+  /* Hide all scrollbars in Storybook preview iframe */
+  html, body, #storybook-root, #storybook-root > * {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE/Edge */
+  }
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  #storybook-root::-webkit-scrollbar,
+  #storybook-root > *::-webkit-scrollbar {
+    display: none !important; /* Chrome/Safari */
+  }
+</style>

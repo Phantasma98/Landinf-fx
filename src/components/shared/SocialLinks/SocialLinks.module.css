@@ -1,0 +1,11 @@
+.socialLinks {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.column {
+    flex-direction: column;
+}
+
+/* Social icons use global .social-icon class */

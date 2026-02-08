@@ -1,0 +1,274 @@
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+  max-width: 721px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.inputContainer {
+  border: 1px solid var(--color-bg);
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0;
+}
+
+.inputField {
+  padding: 0;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+}
+
+.checkField {
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+}
+
+.checkPoint {
+  background-color: var(--color-gray-300);
+  border: 3px solid var(--color-gray-300);
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.checkPoint :active {
+  background-color: var(--color-orangered);
+  border: 3px solid var(--color-bg);
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.formButton {
+  margin: auto 0;
+}
+
+.inputContainer1 {
+  min-height: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  padding: 0 18px;
+}
+
+.inputBottomText {
+}
+
+.inputContainer2 {
+  height: 56px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin-bottom: 18px;
+}
+
+.inputContainer2 a {
+  cursor: pointer;
+  color: var(--color-orangered);
+  text-decoration: none;
+}
+
+.inputContainer2 a:hover {
+  color: var(--color-orangered);
+}
+
+.textInput {
+  background-color: transparent;
+  width: 100%;
+  border: 0px;
+  color: var(--color-text-on-dark);
+  padding: 0 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.textInput:focus {
+  outline: none;
+}
+
+.selectInput {
+  background-color: transparent;
+  width: 100%;
+  border: 0px;
+  color: var(--color-text-on-dark);
+  appearance: none;
+  background-image: url("/images/Arrow_Form.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px 20px;
+  padding: 0 35px 0 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.selectInput:focus {
+  outline: none;
+}
+
+.selectValue {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-on-dark);
+  width: 100%;
+  border: 1px solid var(--color-bg);
+}
+
+.selectPlaceholder {
+  color: var(--color-text-secondary);
+}
+
+.selectWrap {
+  position: relative;
+  width: 100%;
+}
+
+.selectTrigger {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  border: 0;
+  background: transparent;
+  color: var(--color-text-on-dark);
+  padding: 0 18px;
+  text-align: left;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.selectTrigger.selectPlaceholder {
+  color: var(--color-text-secondary);
+}
+
+.selectArrow {
+  width: 20px;
+  height: 20px;
+  background-image: url("/images/Arrow_Form.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+  display: inline-block;
+}
+
+.selectList {
+  position:absolute;
+  left: -1px;
+  width: calc(100% + 2px);
+  box-sizing: border-box;
+  top: calc(100% + 10px);
+  background: var(--color-surface-dark);
+  border: 1px solid var(--color-bg);
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+}
+
+.selectOption {
+  padding: 16px 18px;
+  background: transparent;
+  border: 0;
+  color: var(--color-text-on-dark);
+  text-align: left;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.selectOption:hover {
+  background: var(--color-dark);
+}
+
+.radioInput {
+  display: none;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+.radioInput:checked + .radioLabel {
+  color: var(--color-text-on-dark);
+}
+
+.radioCircle {
+  width: 19px;
+  height: 19px;
+  border: 3px solid var(--color-gray-300);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  background-color: var(--color-gray-300);
+}
+
+.radioInput:checked + .radioLabel .radioCircle {
+  background-color: var(--color-orangered);
+  border-color: var(--color-gray);
+}
+
+.radioInput:checked + .radioLabel .radioCircle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+}
+
+.radioLabel:hover .radioCircle {
+  border-color: var(--color-gray);
+}
+
+.radioLabel:hover {
+  color: var(--color-text-on-dark);
+}
+
+.textInput::placeholder {
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+}
+
+.textInput {
+  text-transform: uppercase;
+}
+
+.selectInput:disabled,
+.selectInput option[disabled] {
+  color: var(--color-text-secondary);
+}
+
+.inputError {
+  border-color: var(--color-orangered);
+}
+
+.errorText {
+  color: var(--color-orangered);
+  font-size: 12px;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+.policyLink {
+  color: var(--color-orangered);
+}

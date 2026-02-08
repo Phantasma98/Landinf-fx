@@ -1,0 +1,80 @@
+.vacancyJobMain {
+  background: var(--color-dark);
+  padding: 120px 0;
+}
+
+.sectionTitle {
+  margin: 0 0 60px 0;
+  color: var(--color-accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px 16px;
+}
+
+.ctaWrap {
+  margin-top: 80px;
+}
+
+.ctaWrap :global(.btn-secondary) {
+  width: 312px;
+  min-width: 312px;
+  height: 56px;
+  padding: 16px 24px;
+  border: 1px solid #fbfbfb;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+@media (max-width: 1024px) {
+  .vacancyJobMain {
+    padding: 80px 0;
+  }
+
+  .sectionTitle {
+    margin-bottom: 48px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .ctaWrap {
+    margin-top: 48px;
+  }
+
+  .ctaWrap :global(.btn-secondary) {
+    width: 280px;
+    min-width: 280px;
+    height: 52px;
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+
+@media (max-width: 744px) {
+  .vacancyJobMain {
+    padding: 60px 0;
+  }
+
+  .sectionTitle {
+    margin-bottom: 36px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .ctaWrap {
+    margin-top: 32px;
+  }
+
+  .ctaWrap :global(.btn-secondary) {
+    width: 100%;
+    min-width: 0;
+  }
+}

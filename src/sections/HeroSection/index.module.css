@@ -1,0 +1,208 @@
+/* Hero Section — Desktop (1440px Figma) */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100dvh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+  background-color: #434343;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Frame 97 — outer row: content + socials */
+.frameParent {
+  position: relative;
+  z-index: 1;
+  width: min(var(--content-max), calc(100vw - (var(--page-pad) * 2)));
+  max-width: var(--content-max);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 23px);
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Frame 96 — stacks meta+title block and actions block */
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.heroMeta,
+.heroTitle,
+.heroActions,
+.containerSocials {
+  opacity: 0;
+  transform: translateY(26px);
+  animation: heroTextEnter 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.heroTitle {
+  animation-delay: 0.12s;
+}
+
+.heroActions {
+  animation-delay: 0.24s;
+}
+
+.containerSocials {
+  animation-delay: 0.34s;
+}
+
+@keyframes heroTextEnter {
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Subtitle / meta line */
+.heroMeta {
+  margin: 0;
+  margin-bottom: -20px; /* Reduce gap to 20px (40px - 20px = 20px between meta and title) */
+  width: min(100%, 1100px);
+  max-width: 1100px;
+  color: rgba(251, 251, 251, 0.8);
+  text-transform: uppercase;
+}
+
+/* Title */
+.heroTitle {
+  margin: 0;
+  max-width: 1100px;
+  color: var(--color-text-on-dark);
+}
+
+/* Frame 34 — buttons row */
+.heroActions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+}
+
+/* social vert */
+.containerSocials {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 15px;
+  flex-shrink: 0;
+  align-self: flex-end;
+  margin-bottom: 42.5px;
+}
+
+.containerSocials :global(.social-icon img) {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/* --------------------------------------------------------
+   Tablet landscape
+   -------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero {
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: 261px 35px;
+    box-sizing: border-box;
+  }
+
+  .heroContent {
+    gap: 32px;
+  }
+
+  .heroMeta {
+    margin-bottom: -20px; /* Reduce gap to 20px (40px - 20px = 20px between meta and title) */
+    width: min(100%, 695px);
+    max-width: 695px;
+  }
+
+  .heroTitle {
+    max-width: 695px;
+  }
+
+  .heroActions {
+    flex-direction: row;
+    gap: 16px;
+  }
+}
+
+/* --------------------------------------------------------
+   Tablet portrait
+   -------------------------------------------------------- */
+@media (max-width: 744px) {
+  .hero {
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: 0 var(--page-pad);
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .frameParent {
+    width: 100%;
+    max-width: 100%;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .heroContent {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .heroMeta {
+    margin-bottom: -20px; /* Reduce gap to 20px (40px - 20px = 20px between meta and title) */
+    width: min(359px, 100%);
+    max-width: min(359px, 100%);
+  }
+
+  .heroTitle {
+    max-width: min(359px, 100%);
+  }
+
+  .heroActions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .containerSocials {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------
+   Phone
+   -------------------------------------------------------- */
+@media (max-width: 390px) {
+  .heroActions {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,118 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(21, 20, 25, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: modalFadeIn var(--transition-normal);
+  overflow: auto;
+  padding: 30px;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.modalContent {
+  background: var(--color-dark);
+  padding: 70px 80px 46px;
+  width: min(631px, calc(100vw - 60px));
+  position: relative;
+  animation: modalSlideUp var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@keyframes modalSlideUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modalClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 46px;
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-normal);
+}
+
+.modalClose:hover {
+  color: var(--color-accent);
+}
+
+.modalTitle {
+  margin: 0;
+  line-height: 90%;
+}
+
+.modalForm {
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .modalOverlay {
+    padding: 0;
+    align-items: center;
+  }
+
+  .modalContent {
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: 90px 54px 42px;
+    gap: 40px;
+    overflow-y: auto;
+  }
+}
+
+@media (max-width: 390px) {
+  .modalOverlay {
+    padding: 0;
+  }
+
+  .modalContent {
+    width: 100vw;
+    height: 100dvh;
+    min-height: 100dvh;
+    padding: 52px 26px 18px;
+    gap: 30px;
+    overflow-y: auto;
+  }
+
+  .modalTitle {
+    font-size: 56px;
+    line-height: 0.9;
+  }
+
+  .modalClose {
+    top: 10px;
+    right: 10px;
+    width: 38px;
+    height: 38px;
+    font-size: 36px;
+  }
+}

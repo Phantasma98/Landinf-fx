@@ -1,0 +1,285 @@
+/* Support Section */
+.supportMain {
+  background: var(--color-dark);
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.supportSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+
+/* Info text */
+.supportInfo {
+  color: var(--color-text-on-dark);
+}
+
+.supportInfo p {
+  margin: 0;
+}
+
+/* Content: QR image + payment methods */
+.supportContent {
+  display: grid;
+  grid-template-columns: 1fr var(--col-right);
+  align-items: flex-start;
+  gap: var(--col-gap);
+  width: 100%;
+}
+
+.donationImage {
+  width: 100%;
+  max-width: 423px;
+  height: 397px;
+}
+
+.donationImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Payment methods container */
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+  max-width: var(--col-right);
+  min-width: 0;
+}
+
+/* Payment buttons row */
+.paymentButtons {
+  gap: 20px;
+  width: 100%;
+}
+
+.paymentButtonItem {
+  flex: 1 1 0;
+  min-width: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Bank info card */
+.bankInfoContainer {
+  width: 100%;
+  height: 150px;
+  background: var(--color-surface-dark);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+/* Arrow button hover on bank card: white bg, orange arrow */
+.bankInfoContainer:hover :global(.arrow-btn-container) a {
+  background: var(--color-text-on-dark);
+  border-color: var(--color-text-on-dark);
+  color: var(--color-accent);
+}
+
+.bankInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.bankInfoTitle {
+  color: var(--color-text-on-dark);
+}
+
+.bankInfoUrlContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.bankInfoUrl {
+  color: var(--color-text-secondary);
+  text-decoration: underline;
+}
+
+/* Requisites view */
+.requisitesContainer {
+  width: 100%;
+  min-height: 150px;
+  background: var(--color-surface-dark);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 20px;
+}
+
+.requisitesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.requisitesTitle {
+  color: var(--color-text-on-dark);
+}
+
+.requisitesList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.requisiteRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.requisiteText {
+  color: var(--color-text-secondary);
+}
+
+/* CTA button */
+.supportButton {
+  align-self: flex-start;
+}
+
+/* ==================== */
+/* RESPONSIVE ADAPTIVE  */
+/* ==================== */
+
+@media (max-width: 1024px) {
+  .supportMain {
+    padding: 120px 0;
+  }
+
+  .supportSection {
+    gap: 60px;
+  }
+
+  .supportContent {
+    grid-template-columns: minmax(260px, 343px) minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .donationImage {
+    width: 343px;
+    height: 322px;
+  }
+
+  .paymentMethods {
+    max-width: 452px;
+    gap: 40px;
+  }
+
+  .paymentButtons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .bankInfoContainer {
+    height: 150px;
+  }
+}
+
+@media (max-width: 744px) {
+  .supportMain {
+    padding: 100px 0;
+  }
+
+  .supportSection {
+    gap: 50px;
+  }
+
+  .supportContent {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .donationImage {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 674 / 350;
+  }
+
+  .paymentMethods {
+    max-width: 100%;
+    gap: 30px;
+  }
+
+  .paymentButtons {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .bankInfoContainer {
+    height: 150px;
+  }
+
+  .requisitesContainer {
+    min-height: 150px;
+  }
+}
+
+@media (max-width: 390px) {
+  .supportMain {
+    padding: 80px 0;
+  }
+
+  .supportSection {
+    gap: 40px;
+  }
+
+  .supportContent {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .donationImage {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 360 / 338;
+  }
+
+  .paymentMethods {
+    width: 100%;
+    gap: 30px;
+  }
+
+  .paymentButtons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .bankInfoContainer {
+    height: 100px;
+    padding-left: 24px;
+    padding-right: 20px;
+  }
+
+  .bankInfo {
+    gap: 10px;
+  }
+
+  .requisitesContainer {
+    min-height: 100px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+}

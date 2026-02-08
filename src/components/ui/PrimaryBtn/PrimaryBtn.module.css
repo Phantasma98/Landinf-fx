@@ -1,0 +1,45 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent);
+  color: var(--color-text-on-dark);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn:hover {
+  background: var(--color-accent-hover);
+  color: var(--color-text-on-dark);
+}
+
+.btn:hover * {
+  color: var(--color-text-on-dark);
+}
+
+.disabled,
+.disabled:hover {
+  background: #7a7a7a;
+}
+
+.l {
+  padding: 20px 40px;
+  font-size: 18px;
+}
+
+.m {
+  padding: 16px 32px;
+  font-size: 16px;
+}
+
+.s {
+  padding: 12px 24px;
+  font-size: 14px;
+}

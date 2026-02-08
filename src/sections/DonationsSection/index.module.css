@@ -1,0 +1,141 @@
+/* Donations Section — Desktop (1440px) */
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 220px 0 120px;
+  gap: 80px;
+  max-width: var(--content-max);
+  width: 100%;
+}
+
+/* Header row — uses content-grid from global */
+.block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 80px;
+  width: 100%;
+}
+
+/* Title in header */
+.titleHeader {
+  color: var(--color-accent);
+}
+
+/* Description in header */
+.titleText {
+  color: var(--color-text-on-dark);
+}
+
+/* Each donation block header (text side) */
+.blockHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 450px;
+  flex-shrink: 0;
+}
+
+.blockHeaderTitle {
+  color: var(--color-text-on-dark);
+}
+
+.blockHeaderText {
+  color: var(--color-text-on-dark);
+}
+
+.blockHeaderSum {
+  color: var(--color-accent);
+}
+
+/* Video container */
+.blockVideo {
+  flex: 1;
+  aspect-ratio: 721 / 406;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.blockVideo iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ==================== */
+/* RESPONSIVE STYLES    */
+/* ==================== */
+
+/* 1024px — Tablet Landscape */
+@media (max-width: 1024px) {
+  .section {
+    padding: 220px 0 120px;
+    gap: 60px;
+  }
+
+  .block {
+    gap: 20px;
+  }
+
+  .blockHeader {
+    width: 450px;
+    gap: 40px;
+  }
+
+  .blockVideo {
+    min-height: 254px;
+    aspect-ratio: 451 / 254;
+  }
+}
+
+/* 744px — Tablet Portrait */
+@media (max-width: 744px) {
+  .section {
+    padding: 200px 0 100px;
+    gap: 50px;
+  }
+
+  .block {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .blockHeader {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .blockVideo {
+    width: 100%;
+    aspect-ratio: 674 / 379;
+    flex-grow: 0;
+  }
+}
+
+/* 390px — Mobile */
+@media (max-width: 390px) {
+  .section {
+    padding: 160px 0 80px;
+    gap: 40px;
+  }
+
+  .block {
+    gap: 40px;
+  }
+
+  .blockHeader {
+    gap: 20px;
+  }
+
+  .blockVideo {
+    aspect-ratio: 360 / 202;
+  }
+}

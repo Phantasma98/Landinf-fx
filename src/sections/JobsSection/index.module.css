@@ -1,0 +1,109 @@
+/* Jobs Section */
+.jobMain {
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.jobsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Subtitle styles */
+.subtitle {
+  margin: 0;
+  color: #FBFBFB;
+}
+
+.jobCategoriesContainer {
+}
+
+.jobCategories {
+  margin-bottom: 40px;
+}
+
+/* Job Cards Grid - 4 columns, 298px cards, 19.5px horizontal gap, 20px vertical gap */
+.jobGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px 19.5px;
+  justify-content: flex-start;
+}
+
+/* Bottom action area - text and button stacked */
+.jobsAction {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  width: 100%;
+}
+
+.jobsQuote {
+  color: #FF4F18;
+  margin: 0;
+}
+
+.jobsButton {
+  flex-shrink: 0;
+}
+
+/* ==================== */
+/* RESPONSIVE STYLES    */
+/* ==================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .jobMain {
+    padding: 100px 0;
+  }
+
+  .jobsSection {
+    gap: 50px;
+  }
+
+
+  .jobCategories {
+    margin-bottom: 30px;
+  }
+
+  .jobGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .jobsAction {
+    gap: 50px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 744px) {
+  .jobMain {
+    padding: 80px 0;
+  }
+
+  .jobsSection {
+    gap: 40px;
+  }
+
+
+  .jobCategories {
+    margin-bottom: 30px;
+  }
+
+  .jobGrid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .jobsAction {
+    gap: 40px;
+  }
+
+}

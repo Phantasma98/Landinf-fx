@@ -1,0 +1,120 @@
+.historyMain {
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.header {
+  align-items: flex-start;
+}
+
+.description {
+  margin: 0;
+  color: #FBFBFB;
+}
+
+.carouselWrapper {
+  overflow: hidden;
+}
+
+.carouselTrack {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: scroll 36s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.carouselItem {
+  width: 494px;
+  height: 400px;
+  margin-right: 16px;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.carouselItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.timelineHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.timelineHeader h3 {
+  margin: 0;
+  max-width: 700px;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.yearContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.paragraph {
+  margin: 0;
+  color: #FBFBFB;
+}
+
+
+@media (max-width: 1024px) {
+  .historyMain {
+    padding: 80px 0;
+    gap: 50px;
+  }
+}
+
+@media (max-width: 744px) {
+  .historyMain {
+    padding: 60px 0;
+    gap: 40px;
+  }
+
+  .carouselTrack {
+    animation-duration: 24s;
+  }
+
+  .carouselItem {
+    width: 494px;
+    height: 200px;
+  }
+
+  .timelineHeader {
+    flex-wrap: wrap;
+  }
+
+  .controls {
+    gap: 10px;
+  }
+
+  .yearContent {
+    gap: 20px;
+  }
+}

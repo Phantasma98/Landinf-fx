@@ -1,0 +1,64 @@
+/* ============================
+   StatisticSection — Desktop (> 1024px)
+   Figma: Numbers - 1440
+   ============================ */
+
+.statisticMain {
+  background: #1B1A1F;
+  padding: 120px 0;
+}
+
+.contentWrapper {
+  /* layout-1250 handles width */
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 65px;
+}
+
+.statItem {
+  /* StatItem component handles its own styling */
+}
+
+/* Last stat spans full width */
+.statItem:last-child {
+  grid-column: 1 / -1;
+}
+
+/* ============================
+   Tablet (≤ 1024px)
+   Figma: 1024 viewport, 924px content
+   ============================ */
+
+@media (max-width: 1024px) {
+  .statisticMain {
+    padding: 120px 0;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 99px;
+  }
+}
+
+/* ============================
+   Mobile (≤ 744px)
+   Figma: 390 viewport, 360px content
+   ============================ */
+
+@media (max-width: 744px) {
+  .statisticMain {
+    padding: 60px 0;
+  }
+
+  .statsGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .statItem:last-child {
+    grid-column: 1;
+  }
+}

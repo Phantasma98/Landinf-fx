@@ -1,0 +1,193 @@
+/* Values Section */
+.valuesMain {
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.valuesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* Title override to prevent wrapping on desktop */
+.valuesTitle {
+  white-space: nowrap;
+  width: 316px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+}
+
+/* Subtitle styles */
+.subtitle {
+  margin: 0;
+  color: #FBFBFB;
+  width: 720px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.valuesContent {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.valuesGridRow {
+  display: grid;
+  grid-template-columns: 509px 721px;
+  column-gap: 20px;
+  align-items: start;
+  width: 100%;
+}
+
+.imageWrap {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.valuesGridLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 509px;
+  min-width: 509px;
+}
+
+.valuesGridRight {
+  display: grid;
+  grid-template-columns: 318px 297px;
+  column-gap: 106px;
+  row-gap: 60px;
+  width: 721px;
+  min-width: 721px;
+}
+
+.valueCard {
+  width: auto;
+  min-width: 0;
+}
+
+.valuesGridLeft .valueCard {
+  width: 422px;
+  max-width: 422px;
+}
+
+.valuesGridRight .valueCard {
+  width: 100%;
+}
+
+/* ==================== */
+/* RESPONSIVE STYLES    */
+/* ==================== */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .valuesTitle {
+    white-space: normal;
+    width: auto;
+    height: auto;
+    display: block;
+  }
+
+  .valuesMain {
+    padding: 100px 0;
+  }
+
+  .valuesSection {
+    gap: 50px;
+  }
+
+
+  .valuesContent {
+    gap: 50px;
+  }
+
+  .subtitle {
+    width: auto;
+    min-height: 0;
+    display: block;
+  }
+
+  .imageWrap {
+    height: 350px;
+  }
+
+  .valuesGridLeft {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 50px 24px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .valuesGridLeft .valueCard {
+    width: calc(50% - 12px);
+    max-width: none;
+  }
+
+  .valuesGridRight {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 50px;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .valuesGridRow {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 744px) {
+  .valuesMain {
+    padding: 80px 0;
+  }
+
+  .valuesSection {
+    gap: 40px;
+  }
+
+
+  .valuesContent {
+    gap: 40px;
+  }
+
+  .imageWrap {
+    height: 201px;
+  }
+
+  .valuesGridLeft {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .valuesGridLeft .valueCard {
+    width: 100%;
+    max-width: none;
+  }
+
+  .valuesGridRight {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+
+  .valuesGridRow {
+    gap: 20px;
+  }
+}

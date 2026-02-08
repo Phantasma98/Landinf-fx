@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.row {
+  flex-direction: row;
+  gap: 222px;
+}
+
+.column {
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  margin: 0;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.subtitle {
+  color: var(--color-text-on-dark);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .row {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .title {
+    white-space: normal;
+  }
+}

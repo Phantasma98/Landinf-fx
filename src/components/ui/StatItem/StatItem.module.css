@@ -1,0 +1,14 @@
+.statItem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.statItem h3 {
+  margin: 0;
+}
+
+.statItem p {
+  margin: 0;
+  color: var(--color-text-on-dark);
+}

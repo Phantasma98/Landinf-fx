@@ -1,0 +1,91 @@
+/* Recruitment Path Section */
+.recruitmentMain {
+  background: var(--color-surface-dark);
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentWrapper {
+  align-items: flex-start;
+}
+
+.sectionTitle {
+  margin: 0;
+  width: 403px;
+  flex-shrink: 0;
+}
+
+/* Steps grid: fixed desktop columns and gaps */
+.pathSteps {
+  display: grid;
+  grid-template-columns: 194px 192px 183px;
+  column-gap: 76px;
+  row-gap: 60px;
+  align-items: start;
+  width: 721px;
+}
+
+.pathStep {
+  width: 100%;
+  max-width: 100%;
+}
+
+.pathStep h3 {
+  color: var(--color-text-on-dark);
+}
+
+.pathStep p {
+  color: var(--color-text-on-dark);
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* ==================== */
+/* RESPONSIVE STYLES    */
+/* ==================== */
+
+/* Tablet (<=1024px) */
+@media (max-width: 1024px) {
+  .recruitmentMain {
+    padding: 120px 0;
+  }
+
+  .sectionTitle {
+    width: 100%;
+  }
+
+  .pathSteps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 40px;
+    width: 100%;
+  }
+}
+
+/* Mobile (<=744px) */
+@media (max-width: 744px) {
+  .recruitmentMain {
+    padding: 80px 0;
+  }
+
+  .contentWrapper {
+    gap: 40px;
+  }
+
+  .pathSteps {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    width: 100%;
+  }
+
+  .pathStep {
+    gap: 10px;
+  }
+}

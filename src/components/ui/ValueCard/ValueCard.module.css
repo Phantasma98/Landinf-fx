@@ -1,0 +1,15 @@
+.valueCard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.valueTitle {
+  margin: 0;
+  color: var(--color-text-on-dark);
+}
+
+.valueDesc {
+  margin: 0;
+  color: var(--color-text-on-dark);
+}

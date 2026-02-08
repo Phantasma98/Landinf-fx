@@ -1,0 +1,197 @@
+/* Arsenal Section */
+
+.arsenalMain {
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.arsenalSection {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.arsenalHeader {
+  align-items: flex-start;
+}
+
+.arsenalTitle {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.arsenalSubtitle {
+  margin: 0;
+}
+
+.arsenalImage {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.arsenalImage img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.textCarouselSection {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.textCarouselTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.textCarouselTitleButtonBlock {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.textHeading {
+  min-height: 72px;
+}
+
+.textHeading h3 {
+  margin: 0;
+}
+
+.textBody {
+  min-height: 88px;
+}
+
+.sectionTitleText {
+  margin: 0;
+  max-width: 1080px;
+}
+
+.arsenalButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+
+/* ==================== */
+/* RESPONSIVE STYLES    */
+/* ==================== */
+
+/* 1024px - Tablet Landscape */
+@media (max-width: 1024px) {
+  .arsenalMain {
+    padding: 120px 0;
+  }
+
+  .arsenalSection {
+    gap: 60px;
+  }
+
+  .arsenalHeader {
+    align-items: flex-start;
+  }
+
+  .textCarouselSection {
+    gap: 40px;
+  }
+
+  .textCarouselTitleButtonBlock {
+    gap: 20px;
+  }
+
+  .textHeading {
+    min-height: 64px;
+  }
+
+  .textBody {
+    min-height: 110px;
+  }
+}
+
+/* 744px - Tablet Portrait */
+@media (max-width: 744px) {
+  .arsenalMain {
+    padding: 100px 0;
+  }
+
+  .arsenalSection {
+    gap: 50px;
+  }
+
+  .arsenalHeader {
+    gap: 50px;
+  }
+
+  .textCarouselSection {
+    gap: 50px;
+  }
+
+  .textCarouselTitleButtonBlock {
+    gap: 20px;
+  }
+
+  .textHeading {
+    min-height: 54px;
+  }
+
+  .textBody {
+    min-height: 130px;
+  }
+}
+
+/* 390px - Mobile */
+@media (max-width: 390px) {
+  .arsenalMain {
+    padding: 80px 0;
+  }
+
+  .arsenalSection {
+    gap: 40px;
+  }
+
+  .arsenalHeader {
+    gap: 40px;
+  }
+
+  .arsenalImage {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    max-width: none;
+  }
+
+  .textCarouselSection {
+    gap: 40px;
+  }
+
+  .textCarouselTitle {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .textCarouselTitleButtonBlock {
+    gap: 10px;
+  }
+
+  .textHeading {
+    min-height: 48px;
+  }
+
+  .textBody {
+    min-height: 100px;
+  }
+
+  .arsenalButtons {
+    flex-direction: column;
+    gap: 15px;
+  }
+}

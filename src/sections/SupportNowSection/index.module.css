@@ -1,0 +1,133 @@
+.supportMain {
+  background: var(--color-dark);
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sectionTitle {
+  margin: 0;
+}
+
+.supportSection {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.supportHeader,
+.supportContent {
+  display: grid;
+  grid-template-columns: 509px 721px;
+  gap: 20px;
+}
+
+.supportInfo p {
+  margin: 0 0 12px 0;
+}
+
+.donationImage {
+  width: 100%;
+  height: 397px;
+}
+
+.donationImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.paymentButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.paymentBtn {
+  background: transparent;
+  border: 1px solid var(--color-bg);
+  padding: 14px 22px;
+  cursor: pointer;
+  transition: all 0.3s;
+  min-width: 160px;
+}
+
+.paymentBtn.active {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.paymentBtn:hover {
+  border-color: var(--color-accent);
+}
+
+.bankInfoContainer {
+  background: var(--color-surface-dark);
+  padding: 30px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bankInfoTitle {
+  margin-bottom: 15px;
+}
+
+.bankInfoButton {
+  width: 54px;
+  height: 54px;
+  border: 1px solid var(--color-gray);
+  background: transparent;
+}
+
+.bankInfoButton:hover {
+  cursor: pointer;
+  background: var(--color-orangered);
+  border-color: var(--color-orangered);
+}
+
+.arrowImage {
+  transition: filter 0.3s;
+}
+
+.bankInfoButton:hover .arrowImage {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(0%)
+    hue-rotate(0deg);
+}
+
+.bankInfoUrlContainer {
+  display: flex;
+}
+
+.bankInfoUrl {
+  color: var(--color-text-secondary);
+}
+
+.bankInfoSvg {
+  margin-left: 20px;
+}
+
+.bankInfoSvg :hover {
+  cursor: pointer;
+}
+
+.bankInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.bankInfo p {
+  margin: 15px 0;
+}
+
+.supportButton {
+  display: flex;
+  align-items: flex-start;
+}

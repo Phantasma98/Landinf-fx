@@ -1,0 +1,447 @@
+/* Header — основний контейнер шапки */
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* 30% on first section, then 95% after entering second section */
+  background: rgba(21, 20, 25, 0.3);
+  backdrop-filter: blur(5px);
+  transition: background-color 0.63s ease, transform 0.63s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-sizing: border-box;
+  text-align: left;
+  color: var(--color-text-on-dark);
+  font-family: var(--font-kordon);
+  height: 100px;
+  --header-bg-current: rgba(21, 20, 25, 0.3);
+}
+
+.headerSolid {
+  background: rgba(21, 20, 25, 0.95);
+  backdrop-filter: blur(10px);
+  --header-bg-current: rgba(21, 20, 25, 0.95);
+}
+
+.headerHidden {
+  transform: translateY(-100%);
+}
+
+/* Внутрішній контейнер з відступами */
+.container {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  /* Відступи згідно Figma 1440px */
+  padding: 26px var(--page-pad);
+  width: 100%;
+  height: 100%;
+}
+
+/* Головний flex-контейнер з елементами шапки */
+.frameParent {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+/* Посилання на логотип */
+.logoLink {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.logoLink:hover {
+  color: inherit;
+}
+
+/* Зображення логотипу — розміри для десктопу */
+.layer1Icon {
+  height: 55px;
+  width: 237px;
+}
+
+/* Навігаційне меню */
+.navList {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 48px;
+  gap: 50px;
+  margin-left: 140px;
+  margin-right: 0;
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  /* Розмір шрифту навігації відповідно до Figma */
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 0.09px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 48px;
+  gap: 15px;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.langSwitcher {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.langBtn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 75px;
+  height: 48px;
+  padding: 14px 15px;
+  background: transparent;
+  border: 0;
+  color: var(--color-text-on-dark);
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  gap: 10px;
+}
+
+.langArrow {
+  width: 12px;
+  height: 12px;
+  display: block;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.langArrow path {
+  fill: currentColor;
+}
+
+.langSwitcher:hover .langBtn {
+  color: var(--color-accent);
+}
+
+.langSwitcher:hover .langArrow {
+  transform: rotate(180deg);
+}
+
+.langSwitcher::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% + 48px); /* langBtn + langItem heights */
+  background: var(--header-bg-current);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.langSwitcher:hover::before {
+  opacity: 1;
+}
+
+.langMenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1100;
+}
+
+.langSwitcher:hover .langMenu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.langItem {
+  background: transparent;
+  border: 0;
+  color: var(--color-text-on-dark);
+  font-family: var(--font-kordon);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1;
+  width: 75px;
+  height: 48px;
+  padding: 14px 15px;
+  text-align: left;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.langItem:hover,
+.langItemActive {
+  color: var(--color-accent);
+}
+
+/* Стилі для ховеру та активного пункту навігації */
+.navList a:hover,
+.navList .active {
+  color: var(--color-accent);
+}
+
+/* Окремий пункт навігації */
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3px 0;
+  height: 48px;
+  white-space: nowrap;
+}
+
+/* Посилання в навігації */
+.link2 {
+  position: relative;
+  letter-spacing: 0.09px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.joinBtn {
+  width: 155px;
+  height: 48px;
+  flex-shrink: 0;
+}
+
+.joinBtn :global(.btn-secondary) {
+  width: 155px;
+  min-width: 155px;
+  height: 48px;
+  padding: 14px 16px;
+  font-family: var(--font-kordon);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+/* Кнопка бургер-меню — прихована на десктопі */
+.menuBtn {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Розміри бургер-кнопки відповідно до Figma */
+  width: 56px;
+  height: 56px;
+  padding: 16px;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Лінії бургер-меню — ширина 32px, висота 4px згідно Figma */
+.menuBtn span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  background: var(--color-text-on-dark);
+  transition: all 0.3s ease;
+}
+
+/* Tablet landscape */
+@media (max-width: 1024px) {
+  .container {
+    padding: 18px var(--page-pad);
+  }
+
+  .layer1Icon {
+    width: 178px;
+    height: auto;
+  }
+
+  .navList {
+    gap: clamp(14px, 2vw, 24px);
+    margin-left: clamp(16px, 2.2vw, 30px);
+  }
+
+  .actions {
+    margin-left: auto;
+    gap: 10px;
+  }
+
+  .joinBtn,
+  .joinBtn :global(.btn-secondary) {
+    width: 138px;
+    min-width: 138px;
+  }
+}
+
+/* Tablet portrait / narrow tablet: switch to burger if nav no longer fits */
+@media (max-width: 744px) {
+  .navList {
+    display: none;
+  }
+
+  .menuBtn {
+    display: flex;
+    margin-left: 12px;
+  }
+
+  .actions {
+    margin-left: auto;
+  }
+}
+
+/* ============================
+   Phone (max-width: 390px)
+   ============================ */
+@media (max-width: 390px) {
+  .header {
+    height: 100px;
+  }
+
+  .container {
+    /* Відступи для планшету згідно Figma 744px */
+    padding: 22px var(--page-pad);
+  }
+
+  /* Навігація — off-canvas menu */
+  .navList {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.95);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    width: auto;
+    height: auto;
+    margin: 0;
+  }
+
+  .navList.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Показуємо бургер-кнопку на планшеті */
+  .menuBtn {
+    display: flex;
+  }
+
+  .item {
+    padding: 0;
+    height: auto;
+  }
+
+  .link2 {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .langBtn {
+    width: 75px;
+    height: 48px;
+    padding: 14px 15px;
+    font-size: 16px;
+    line-height: 1;
+    gap: 10px;
+  }
+
+  .langArrow {
+    width: 12px;
+    height: 12px;
+  }
+
+  .langMenu {
+    width: 75px;
+    top: 100%;
+  }
+
+  .langItem {
+    width: 75px;
+    height: 48px;
+    padding: 14px 15px;
+    font-size: 16px;
+    line-height: 1;
+  }
+
+  .actions {
+    width: auto;
+    height: auto;
+    margin-left: auto;
+  }
+
+  .joinBtn,
+  .joinBtn :global(.btn-secondary) {
+    width: auto;
+    min-width: auto;
+    height: 48px;
+  }
+}
+
+/* ============================
+   Mobile compact (max-width: 390px)
+   ============================ */
+@media (max-width: 390px) {
+  .header {
+    /* Висота шапки для мобільної версії згідно Figma 390px */
+    height: 80px;
+  }
+
+  .container {
+    /* Відступи для мобільної версії згідно Figma */
+    padding: 0 var(--page-pad);
+  }
+
+  /* Зменшений логотип для мобільної версії */
+  .layer1Icon {
+    height: 35px;
+    width: 142.64px;
+  }
+
+  .frameParent {
+    gap: 10px;
+  }
+
+  .joinBtn :global(.btn-secondary) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .langMenu {
+    top: 100%;
+  }
+}

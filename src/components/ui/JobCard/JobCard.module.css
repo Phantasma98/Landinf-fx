@@ -1,0 +1,77 @@
+.jobCard {
+  width: 298px;
+  height: 150px;
+  padding: 26px 20px;
+  background: #1B1A1F;
+  cursor: pointer;
+  transition: none;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.jobCard:hover :global(.arrow-btn-container) a {
+  background: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-text-on-dark) !important;
+}
+
+/* "ВСІ ВАКАНСІЇ" card has white arrow button by default */
+.jobCardAll :global(.arrow-btn-container) a {
+  background: var(--color-text-on-dark);
+  color: var(--color-accent);
+}
+
+.jobCardContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: stretch;
+  height: 100%;
+  gap: 10px;
+}
+
+.jobCard :global(.arrow-btn-container) {
+  align-self: flex-end;
+}
+
+.jobCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.jobTags {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.jobTags span {
+  color: var(--color-text-secondary);
+  transition: none;
+}
+
+.jobCardContent h4 {
+  color: var(--color-text-on-dark);
+  text-transform: none;
+  margin: 0;
+  max-width: 182px;
+  transition: none;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .jobCard {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 744px) {
+  .jobCard {
+    height: auto;
+    min-height: 150px;
+  }
+}

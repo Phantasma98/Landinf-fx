@@ -1,0 +1,28 @@
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  background: transparent;
+  border: 1px solid rgba(251, 251, 251, 0.8);
+  color: var(--color-accent);
+  border-radius: 0;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.arrow:hover {
+  background-color: #FBFBFB;
+  color: var(--color-accent);
+  border-color: #FBFBFB;
+}
+
+.arrowIcon {
+  display: block;
+  width: 20px;
+  height: 20px;
+}

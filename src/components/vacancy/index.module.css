@@ -1,0 +1,541 @@
+/* Vacancy Section */
+.main {
+  background: #1b1a1f;
+  padding: 220px 0 120px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.section {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+}
+.title {
+  color: var(--color-orangered);
+  margin: 0;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20;
+}
+.blockHeader {
+  color: var(--color-gray);
+  display: flex;
+  flex-direction: column;
+  gap: 40;
+  max-width: 450;
+}
+.blockHeaderTitle {
+  color: var(--color-gray);
+}
+.blockHeaderText {
+  color: var(--color-gray);
+}
+.blockHeaderSum {
+  color: var(--color-orangered);
+}
+.blockImage {
+  height: 406;
+  width: 721;
+}
+.blockText ul {
+  padding-left: 24px;
+}
+
+.jobsSubtitle {
+  color: #fbfbfb;
+  max-width: 721px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.jobCategoriesContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+  max-width: 1250px;
+  gap: 40px;
+}
+
+.jobCategories {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1250px;
+}
+
+.categoryBtn {
+  background: transparent;
+  border: 1px solid #fbfbfb;
+  color: #fbfbfb;
+  padding: 14px 22px;
+  letter-spacing: 0.32px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.categoryBtn.active {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+.categoryBtn.active :hover {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+
+.categoryBtn:hover {
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+
+.jobGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.jobCard {
+  background: #1b1a1f;
+  padding: 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.jobCardContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.jobCardContainerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 182;
+}
+.jobCard h4 {
+  font-size: 18px;
+  line-height: 1;
+  color: #fbfbfb;
+}
+
+.jobTags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.jobTags span {
+  font-size: 14px;
+  color: #878787;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.jobArrowSvg {
+  margin-top: 60;
+  width: 54;
+  height: 54;
+}
+.jobsAction {
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.jobsQuote {
+  text-transform: uppercase;
+  color: #ff4f18;
+  line-height: 1;
+  margin: 0;
+}
+
+.jobsButton {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+/* Form Section */
+.formMain {
+  background: #1b1a1f;
+  padding: 120px 0;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.formTitle {
+  color: #ff4f18;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.formSection {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.formHeader {
+  display: flex;
+  gap: 159px;
+  max-width: 1250px;
+}
+
+.formInfo {
+  max-width: 730px;
+}
+
+.formInfo p {
+  color: #fbfbfb;
+}
+
+.formContent {
+  display: flex;
+  justify-content: flex-end;
+  max-width: 1250px;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.inputContainer {
+  border: 1px solid #fbfbfb;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputField {
+  padding: 0 18;
+  height: 22px;
+  color: var(--color-gray-300);
+  display: flex;
+}
+.checkField {
+  color: var(--color-gray-300);
+  display: flex;
+  flex-direction: row;
+  margin-right: 30px;
+}
+.checkPoint {
+  background-color: var(--color-gray-300);
+  border: 3px solid var(--color-gray-300);
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.checkPoint :active {
+  background-color: var(--color-orangered);
+  border: 3px solid #fbfbfb;
+  width: 19px;
+  height: 19px;
+  margin-right: 10px;
+  border-radius: 50px;
+}
+
+.formButton {
+  margin: auto 0;
+}
+.inputContainer1 {
+  height: 56px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.inputBottomText {
+  color: var(--color-gray-300);
+}
+
+.inputContainer2 {
+  height: 56px;
+  display: flex;
+  justify-content: start;
+  align-items: end;
+  margin-bottom: 18;
+}
+.inputContainer2 a {
+  color: var(--color-orangered);
+  cursor: pointer;
+}
+.inputContainer2 a:hover {
+  color: var(--color-gray);
+}
+
+.textInput {
+  background-color: #151419;
+  width: 100%;
+  border: 0px;
+  color: var(--color-gray);
+}
+
+.selectInput {
+  background-color: #151419;
+  width: 100%;
+  border: 0px;
+  color: var(--color-gray-300);
+  appearance: none;
+  background-image: url("/images/Arrow_Form.svg");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px 20px;
+  padding-right: 35px;
+}
+
+.selectValue {
+  background-color: #151419;
+  width: 100%;
+  border: 1px solid #fbfbfb;
+  color: var(--color-gray-300);
+}
+/* Radio Input Styles */
+.radioInput {
+  display: none;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+.radioInput:checked + .radioLabel {
+  color: var(--color-gray);
+}
+
+.radioCircle {
+  width: 19px;
+  height: 19px;
+  border: 3px solid var(--color-gray-300);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+  background-color: var(--color-gray-300);
+}
+
+.radioInput:checked + .radioLabel .radioCircle {
+  background-color: var(--color-orangered);
+  border-color: var(--color-gray);
+}
+
+.radioInput:checked + .radioLabel .radioCircle::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+}
+
+.radioLabel:hover .radioCircle {
+  border-color: var(--color-gray);
+}
+
+.radioLabel:hover {
+  color: var(--color-gray);
+}
+
+/* Vacancy Section */
+/* Jobs Section */
+
+.jobMain {
+  background: #151419;
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.sectionTitle {
+  color: #ff4f18;
+  margin: 0;
+  white-space: nowrap;
+}
+.jobsSection {
+  max-width: 1250px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.jobsHeader {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1250px;
+}
+
+.jobsSubtitle {
+  color: #fbfbfb;
+  max-width: 721px;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.jobCategoriesContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 80px 0;
+  max-width: 1250px;
+  gap: 40px;
+}
+
+.jobCategories {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1250px;
+}
+
+.categoryBtn {
+  background: transparent;
+  border: 1px solid #fbfbfb;
+  color: #fbfbfb;
+  padding: 14px 22px;
+  letter-spacing: 0.32px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.categoryBtn.active {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+.categoryBtn.active :hover {
+  background: #ff4f18;
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+
+.categoryBtn:hover {
+  border-color: #ff4f18;
+  color: #fbfbfb;
+}
+
+.jobGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1250px;
+}
+
+.jobCard {
+  background: #1b1a1f;
+  padding: 20px;
+  min-height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.jobCardContainer {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.jobCardContainerTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 182;
+}
+.arrowButtonContainer {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+.jobCard h4 {
+  font-size: 18px;
+  line-height: 1;
+  color: #fbfbfb;
+}
+
+.jobTags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.jobTags span {
+  font-size: 14px;
+  color: #878787;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.jobArrowSvg {
+  margin-top: 60;
+  width: 54;
+  height: 54;
+}
+.jobsAction {
+  max-width: 1250px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.jobsQuote {
+  text-transform: uppercase;
+  color: #ff4f18;
+  line-height: 1;
+  margin: 0;
+}
+
+.jobsButton {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.jobArrowButton {
+  margin-top: 60;
+  width: 54;
+  height: 54;
+  border: 1px solid var(--color-gray);
+  background: transparent;
+}
+.jobArrowButton:hover {
+  cursor: pointer;
+  background: var(--color-orangered);
+  border-color: var(--color-orangered);
+  color: var(--color-gray);
+}
+.arrowImage {
+  transition: filter 0.3s;
+}
+.jobArrowButton:hover .arrowImage {
+  filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(0%)
+    hue-rotate(0deg);
+}

@@ -1,0 +1,140 @@
+/* Radio Group Wrapper */
+.radioWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Radio Group Container */
+.radioGroup {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 18px 0;
+  gap: 30px;
+  width: 100%;
+}
+
+/* Error state for container */
+.radioGroup.error {
+  border: 1px solid var(--color-accent);
+  padding: 18px;
+}
+
+/* Radio Label */
+.radioLabel {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Hidden native input */
+.radioInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* Custom radio circle */
+.radioCircle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 3px;
+  width: 19px;
+  height: 19px;
+  background: var(--color-text-secondary);
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.radioCircle.selected {
+  background: var(--color-accent);
+}
+
+/* Inner circle (visible when selected) */
+.radioInner {
+  box-sizing: border-box;
+  width: 13px;
+  height: 13px;
+  background: transparent;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.radioCircle.selected .radioInner {
+  background: var(--color-text-on-dark);
+}
+
+/* Radio text */
+.radioText {
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.radioLabel:hover .radioText {
+  color: var(--color-text-on-dark);
+}
+
+.radioCircle.selected + .radioText {
+  color: var(--color-text-on-dark);
+}
+
+/* Error message */
+.errorMessage {
+  margin-top: 10px;
+  font-family: var(--font-kordon);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.32px;
+  color: rgba(255, 79, 24, 0.5);
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-4px);
+  animation: fieldErrorEnter 0.63s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes fieldErrorEnter {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== */
+/* RESPONSIVE STYLES    */
+/* ==================== */
+
+@media (max-width: 744px) {
+  .radioGroup {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 390px) {
+  .radioGroup {
+    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    padding: 0;
+  }
+
+  .radioLabel {
+    gap: 8px;
+  }
+
+  .errorMessage {
+    font-size: 12px;
+  }
+}

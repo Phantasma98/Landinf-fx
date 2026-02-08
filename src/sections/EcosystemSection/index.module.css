@@ -1,0 +1,184 @@
+.ecosystemMain {
+  padding: 120px 0;
+}
+
+.subtitle {
+  color: #FBFBFB;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 80px;
+}
+
+.card {
+  box-sizing: border-box;
+  width: 100%;
+  background: transparent;
+  border: 1px solid #FBFBFB;
+  overflow: hidden;
+  position: relative;
+}
+
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border: 1px solid var(--color-accent);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.card:not(:first-child) {
+  margin-top: -1px;
+}
+
+.cardHeader {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 40px;
+  gap: 20px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.cardTitle {
+  color: #FBFBFB;
+  flex: 1;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  flex-shrink: 0;
+  color: #FBFBFB;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrowIcon {
+  width: 19.42px;
+  height: 19.42px;
+}
+
+.arrowIcon path {
+  fill: currentColor;
+}
+
+.card:hover {
+  z-index: 3;
+}
+
+.card:hover::after {
+  opacity: 1;
+}
+
+.card:hover .cardTitle {
+  color: var(--color-accent);
+}
+
+.card:hover .arrow {
+  color: var(--color-accent);
+}
+
+.card.open .arrow {
+  transform: rotate(180deg);
+}
+
+/* Answer wrapper for smooth animation */
+.answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card.open .answerWrapper {
+  grid-template-rows: 1fr;
+}
+
+/* Answer content */
+.answer {
+  overflow: hidden;
+}
+
+.answer p {
+  margin: 0;
+  padding: 8px 40px 16px 40px;
+  max-width: 1016px;
+  color: #FBFBFB;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.4s ease 0.2s, transform 0.4s ease 0.2s;
+}
+
+.card.open .answer p {
+  opacity: 1;
+  transform: translateY(0);
+  padding-bottom: 28px;
+}
+
+@media (max-width: 1024px) {
+  .ecosystemMain {
+    padding: 80px 0;
+  }
+
+  .list {
+    margin-top: 40px;
+  }
+
+  .cardHeader {
+    padding: 28px 30px;
+  }
+
+  .arrow {
+    width: 44px;
+    height: 44px;
+  }
+
+  .arrowIcon {
+    width: 18px;
+    height: 18px;
+  }
+
+  .answer p {
+    padding: 0 30px 24px 30px;
+  }
+}
+
+@media (max-width: 744px) {
+  .ecosystemMain {
+    padding: 60px 0;
+  }
+
+  .cardHeader {
+    padding: 15px 40px;
+  }
+
+  .arrow {
+    width: 36px;
+    height: 36px;
+  }
+
+  .arrowIcon {
+    width: 16px;
+    height: 16px;
+  }
+
+  .answer p {
+    padding: 0 40px 20px 40px;
+  }
+}
