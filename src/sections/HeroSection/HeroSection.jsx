@@ -10,6 +10,8 @@ const MODAL_CTA_TEXTS = [
   "приєднатися",
   "стати частиною команди",
   "відправити заявку",
+  "залишити заявку",
+  "підтримати",
 ];
 
 export default function HeroSection({

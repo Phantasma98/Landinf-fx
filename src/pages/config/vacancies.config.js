@@ -12,7 +12,7 @@ import {
 } from "@/data/vacancies";
 
 export const vacanciesPageConfig = {
-  startTheme: "dark",
+  startTheme: "surface",
   sections: [
     { id: "hero", Component: Hero, props: vacanciesHero },
     { id: "jobs", Component: Job, props: { ...vacanciesJob, isVacanciesPage: true } },

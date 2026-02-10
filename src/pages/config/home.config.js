@@ -1,4 +1,5 @@
 import Hero from "@/sections/HeroSection/HeroSection";
+import AboutSection from "@/sections/AboutSection/AboutSection";
 import Statistic from "@/sections/StatisticSection/StatisticSection";
 import History from "@/sections/HistorySection/HistorySection";
 import Ecosystem from "@/sections/EcosystemSection/EcosystemSection";
@@ -18,7 +19,9 @@ import {
   mainValues,
   mainCommander,
   mainStatistic,
+  mainAbout,
 } from "@/data/main";
+import { aboutStatistic } from "@/data/about";
 
 export const getHomePageConfig = (language = "ua") => {
   const hero = mainHero[language] || mainHero.ua;
@@ -48,6 +51,7 @@ export const getHomePageConfig = (language = "ua") => {
     startTheme: "dark",
     sections: [
       { id: "hero", Component: Hero, props: { ...hero, socials: mainSocials } },
+      { id: "about", Component: AboutSection, props: mainAbout },
       { id: "commander", Component: Commander, props: commander },
       { id: "values", Component: Values, props: values },
       { id: "jobs", Component: Job, props: mainJob },

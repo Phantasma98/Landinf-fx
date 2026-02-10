@@ -4,13 +4,10 @@ import useCountUp from "@/hooks/useCountUp";
 import { formatNumberWithSpaces } from "@/utils/formatNumberWithSpaces";
 
 function AnimatedAboutStatItem({ item, className }) {
-  const numericTitle =
-    typeof item.title === "string" && /^\d+$/.test(item.title.trim());
-  const isNumeric = typeof item.value === "number" || numericTitle;
-  const target = typeof item.value === "number" ? item.value : Number(item.title);
+  const isNumeric = typeof item.value === "number";
 
-  const { ref, value } = useCountUp(isNumeric ? target : 0, {
-    duration: 2000,
+  const { ref, value } = useCountUp(isNumeric ? item.value : 0, {
+    duration: 1000,
     decimals: item.decimals ?? 0,
   });
 
@@ -19,7 +16,7 @@ function AnimatedAboutStatItem({ item, className }) {
     : item.title;
 
   return (
-    <div ref={isNumeric ? ref : null}>
+    <div ref={ref}>
       <StatItem title={displayTitle} text={item.text} className={className} />
     </div>
   );
