@@ -1,9 +1,22 @@
+import { useEffect } from "react";
 import PageLayout from "@/components/layout/PageLayout";
 import { PageSections } from "@/components/layout";
-import { homePageConfig } from "@/pages/config/home.config";
+import { getHomePageConfig } from "@/pages/config/home.config";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { preloadImagesFromData } from "@/utils/preloadImages";
 
 export default function Home() {
-  const { startTheme, sections } = homePageConfig;
+  const { language } = useLanguage();
+  const { startTheme, sections } = getHomePageConfig(language);
+
+  // Preload всіх зображень при монтуванні компонента
+  useEffect(() => {
+    sections.forEach(section => {
+      if (section.props) {
+        preloadImagesFromData(section.props);
+      }
+    });
+  }, [sections]);
 
   return (
     <PageLayout startTheme={startTheme}>

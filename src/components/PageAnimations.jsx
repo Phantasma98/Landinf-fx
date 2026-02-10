@@ -33,11 +33,13 @@ export default function PageAnimations({ children }) {
   // --- Lenis smooth scroll (mount once) ---
   useEffect(() => {
     const lenis = new Lenis({
-      lerp: 0.05,
-      duration: 1.35,
-      easing: (t) => 1 - Math.pow(1 - t, 3),
+      lerp: 0.1,
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       smoothWheel: true,
-      wheelMultiplier: 0.9,
+      wheelMultiplier: 1,
+      touchMultiplier: 2,
+      infinite: false,
     });
     lenisRef.current = lenis;
 
