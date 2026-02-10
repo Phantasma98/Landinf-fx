@@ -1,4 +1,5 @@
 import { MonoZbir } from "@/assets";
+import { Link } from "react-router-dom";
 
 export const socialsDefault = {
   telegram: "https://t.me/phoenix_dpsu",
@@ -23,8 +24,15 @@ export const faqDefault = {
     },
     {
       question: "ЧИ Є КОНТРАКТ 18-24?",
-      answer:
-        "Так. З усією детальною інформацією можна ознайомитись на сторінці Контракт 18-24.",
+      answer: (
+        <>
+          Так. З усією детальною інформацією можна ознайомитись на сторінці{" "}
+          <Link to="/contract-18-24-drones" style={{ color: "var(--color-accent)", textDecoration: "underline" }}>
+            Контракт 18-24
+          </Link>
+          .
+        </>
+      ),
     },
     {
       question: "ЧИ ПОТРІБНО ЗВЕРТАТИСЬ В ТЦК?",
@@ -51,8 +59,13 @@ export const faqDefault = {
 
 export const formDefault = {
   title: "Долучитись",
-  subtitle:
-    "Твій перший крок на шляху до Фенікса. Залишай заявку та будь на звʼязку. Наші рекрутери звʼяжуться з тобою.",
+  subtitle: (
+    <>
+      Твій перший крок на шляху до Фенікса. <br />
+      Залишай заявку та будь на зв'язку. <br />
+      Наші рекрутери зв'яжуться з тобою.
+    </>
+  ),
   fields: {
     name: "Ім'я",
     phone: "Телефон",
@@ -67,7 +80,7 @@ export const formDefault = {
     "Інше",
   ],
   contacts: ["Телефон", "Telegram", "WhatsApp", "Signal"],
-  submitText: "Надіслати",
+  submitText: "Відправити заявку",
 };
 
 export const supportDefault = {

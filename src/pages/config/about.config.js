@@ -27,7 +27,7 @@ export const aboutPageConfig = {
     { id: "ecosystem", Component: Ecosystem, props: aboutEcosystem },
     { id: "arsenal", Component: Arsenal, props: arsenalSection },
     { id: "commander", Component: Commander, props: aboutCommander },
-    { id: "values", Component: Values, props: mainValues },
+    { id: "values", Component: Values, props: mainValues.ua },
     { id: "support", Component: Support, props: mainSupportUa },
     { id: "form", Component: SectionForm, props: aboutForm },
   ],

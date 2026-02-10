@@ -38,8 +38,13 @@ export const contactsSection = {
 
 export const contactsForm = {
   title: "ДОЛУЧИТИСЬ",
-  subtitle: "Залишай заявку та будь на звʼязку. Рекрутери Фенікса звʼяжуться з тобою.",
-  submitText: "Надіслати",
+  subtitle: (
+    <>
+      Залишай заявку та будь на зв'язку. <br />
+      Рекрутери Фенікса зв'яжуться з тобою.
+    </>
+  ),
+  submitText: "Відправити заявку",
 };
 
 export const contactsSocials = {

@@ -9,7 +9,7 @@ import {
 } from "@/data/contacts";
 
 export const contactsPageConfig = {
-  startTheme: "dark",
+  startTheme: "surface",
   sections: [
     { id: "hero", Component: Hero, props: { ...contactsHero, socials: contactsSocials } },
     { id: "contacts", Component: ContactsSection, props: contactsInfo },

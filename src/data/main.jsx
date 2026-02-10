@@ -399,6 +399,32 @@ export const mainSupport = {
   },
 };
 
+export const mainAbout = {
+  title: "ПРО НАС",
+  description: "Фенікс - це найрезультативніший підрозділ ДПСУ. Ми створили власну екосистему безпілотних авіаційних систем, що забезпечує весь процес: від створення БК до нанесення нищівних ударів по ворогу.",
+  images: [
+    {
+      src: CarouselMain1,
+      alt: "Екіпаж Фенікс готує дрон до бойового вильоту у польових умовах",
+    },
+    {
+      src: CarouselMain2,
+      alt: "Командир та оператор Фенікс під час планування бойової операції",
+    },
+    {
+      src: CarouselMain3,
+      alt: "Пілот FPV-дрона Фенікс запускає дрон на виконання завдання",
+    },
+  ],
+  statsTop: { title: "топ-2", text: "В УГРУПОВАННІ СІЛ БЕЗПІЛОТНИХ СИСТЕМ" },
+  stats: [
+    { value: 126500, text: "ВИПУЩЕНО НА БОЙОВІ ЗАВДАННЯ" },
+    { value: 26500, text: "ПОШКОДЖЕНО ТА ЗНИЩЕНО ЦІЛЕЙ" },
+    { value: 5130, text: "ЗНИЩЕНО ОСОБОВОГО СКЛАДУ ВОРОГА" },
+  ],
+  infiniteCarousel: true,
+};
+
 export const mainFaq = faqDefault;
 export const mainForm = formDefault;
 export const mainSocials = socialsDefault;

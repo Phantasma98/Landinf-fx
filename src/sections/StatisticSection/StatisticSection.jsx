@@ -8,7 +8,7 @@ function AnimatedStatItem({ item, className }) {
   const isNumeric = typeof item.value === "number";
 
   const { ref, value } = useCountUp(isNumeric ? item.value : 0, {
-    duration: 2000,
+    duration: 1000,
     decimals: item.decimals ?? 0,
   });
 
