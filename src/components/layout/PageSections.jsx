@@ -7,6 +7,10 @@ export default function PageSections({ sections = [] }) {
 
   return sections.map(({ id, Component, props = {} }, index) => {
     const key = id || `${Component?.displayName || Component?.name || "section"}-${index}`;
-    return <Component key={key} {...props} />;
+    return (
+      <div key={key} id={id} className="section-wrapper">
+        <Component {...props} />
+      </div>
+    );
   });
 }

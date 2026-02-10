@@ -1,66 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import {
-  MainHeroImage,
-  AboutHeroImage,
-  ContractHeroImage,
-  ContactsHeroImage,
-  VacanciesHero,
-  HeaderSpotterImage,
-  HeaderTrainingImage,
-} from "@/assets";
-
-const SITE_NAME = "Фенікс - ДПСУ";
-
-const SEO_BY_PATH = {
-  "/": {
-    title: "Фенікс - Головний відділ БпАК ДПСУ",
-    description:
-      "Головний відділ безпілотних авіаційних систем ДПСУ «Фенікс»: вакансії, служба, рекрутинг, підтримка підрозділу.",
-    image: MainHeroImage,
-  },
-  "/about": {
-    title: "Про Фенікс - Екосистема безпілотних систем",
-    description:
-      "Історія, екосистема, командир та бойовий шлях підрозділу «Фенікс».",
-    image: AboutHeroImage,
-  },
-  "/contract": {
-    title: "Контракт 18-24: Дрони - Фенікс",
-    description:
-      "Умови контракту 18-24 у підрозділі «Фенікс»: підготовка, вакансії, переваги служби.",
-    image: ContractHeroImage,
-  },
-  "/contacts": {
-    title: "Контакти Фенікс - Рекрутинг, медіа, співпраця",
-    description:
-      "Офіційні контакти підрозділу «Фенікс»: рекрутинг, медіа, співпраця та месенджери.",
-    image: ContactsHeroImage,
-  },
-  "/vacancies": {
-    title: "Вакансії у Фенікс - Долучайся до підрозділу",
-    description:
-      "Актуальні вакансії підрозділу «Фенікс»: бойові та технічні напрямки, шлях рекрута, подача заявки.",
-    image: VacanciesHero,
-  },
-  "/donations": {
-    title: "Підтримати Фенікс - Донати",
-    description:
-      "Підтримайте підрозділ «Фенікс» донатом. Кожен внесок підсилює бойові можливості та зберігає життя.",
-    image: HeaderSpotterImage,
-  },
-  "/fundraising": {
-    title: "Закриті збори - Фенікс",
-    description:
-      "Перегляньте закриті збори підрозділу «Фенікс» та результати підтримки.",
-    image: HeaderSpotterImage,
-  },
-  "/cookies": {
-    title: "Cookies Policy - Фенікс",
-    description: "Політика використання cookies сайту підрозділу «Фенікс».",
-    image: HeaderTrainingImage,
-  },
-};
+import { SEO_CONFIG, SEO_FALLBACK, SEO_GLOBAL } from "@/config/seo.config";
 
 function upsertMeta({ attr, key, content }) {
   const selector = `meta[${attr}="${key}"]`;
@@ -77,34 +17,47 @@ export default function SeoManager() {
   const { pathname } = useLocation();
 
   useEffect(() => {
+    // Нормалізація шляху для динамічних роутів
     const normalizedPath = pathname.startsWith("/vacancy/") ? "/vacancy" : pathname;
-    const seo = SEO_BY_PATH[normalizedPath] || {
-      title: SITE_NAME,
-      description:
-        "Офіційний сайт підрозділу «Фенікс» Державної прикордонної служби України.",
-      image: MainHeroImage,
-    };
 
-    const title = `${seo.title} | ${SITE_NAME}`;
+    // Отримання SEO конфігурації
+    const seo = SEO_CONFIG[normalizedPath] || SEO_FALLBACK;
+
+    const title = seo.title;
     const canonical = `${window.location.origin}${pathname}`;
     const imageUrl = seo.image ? `${window.location.origin}${seo.image}` : "";
 
+    // Встановлення title
     document.title = title;
 
+    // Meta теги
     upsertMeta({ attr: "name", key: "description", content: seo.description });
+
+    // Open Graph
+    upsertMeta({ attr: "property", key: "og:site_name", content: SEO_GLOBAL.siteName });
+    upsertMeta({ attr: "property", key: "og:locale", content: SEO_GLOBAL.locale });
+    upsertMeta({ attr: "property", key: "og:type", content: SEO_GLOBAL.type });
     upsertMeta({ attr: "property", key: "og:title", content: title });
     upsertMeta({ attr: "property", key: "og:description", content: seo.description });
-    upsertMeta({ attr: "property", key: "og:type", content: "website" });
     upsertMeta({ attr: "property", key: "og:url", content: canonical });
-    upsertMeta({ attr: "name", key: "twitter:card", content: "summary_large_image" });
+
+    // Twitter Card
+    upsertMeta({ attr: "name", key: "twitter:card", content: SEO_GLOBAL.twitterCard });
     upsertMeta({ attr: "name", key: "twitter:title", content: title });
     upsertMeta({ attr: "name", key: "twitter:description", content: seo.description });
 
+    // Зображення для OG та Twitter
     if (imageUrl) {
       upsertMeta({ attr: "property", key: "og:image", content: imageUrl });
       upsertMeta({ attr: "name", key: "twitter:image", content: imageUrl });
     }
 
+    // Robots meta (якщо вказано)
+    if (seo.robots) {
+      upsertMeta({ attr: "name", key: "robots", content: seo.robots });
+    }
+
+    // Canonical URL
     let canonicalEl = document.head.querySelector('link[rel="canonical"]');
     if (!canonicalEl) {
       canonicalEl = document.createElement("link");

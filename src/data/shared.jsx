@@ -99,5 +99,5 @@ export const supportDefault = {
   },
   qrImage: MonoZbir,
   ctaText: "ПЕРЕГЛЯНУТИ ЗАКРИТІ ЗБОРИ",
-  ctaHref: "/fundraising",
+  ctaHref: "/donations",
 };

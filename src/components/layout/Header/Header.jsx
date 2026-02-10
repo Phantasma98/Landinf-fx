@@ -36,23 +36,25 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
     setLanguage(langCode);
   };
 
-  const handleNavClick = (item, e) => {
-    if (item.anchor) {
-      // EN: scroll to anchor
-      e.preventDefault();
-      const section = document.getElementById(item.anchor);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-        setIsMenuOpen(false);
-      }
-    }
-    // UA: default Link behavior (navigate)
+  const handleNavClick = () => {
+    // Close mobile menu after click
+    setIsMenuOpen(false);
   };
 
   const handleLogoClick = (e) => {
     if (location.pathname === "/") {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  const getJoinButtonProps = () => {
+    if (language === "en") {
+      // EN: link to support section
+      return { href: "#support" };
+    } else {
+      // UA: open modal
+      return { onClick: openModal };
     }
   };
 
@@ -81,7 +83,7 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
                   <a
                     href={`#${item.anchor}`}
                     className={`${styles.link2} font-nav`}
-                    onClick={(e) => handleNavClick(item, e)}
+                    onClick={handleNavClick}
                   >
                     {item.text}
                   </a>
@@ -89,7 +91,7 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
                   <Link
                     to={item.href}
                     className={`${styles.link2} font-nav`}
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={handleNavClick}
                   >
                     {item.text}
                   </Link>
@@ -134,7 +136,7 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
             </div>
 
             <div className={styles.joinBtn}>
-              <SecondaryBtn text={actions.joinText} size="m" onClick={openModal} />
+              <SecondaryBtn text={actions.joinText} size="m" {...getJoinButtonProps()} />
             </div>
           </div>
 

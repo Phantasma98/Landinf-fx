@@ -19,6 +19,7 @@ import {
   DroneInterceptorImage,
   DroneLelekaImage,
   GroundRobotImage,
+  MonoZbir,
 } from "@/assets";
 
 export const mainHero = {
@@ -244,10 +245,10 @@ export const mainValues = {
 export const mainStatistic = {
   title: "FENIKS TODAY",
   items: [
-    { num: "TOP-2", title: "UNMANNED SYSTEMS DETACHMENTS IN UKRAINE AND WITHIN THE STATE BORDER GUARD SERVICE" },
-    { value: 26500, title: "ENEMY TARGETS DESTROYED & DAMAGED" },
-    { num: "TOP-3", title: "FUNDRAISING INITIATIVE FOR DELTA" },
-    { value: 5130, title: "CIVILIAN DONATIONS TO FPV PRODUCTION" },
+    { num: "TOP-2", title: "EFFECTIVENESS RATING WITHIN THE UNMANNED SYSTEMS FORCES GROUP" },
+    { value: 26500, title: "ENEMY TARGETS DAMAGED & DESTROYED" },
+    { num: "TOP-3", title: "PERFORMANCE RATING IN THE DELTA UAS" },
+    { value: 5130, title: "CONFIRMED ENEMY PERSONNEL ELIMINATIONS" },
     { value: 2.2, prefix: "$", suffix: " BILLION", decimals: 1, title: "TOTAL ESTIMATED FINANCIAL DAMAGE TO ENEMY ASSETS" },
   ],
 };
@@ -363,8 +364,42 @@ export const mainCommander = {
   },
 };
 
+export const mainSupport = {
+  ua: supportDefault,
+  en: {
+    title: "SUPPORT US",
+    infoLines: [
+      "Fundraising: Interceptor Drones",
+      "Target: 1,500,000 UAH",
+      "Let's clear the Ukrainian sky of the enemy presence!",
+    ],
+    paymentMethods: ["MONOBANK", "CREDIT CARD", "PAYPAL", "BANK TRANSFER"],
+    defaultMethod: "MONOBANK",
+    paymentLinks: {
+      MONOBANK: "https://send.monobank.ua/jar/2ZnCUmV6bZ",
+      "CREDIT CARD": "https://send.monobank.ua/jar/2ZnCUmV6bZ",
+      PAYPAL: "https://paypal.me/phoenixdpsu",
+    },
+    bankTitles: {
+      MONOBANK: "DONATE NOW",
+      "CREDIT CARD": "DONATE NOW",
+      PAYPAL: "GO TO PAYPAL",
+    },
+    requisites: {
+      title: "BANK TRANSFER DETAILS",
+      items: [
+        { label: "IBAN", value: "UA123456789012345678901234567" },
+        { label: "EDRPOU", value: "12345678" },
+        { label: "Recipient", value: "NGO Feniks" },
+      ],
+    },
+    qrImage: MonoZbir,
+    ctaText: "VIEW FINISHED FUNDRAISINGS",
+    ctaHref: "/donations",
+  },
+};
+
 export const mainFaq = faqDefault;
 export const mainForm = formDefault;
 export const mainSocials = socialsDefault;
-export const mainSupport = supportDefault;
 export const mainSupportUa = supportDefault;

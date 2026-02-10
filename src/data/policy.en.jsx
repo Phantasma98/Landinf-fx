@@ -2,208 +2,124 @@ export const policySectionEn = {
   title: "PRIVACY POLICY",
   blocks: [
     {
-      header: "1. General provisions",
+      header: "1. General Provisions",
       text: (
         <>
-          The Privacy Policy defines the rules governing the collection,
-          processing, use and protection of personal data that may be
-          requested/obtained when using the website feniks.army (hereinafter –
-          the Site).
+          By accepting this Privacy Policy (hereinafter – the "Policy"), you acknowledge and agree that your personal data may be collected, processed, and used for the purposes of role-based access management, preparation of statistical, administrative, and other information related to professional training.
           <br /><br />
-          Personal data – information or a set of information about a natural or
-          legal person who is identified or can be specifically identified.
-          <br /><br />
-          The Site Administrator treats the confidential (personal) information
-          of any persons who use the information posted on the Site with great
-          respect, as well as the subjects of the Site – registered users,
-          authorized persons of providers, teachers (trainers), therefore we
-          strive to protect the confidentiality of personal data, thereby
-          creating and ensuring the most comfortable conditions for using the
-          Site.
-          <br /><br />
-          By filling in the registration form data and marking the
-          acknowledgement of this Privacy Policy (hereinafter – the Policy), you
-          consent to the processing of your personal data for the purpose of
-          ensuring role-based access, preparation of statistical, administrative
-          and other information on professional training issues.
-          <br /><br />
-          Before using the Site, carefully read your rights and obligations
-          regarding the processing of personal data specified in Article 8 of the
-          Law of Ukraine "On Protection of Personal Data", this Policy, and also
-          express your full consent to its terms.
+          Before using the Portal, please carefully review your rights and obligations regarding the processing of personal data, as set forth in Article 8 of the Law of Ukraine "On Personal Data Protection" and this Policy, and confirm your full consent to its terms.
         </>
       ),
     },
     {
-      header: "2. Collection and use of personal data",
+      header: "2. Collection and Use of Personal Data",
       text: (
         <>
-          The collection of personal data is carried out exclusively at your
-          conscious and voluntary decision as a subject of personal data for the
-          use of the Site's functionality and in accordance with the purpose of
-          processing personal data formulated in this Policy.
+          Personal data is collected and processed solely on the basis of your explicit, informed, and voluntary decision as the data subject, in order to access and use the functional capabilities of the Portal and in accordance with the purposes set forth herein.
           <br /><br />
-          The scope and type of collection and use of your personal data vary
-          depending on the role in which you plan to use the Site's
-          functionality.
+          The scope and type of personal data collected and processed may vary depending on the role under which you intend to use the Portal.
           <br /><br />
-          When registering on the Site depending on your chosen role and filling
-          in personal account data, you provide the following data:
+          By registering on the Portal and completing your personal account details, you may be required to provide, inter alia:
           <ul>
             <li>
-              Full name, date of birth, gender, or other identification data,
-              phone number and e-mail;
+              full name, date of birth, gender, or other identifying information, telephone number, and e-mail address;
             </li>
             <li>
-              information related to your professional activities: place of
-              work, position, job category, specialty, qualification, academic
-              degree, academic title, etc.;
+              information related to your professional activities, including place of employment, position, job category, specialty, qualifications, academic degree, academic title, etc.;
             </li>
-            <li>additional registration data.</li>
+            <li>
+              information automatically collected during your use of the Portal, including data submitted via feedback forms and/or electronic communications.
+            </li>
           </ul>
-          <br />
-          During further use of the Site, information contained in feedback
-          forms / electronic messages is automatically collected.
         </>
       ),
     },
     {
-      header: "3. Purpose of collection, processing and use of personal data",
+      header: "3. Purpose of DATA Processing",
       text: (
         <>
-          The collection, processing and use of personal data is carried out for
-          the purpose of ensuring role-based access, including:
+          Your personal data may be collected, processed, and used for the following purposes:
           <ul>
-            <li>registration of Site subjects;</li>
             <li>
-              organization of electronic interaction of Site subjects through
-              personal accounts;
+              to ensure role-based access, including:
+              <ul>
+                <li>registration of Portal users;</li>
+                <li>facilitation of electronic interaction between users via personal accounts;</li>
+              </ul>
             </li>
             <li>
-              generalization and systematization of registers and structured
-              data, including:
+              to aggregate and systematize registers and structured data, including:
               <ul>
-                <li>formation of the list;</li>
-                <li>
-                  monitoring, generalization and analysis of statistical data
-                  generated by Site subjects as a result of its use.
-                </li>
+                <li>creation of user lists;</li>
+                <li>monitoring, aggregation, and analysis of statistical data generated by Portal users through their use of the Portal.</li>
               </ul>
             </li>
           </ul>
           <br />
-          Personal data is stored for no longer than necessary for the purpose of
-          their collection, processing and use, or until you cease using the Site
-          by deleting your account on the Site.
+          Personal data shall be retained only for as long as is necessary to fulfill the purposes described herein, or until you terminate your use of the Portal by deleting your personal account.
         </>
       ),
     },
     {
-      header: "4. Access to personal data",
+      header: "4. Access to Personal Data",
       text: (
         <>
-          Full access to personal data of registered Portal subjects is granted
-          to the authorized person of the Site Administrator.
+          Full access to the personal data of registered users is granted exclusively to the duly authorized representative of the Portal Administrator.
         </>
       ),
     },
     {
-      header: "5. Transfer of personal data to third parties",
+      header: "5. Disclosure to Third Parties",
       text: (
         <>
-          The Site Administrator does not transfer or disclose personal data
-          received from registered Site subjects to third parties.
+          The Portal Administrator (https://www.usfenix.army/) does not sell, lease, or otherwise disclose personal data of registered users to third parties, except as required by applicable law.
           <br /><br />
-          Disclosure of personal data is possible in cases determined by the
-          current legislation of Ukraine, as well as in the case of involving
-          third parties that provide technical support and/or services for
-          improving the Site under contract and subject to non-disclosure of
-          personal data.
+          Disclosure may occur in cases where third-party service providers are engaged to provide technical support and/or Portal improvement services, subject to contractual confidentiality obligations.
           <br /><br />
-          The Portal may contain hyperlinks to third-party websites and other
-          Internet resources. Third-party resources may be governed by their own
-          terms of use and privacy rules. Third-party resources and their content
-          are not verified by us for compliance with requirements (accuracy,
-          completeness, legality, etc.). The Main Department of Unmanned Aerial
-          Systems of the State Border Guard Service of Ukraine "Feniks" is not
-          responsible for any information or materials posted on third-party
-          resources.
+          The Portal may contain hyperlinks to third-party websites or online resources. Such third-party resources are governed by their own terms of use and privacy policies. The Portal Administrator does not verify, endorse, or assume responsibility for the accuracy, completeness, legality, or content of such external resources.
         </>
       ),
     },
     {
-      header: "6. Protection of personal data",
+      header: "6. Data Security",
       text: (
         <>
-          The Site Administrator takes necessary procedural and technical
-          measures to protect your personal data from loss, unauthorized access
-          or distribution on the Site.
+          The Portal Administrator implements appropriate technical, organizational, and procedural safeguards designed to protect your personal data from loss, unauthorized access, misuse, alteration, or disclosure.
         </>
       ),
     },
     {
-      header: "7. Changes to the Policy terms",
+      header: "7. Amendments to this Policy",
       text: (
         <>
-          The Site Administrator may change this Policy to accurately reflect the
-          methods of collection, processing, use, access and protection of
-          personal data.
+          The Portal Administrator reserves the right to amend or update this Policy from time to time to reflect changes in data processing practices or legal requirements.
           <br /><br />
-          Accordingly, you should review this Policy periodically. When the Site
-          Administrator changes this Policy, it updates the "last modified" date
-          at the top of this Policy. Changes to this Policy are effective when
-          published.
+          You are encouraged to review this Policy periodically. Any changes will be effective upon publication, with the "last updated" date revised accordingly.
         </>
       ),
     },
     {
-      header: "8. Your rights",
+      header: "8. Your Rights",
       text: (
         <>
-          By registering on the Site, you have the right to:
+          As a registered user of the Portal, you have the right to:
           <ul>
-            <li>
-              receive information about the sources of collection and storage
-              location of your personal data, the purpose of their processing;
-            </li>
-            <li>
-              receive information about the conditions of access to personal
-              data, including information about third parties to whom your
-              personal data is transferred;
-            </li>
-            <li>
-              receive information regarding the processing and use of your
-              personal data no later than thirty calendar days from the date of
-              receipt of the request (except in cases provided by the Law of
-              Ukraine "On Protection of Personal Data");
-            </li>
-            <li>
-              submit a motivated demand to the owner of personal data with an
-              objection to the processing of your personal data;
-            </li>
-            <li>
-              file complaints regarding the processing of your personal data by
-              the owner or manager of personal data to the Commissioner for Human
-              Rights of the Verkhovna Rada of Ukraine or to the court;
-            </li>
-            <li>
-              apply legal remedies in case of violation of personal data
-              protection legislation;
-            </li>
-            <li>
-              withdraw consent to the processing of your personal data.
-            </li>
+            <li>obtain information regarding the sources, purpose, and location of your personal data;</li>
+            <li>obtain information on the conditions of access to your personal data, including information about third parties to whom such data may be disclosed;</li>
+            <li>request, within thirty (30) calendar days (unless otherwise provided by the Law of Ukraine "On Personal Data Protection"), information regarding the processing and use of your personal data;</li>
+            <li>object, on legitimate grounds, to the processing of your personal data;</li>
+            <li>lodge a complaint regarding the processing of your personal data with the Commissioner of the Verkhovna Rada of Ukraine for Human Rights or with a competent court;</li>
+            <li>seek legal remedies in the event of violations of data protection legislation;</li>
+            <li>withdraw your consent to the processing of your personal data at any time.</li>
           </ul>
         </>
       ),
     },
     {
-      header: "9. Location of personal data",
+      header: "9. Data Controller",
       text: (
         <>
-          The owner and manager of personal data is the Main Department of
-          Unmanned Aerial Systems of the State Border Guard Service of Ukraine
-          "Feniks".
+          The owner and controller of personal data is the Main Department of Unmanned Aerial Systems of the State Border Guard Service of Ukraine "Feniks"
         </>
       ),
     },

@@ -1,27 +1,27 @@
 export const donationsSectionEn = {
-  title: "Closed collections",
+  title: "FINISHED",
   description:
-    "Every donation is incredibly important to us. We use all collected funds for their intended purpose and convert them into results. Thank you for your support!",
+    "Every donata is a vital to our mission. We guarantee that 100% of all donated funds are utilized for their intended purpose - directly converted into tangible results on the battlefield.",
   blocks: [
     {
-      title: "electronic warfare collection",
+      title: "RADAR SYSTEMS",
       text:
-        "Collection for electronic warfare equipment. Thanks to them, we can ensure the safety of our pilots at positions.",
-      sum: "collected: 500 000 UAH",
+        "Збір на засоби радіоелектронної боротьби. Завдяки їм ми можемо забезпечити безпеку наших пілотів на позиціях.",
+      sum: "RAISED: 500 000 UAH",
       videoId: "IOtFDqeimOI",
     },
     {
-      title: "interceptor drones collection",
+      title: "INTERCEPTOR DRONES",
       text:
-        "Collection for FPV interceptors - drones that will shoot down enemy reconnaissance UAVs.",
-      sum: "collected: 500 000 UAH",
+        "Збір на FPV-перехоплювачі - дрони, які збиватимуть ворожі розвідувальні БПЛА.",
+      sum: "RAISED: 500 000 UAH",
       videoId: "IOtFDqeimOI",
     },
     {
-      title: "interceptor drones collection",
+      title: "INTERCEPTOR DRONES",
       text:
-        "Collection for FPV interceptors - drones that will shoot down enemy reconnaissance UAVs.",
-      sum: "collected: 500 000 UAH",
+        "Збір на FPV-перехоплювачі - дрони, які збиватимуть ворожі розвідувальні БПЛА.",
+      sum: "RAISED: 500 000 UAH",
       videoId: "IOtFDqeimOI",
     },
   ],

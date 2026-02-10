@@ -6,7 +6,7 @@ export const headerNav = {
     { text: "Контакти", href: "/contacts" },
   ],
   en: [
-    { text: "About us", anchor: "about" },
+    { text: "About us", anchor: "history" },
     { text: "Ecosystem", anchor: "ecosystem" },
     { text: "Commander", anchor: "commander" },
     { text: "Values", anchor: "values" },

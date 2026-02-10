@@ -24,12 +24,11 @@ const Footer = () => {
   ];
 
   const navLinksEn = [
-    { text: "Home", href: "/" },
-    { text: "About Feniks", href: "/about" },
-    { text: "Vacancies", href: "/vacancies" },
-    { text: "Contract 18-24", href: "/contract" },
-    { text: "Support Feniks", href: "/donations" },
-    { text: "Contacts", href: "/contacts" },
+    { text: "About us", anchor: "history" },
+    { text: "Ecosystem", anchor: "ecosystem" },
+    { text: "Commander", anchor: "commander" },
+    { text: "Values", anchor: "values" },
+    { text: "Support Feniks", anchor: "support" },
   ];
 
   const socialItems = [
@@ -50,8 +49,8 @@ const Footer = () => {
             <div className={styles.brandTop}>
               <p className={`${styles.footerOrganization} font-text-l-xs`}>
                 {language === "ua"
-                  ? <>ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> ДЕРЖАВНОЇ СЛУЖБИ УКРАЇНИ</>
-                  : <>MAIN DEPARTMENT OF UNMANNED AERIAL SYSTEMS <br /> OF THE STATE SERVICE OF UKRAINE</>
+                  ? <>ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> ДЕРЖАВНОЇ ПРИКОРДОННОЇ СЛУЖБИ УКРАЇНИ</>
+                  : <>MAIN DEPARTMENT OF UNMANNED AERIAL SYSTEMS OF <br />THE STATE BORDER GUARD SERVICE OF UKRAINE</>
                 }
               </p>
               <div className={styles.footerLogo}>
@@ -82,7 +81,11 @@ const Footer = () => {
             <ul className={`${styles.navList} font-text-l-s`}>
               {navLinks.map((item, idx) => (
                 <li key={idx}>
-                  <Link to={item.href}>{item.text}</Link>
+                  {item.anchor ? (
+                    <a href={`#${item.anchor}`}>{item.text}</a>
+                  ) : (
+                    <Link to={item.href}>{item.text}</Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -109,10 +112,10 @@ const Footer = () => {
               </h4>
               <div className={`${styles.infoLines} font-text-l-s`}>
                 <p>
-                  {language === "ua" ? "Медіа" : "Media"}: <a href="mailto:Медіа: pr@usfenix.army" className={styles.contactLink}>pr@usfenix.army</a>
+                  {language === "ua" ? "Медіа" : "Media"}: <a href="mailto:media@feniks.army" className={styles.contactLink}>media@feniks.army</a>
                 </p>
                 <p>
-                  {language === "ua" ? "Співпраця" : "Cooperation"}: <a href="mailto:Співпраця: info@usfenix.army" className={styles.contactLink}>info@usfenix.army</a>
+                  {language === "ua" ? "Співпраця" : "Cooperation"}: <a href="mailto:info@feniks.army" className={styles.contactLink}>info@feniks.army</a>
                 </p>
               </div>
             </div>
