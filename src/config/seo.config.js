@@ -25,7 +25,7 @@ export const SEO_CONFIG = {
   // Головна сторінка (EN)
   "/en": {
     title: "Fenix — UAS Department of SBGS Ukraine",
-    description: "Official website of the "Fenix" unit (State Border Guard Service of Ukraine). Unmanned aerial systems, recruitment, donations, and news.",
+    description: "Official website of the \"Fenix\" unit (State Border Guard Service of Ukraine). Unmanned aerial systems, recruitment, donations, and news.",
     h1: "Fenix - Main Department of Unmanned Aerial Systems",
     image: MainHeroImage,
     robots: "",
