@@ -448,7 +448,8 @@ a.btn-secondary:hover * {
 }
 
 /* Starting color classes for pages (longhand to avoid resetting background-size on Hero) */
-.start-dark > section:nth-of-type(odd) {
+.start-dark > section:nth-of-type(odd),
+.start-dark > .section-wrapper:nth-of-type(odd) > section {
   background-image: url('@/assets/images/backgrounds/bg-dark.svg');
   background-color: #151419;
   background-size: cover;
@@ -456,7 +457,8 @@ a.btn-secondary:hover * {
   background-repeat: no-repeat;
 }
 
-.start-dark > section:nth-of-type(even) {
+.start-dark > section:nth-of-type(even),
+.start-dark > .section-wrapper:nth-of-type(even) > section {
   background-image: url('@/assets/images/backgrounds/bg-surface.svg');
   background-color: #1B1A1F;
   background-size: cover;
@@ -464,7 +466,8 @@ a.btn-secondary:hover * {
   background-repeat: no-repeat;
 }
 
-.start-surface > section:nth-of-type(odd) {
+.start-surface > section:nth-of-type(odd),
+.start-surface > .section-wrapper:nth-of-type(odd) > section {
   background-image: url('@/assets/images/backgrounds/bg-surface.svg');
   background-color: #1B1A1F;
   background-size: cover;
@@ -472,7 +475,8 @@ a.btn-secondary:hover * {
   background-repeat: no-repeat;
 }
 
-.start-surface > section:nth-of-type(even) {
+.start-surface > section:nth-of-type(even),
+.start-surface > .section-wrapper:nth-of-type(even) > section {
   background-image: url('@/assets/images/backgrounds/bg-dark.svg');
   background-color: #151419;
   background-size: cover;

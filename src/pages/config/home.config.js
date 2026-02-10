@@ -24,6 +24,7 @@ export const getHomePageConfig = (language = "ua") => {
   const hero = mainHero[language] || mainHero.ua;
   const commander = mainCommander[language] || mainCommander.ua;
   const values = mainValues[language] || mainValues.ua;
+  const support = mainSupport[language] || mainSupport.ua;
 
   // English version structure
   if (language === "en") {
@@ -37,7 +38,7 @@ export const getHomePageConfig = (language = "ua") => {
         { id: "arsenal", Component: Arsenal, props: mainArsenal },
         { id: "commander", Component: Commander, props: commander },
         { id: "values", Component: Values, props: values },
-        { id: "support", Component: Support, props: mainSupport },
+        { id: "support", Component: Support, props: support },
       ],
     };
   }
@@ -50,7 +51,7 @@ export const getHomePageConfig = (language = "ua") => {
       { id: "commander", Component: Commander, props: commander },
       { id: "values", Component: Values, props: values },
       { id: "jobs", Component: Job, props: mainJob },
-      { id: "support", Component: Support, props: mainSupport },
+      { id: "support", Component: Support, props: support },
     ],
   };
 };
