@@ -1,28 +1,59 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import styles from "./index.module.css";
 import SecondaryBtn from "@/components/ui/SecondaryBtn";
 import { LogoPhoenixTop } from "@/assets";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useModal } from "@/contexts/ModalContext";
-
-const navItems = [
-  { text: "Про Фенікс", href: "/about" },
-  { text: "Вакансії", href: "/vacancies" },
-  { text: "Контракт 18-24", href: "/contract" },
-  { text: "Контакти", href: "/contacts" },
-];
+import { headerNav, headerActions, allowedEnPages } from "@/data/header";
 
 export default function Header({ isVisible = true, isScrolled = false, forceSolid = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
   const { openModal } = useModal();
+  const navigate = useNavigate();
+  const location = useLocation();
   const currentLang = (language || "ua").toUpperCase();
   const nextLang = language === "en" ? "ua" : "en";
   const nextLangLabel = nextLang.toUpperCase();
 
+  const navItems = headerNav[language] || headerNav.ua;
+  const actions = headerActions[language] || headerActions.ua;
+
   const handleLanguageSelect = (langCode) => {
+    const currentPath = location.pathname;
+
+    if (langCode === "en") {
+      // UA → EN: redirect to main if current page not in allowed list
+      if (!allowedEnPages.includes(currentPath)) {
+        navigate("/");
+      }
+    } else {
+      // EN → UA: stay on same page (UA has all pages)
+      // No redirect needed
+    }
+
     setLanguage(langCode);
+  };
+
+  const handleNavClick = (item, e) => {
+    if (item.anchor) {
+      // EN: scroll to anchor
+      e.preventDefault();
+      const section = document.getElementById(item.anchor);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+        setIsMenuOpen(false);
+      }
+    }
+    // UA: default Link behavior (navigate)
+  };
+
+  const handleLogoClick = (e) => {
+    if (location.pathname === "/") {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
   };
 
   return (
@@ -33,7 +64,7 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
     >
       <div className={styles.container}>
         <div className={styles.frameParent}>
-          <Link to="/" className={styles.logoLink}>
+          <Link to="/" className={styles.logoLink} onClick={handleLogoClick}>
             <img
               className={styles.layer1Icon}
               src={LogoPhoenixTop}
@@ -46,13 +77,23 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
           <nav className={`${styles.navList} ${isMenuOpen ? styles.open : ""}`}>
             {navItems.map((item, idx) => (
               <div key={idx} className={styles.item}>
-                <Link
-                  to={item.href}
-                  className={`${styles.link2} font-nav`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.text}
-                </Link>
+                {item.anchor ? (
+                  <a
+                    href={`#${item.anchor}`}
+                    className={`${styles.link2} font-nav`}
+                    onClick={(e) => handleNavClick(item, e)}
+                  >
+                    {item.text}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`${styles.link2} font-nav`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.text}
+                  </Link>
+                )}
               </div>
             ))}
           </nav>
@@ -93,7 +134,7 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
             </div>
 
             <div className={styles.joinBtn}>
-              <SecondaryBtn text="приєднатися" size="m" onClick={openModal} />
+              <SecondaryBtn text={actions.joinText} size="m" onClick={openModal} />
             </div>
           </div>
 

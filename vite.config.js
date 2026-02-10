@@ -29,9 +29,18 @@ export default defineConfig({
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'lenis': ['lenis'],
-        }
+        },
+        // Оптимізація кешування - статичні імена для vendor chunks
+        chunkFileNames: (chunkInfo) => {
+          if (chunkInfo.name === 'react-vendor') {
+            return 'assets/react-vendor.[hash].js';
+          }
+          return 'assets/[name].[hash].js';
+        },
       }
-    }
+    },
+    // Збільшення chunk size warning threshold
+    chunkSizeWarningLimit: 1000,
   },
   test: {
     projects: [{

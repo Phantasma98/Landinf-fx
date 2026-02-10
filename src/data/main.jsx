@@ -12,120 +12,243 @@ import {
   CarouselMain9,
   CarouselMain10,
   HeaderTrainingImage,
-  CommanderImage
+  CommanderImage,
+  DroneStalkerImage,
+  DroneMatriceImage,
+  DroneVampireImage,
+  DroneInterceptorImage,
+  DroneLelekaImage,
+  GroundRobotImage,
 } from "@/assets";
 
 export const mainHero = {
-  backgroundImage: MainHeroImage,
-  backgroundAlt:
-    "Військовий оператор підрозділу Фенікс керує квадрокоптером на фоні неба.",
-  meta: (
-    <>
-      ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> ДЕРЖАВНОЇ ПРИКОРДОННОЇ СЛУЖБИ УКРАЇНИ «ФЕНІКС»
-    </>
-  ),
-  title: (
-    <>
-      спалюємо <br /> межі можливого
-    </>
-  ),
-  primaryAction: { text: "ДОЛУЧИТИСЬ", href: "#jobs" },
-  secondaryAction: { text: "ПІДТРИМАТИ", href: "#support" },
+  ua: {
+    backgroundImage: MainHeroImage,
+    backgroundAlt:
+      "Військовий оператор підрозділу Фенікс керує квадрокоптером на фоні неба.",
+    meta: (
+      <>
+        ГОЛОВНИЙ ВІДДІЛ БЕЗПІЛОТНИХ АВІАЦІЙНИХ СИСТЕМ <br /> ДЕРЖАВНОЇ ПРИКОРДОННОЇ СЛУЖБИ УКРАЇНИ «ФЕНІКС»
+      </>
+    ),
+    title: (
+      <>
+        спалюємо <br /> межі можливого
+      </>
+    ),
+    primaryAction: { text: "ДОЛУЧИТИСЬ", href: "#jobs" },
+    secondaryAction: { text: "ПІДТРИМАТИ", href: "#support" },
+  },
+  en: {
+    backgroundImage: MainHeroImage,
+    backgroundAlt:
+      "Військовий оператор підрозділу Фенікс керує квадрокоптером на фоні неба.",
+    meta: (
+      <>
+        MAIN DEPARTMENT OF UNMANNED AERIAL SYSTEMS <br /> OF THE STATE BORDER GUARD SERVICE OF UKRAINE «FENIKS»
+      </>
+    ),
+    title: (
+      <>
+        КРИЛА, ЩО <br /> СПОПЕЛЯЮТЬ
+      </>
+    ),
+    primaryAction: { text: "SUPPORT FENIKS", href: "#support" },
+  },
 };
 
-export const mainAbout = {
-  title: "про нас",
+export const mainHistory = {
+  title: "HISTORY",
   description:
-    "Фенікс - це найрезультативніший підрозділ ДПСУ. Ми створили власну екосистему безпілотних авіаційних систем, що забезпечує весь процес: від створення БК до нанесення нищівних ударів ворогу.",
+    "The combat path of the Feniks Regiment is a story of radical transformation: evolving from a border guard infantry unit into a cornerstone of Ukraine's Unmanned Systems Forces.",
   images: [
     {
       src: CarouselMain1,
-      alt: "Оператор підрозділу Фенікс керує розвідувальним дроном Mavic серед поля.",
+      alt: "Feniks border guard soldiers during early operations",
     },
     {
       src: CarouselMain2,
-      alt: "Крупний план пілота Фенікс у FPV-окулярах під час виконання нічного завдання.",
+      alt: "Feniks operators training with first generation drones",
     },
     {
       src: CarouselMain3,
-      alt: "Технік підрозділу Фенікс встановлює акумулятор на FPV-дрон перед вильотом.",
-    },
-    {
-      src: CarouselMain4,
-      alt: "Руки оператора Фенікс на пульті керування БПЛА під час коригування вогню.",
-    },
-    {
-      src: CarouselMain5,
-      alt: "Портрет бійця екіпажу БПЛА Фенікс у захисній масці на фоні лісосмуги.",
-    },
-    {
-      src: CarouselMain6,
-      alt: "Командир підрозділу Фенікс Дмитро Олексюк на позиції в полі.",
-    },
-    {
-      src: CarouselMain7,
-      alt: "Екіпаж ударних дронів Фенікс готує важкий безпілотник до нічного полювання.",
-    },
-    {
-      src: CarouselMain8,
-      alt: "Пілот підрозділу Фенікс у повній амуніції працює з FPV-дроном у зруйнованій будівлі.",
-    },
-    {
-      src: CarouselMain9,
-      alt: "Військовий підрозділу Фенікс запускає розвідувальний безпілотник літакового типу.",
-    },
-    {
-      src: CarouselMain10,
-      alt: "Майстерня Фенікс: процес пайки та технічного обслуговування бойового дрона.",
+      alt: "Feniks unit deployment in Eastern Ukraine",
     },
   ],
-  statsTop: {
-    title: "ТОП-2",
-    text: "В УГРУПОВАННІ СИЛ БЕЗПІЛОТНИХ СИСТЕМ",
-  },
-  stats: [
-    { title: "126500", text: "ВИЛЬОТІВ НА БОЙОВІ ЗАВДАННЯ" },
-    { title: "26500", text: "ПОШКОДЖЕНО ТА ЗНИЩЕНО ЦІЛЕЙ" },
-    { title: "5130", text: "ЗНИЩЕНО ОСОБОВОГО СКЛАДУ ВОРОГА" },
+  years: [
+    {
+      year: "2022",
+      title: "FIRST YEAR OF FULL-SCALE INVASION",
+      paragraphs: [
+        "2022: First year of Full-Scale Invasion\nThe \"Feniks\" unit originated as a specialized infantry border guard department within the 3rd Luhansk Border Guard Detachment.",
+        "The First Contact: On February 24, 2022, the unit met the invasion at the outermost positions of Eastern Ukraine - standing where the border was first breached.",
+        "Defensive Resilience: The first year was defined by intense defensive operations across Kreminna, Rubizhne, Popasna, Lyman, and Svyatohirsk. Every city provided hard-won experience; every battle taught new tactical lessons.",
+        "The Battle of Bakhmut: In December 2022, the unit deployed to Bakhmut, the most volatile sector of the front. During this campaign, the unit neutralized hundreds of Wagner PMC forces. In a rare feat for an infantry unit, a soldier codenamed \"Hudson\" used a Stinger MANPADS to down two Russian \"Su-25\" attack aircraft.",
+        "The Birth of a New Era: Bakhmut marked the birth of our drone capabilities. It was here that we formed our first multi-rotor crews to drop munitions on enemy infantry - a move that would eventually redefine the entire unit.",
+      ],
+    },
   ],
 };
 
-export const mainValues = {
-  title: "цінності",
+export const mainEcosystem = {
+  title: "ECOSYSTEM",
   subtitle:
-    "Фенікс - сучасний підрозділ з культурою та динамікою команди Формули-1. Ключова цінність - збереження життя наших бійців.",
-  image: HeaderTrainingImage,
-  values: [
+    "We have built a solid Unmanned Aerial Systems structure that operates with the precision of a Swiss watch.",
+  items: [
     {
-      title: "Радикальна Чесність",
-      description:
-        "Ми не боїмось казати правду. Якщо існує проблема - про неї кажуть вголос миттєво. Ініціатива не карається, а заохочується. Брехня в команді наш червоний прапор.",
+      title: "UAS LABORATORY",
+      description: "",
     },
     {
-      title: "культ результату",
-      description:
-        "Якщо нам треба порушити застарілу інструкцію, щоб покращити результативність і оптимізувати процеси - ми це робимо.",
+      title: "MUNITION R&D WORKSHOP",
+      description: "",
     },
     {
-      title: "Анти-Застій",
+      title: "UAV OPERATOR TRAINING CENTER",
       description:
-        "Ми - як військовий стартап. Ми вчимося щодня. Якщо ти не розвиваєшся, команда шукає тобі заміну. Ми даємо драйв, ти даєш динаміку.",
+        "We have established a modern training center dedicated to aspiring UAV operators. Our program prepares pilots for their first missions by simulating highly realistic combat environments. Led by instructors with extensive frontline experience, we help every student unlock their full operational potential.",
+    },
+  ],
+};
+
+export const mainArsenal = {
+  title: "ARSENAL",
+  subtitle:
+    "The Feniks Regiment utilizes the most advanced systems for strike, reconnaissance, and logistics - ranging from tactical FPV drones to long-range fixed-wing UAS and Unmanned Ground Systems.",
+  items: [
+    {
+      title: "FPV DRONES",
+      description:
+        "An FPV (First-Person View) drone is a UAV operated from a first-person perspective. The video signal is transmitted from the drone to the operator via radio waves or fiber-optic cable. FPV drones are deployed as loitering munitions (kamikaze) equipped with various warheads, or used for dropping munitions on enemy targets.",
+      image: DroneStalkerImage,
+      imageAlt: "Specialized FPV drone Stalker with fiber-optic cable for EW protection, Feniks unit",
     },
     {
-      title: "Екосистема Важливості",
+      title: "QUADROCOPTERS",
       description:
-        "Пілот дрона - це вершина нашої екосистеми, але без ідеального забезпечення він просто не може літати. Ми цінуємо «механіків» так само як «гонщиків».",
+        "Quadrocopters are lightweight, multi-rotor platforms featuring Vertical Take-Off and Landing (VTOL) capabilities and precision hovering. These drones are engineered for superior maneuverability and flight stability in challenging environments. Their primary operational roles include aerial reconnaissance, fire correction (artillery spotting), precision strikes via munition drops, and the rapid delivery of critical light payloads.",
+      image: DroneMatriceImage,
+      imageAlt: "Reconnaissance quadcopter Matrice 4 of Feniks unit in flight over the battlefield",
     },
     {
-      title: "Спеціалізація Піт-стоп",
+      title: "HEAVY BOMBERS",
       description:
-        "У гонці механік не сідає за кермо, а пілот не крутить гайки. Ми гарантуємо: ти будеш займатися тим, у чому ти найефективніший.",
+        "Heavy Bombers are large-scale, multi-rotor strike UAVs engineered for high precision and heavy-duty operations. With a payload capacity of up to 15 kg and an operational range up to 20 km, these versatile platforms are designed for a wide array of mission profiles, including precision munition drops, remote mining, cargo delivery, and emergency medical evacuation (MEDEVAC).",
+      image: DroneVampireImage,
+      imageAlt: "Night heavy bomber drone Vampire of Feniks unit during mission execution",
     },
     {
-      title: "Принцип Телеметрії",
+      title: "INTERCEPTORS",
       description:
-        "Ми керуємось даними, а не емоціями. Ми ведемо війну спираючись на стріми, дані розвідки та аналітику. Немає даних - немає наказу.",
+        "Interceptor drones are specialized platforms engineered to detect, track, and neutralize hostile unmanned systems within controlled airspace. To counter aerial threats, these interceptors utilize various engagement methods: deploying capture nets, executing kinetic \"ramming\" maneuvers, or neutralizing the target via signal and GPS jamming. For high-priority threats, they are capable of direct kinetic impact to ensure total destruction of the enemy drone.",
+      image: DroneInterceptorImage,
+      imageAlt: "Strike interceptor P1-sun in the sky - Feniks unit equipment for combating enemy UAVs",
     },
+    {
+      title: "FIXED-WING UAS",
+      description:
+        "Fixed-wing platforms are aircraft-type UAVs designed for high-efficiency, long-range operations. Their aerodynamic design allows for superior flight endurance, high speeds, and precision over vast distances. These systems are the primary choice for deep-theater aerial reconnaissance, artillery fire correction, and both short- and long-range strike missions. Their ability to remain airborne for extended periods makes them a highly effective asset for sustained surveillance and strategic engagements.",
+      image: DroneLelekaImage,
+      imageAlt: "Fixed-wing UAV Leleka-100 conducting aerial reconnaissance for Feniks unit",
+    },
+    {
+      title: "UNMANNED GROUND SYSTEMS (UGS)",
+      description:
+        "Unmanned Ground Systems are automated or remotely operated platforms designed to execute a broad spectrum of land-based operations. These robotic complexes serve as force multipliers by handling high-risk tasks, including logistics and supply, autonomous mining and demining, and tactical reconnaissance. Furthermore, UGS platforms provide critical fire support and serve as a lifeline for frontline troops through specialized medical evacuation (MEDEVAC) capabilities.",
+      image: GroundRobotImage,
+      imageAlt: "Ground robotic complex of Feniks unit for logistics and evacuation on the frontline",
+    },
+  ],
+  primaryCta: { text: "SUPPORT US", href: "#support" },
+};
+
+export const mainValues = {
+  ua: {
+    title: "цінності",
+    subtitle:
+      "Фенікс - сучасний підрозділ з культурою та динамікою команди Формули-1. Ключова цінність - збереження життя наших бійців.",
+    image: HeaderTrainingImage,
+    values: [
+      {
+        title: "Радикальна Чесність",
+        description:
+          "Ми не боїмось казати правду. Якщо існує проблема - про неї кажуть вголос миттєво. Ініціатива не карається, а заохочується. Брехня в команді наш червоний прапор.",
+      },
+      {
+        title: "культ результату",
+        description:
+          "Якщо нам треба порушити застарілу інструкцію, щоб покращити результативність і оптимізувати процеси - ми це робимо.",
+      },
+      {
+        title: "Анти-Застій",
+        description:
+          "Ми - як військовий стартап. Ми вчимося щодня. Якщо ти не розвиваєшся, команда шукає тобі заміну. Ми даємо драйв, ти даєш динаміку.",
+      },
+      {
+        title: "Екосистема Важливості",
+        description:
+          "Пілот дрона - це вершина нашої екосистеми, але без ідеального забезпечення він просто не може літати. Ми цінуємо «механіків» так само як «гонщиків».",
+      },
+      {
+        title: "Спеціалізація Піт-стоп",
+        description:
+          "У гонці механік не сідає за кермо, а пілот не крутить гайки. Ми гарантуємо: ти будеш займатися тим, у чому ти найефективніший.",
+      },
+      {
+        title: "Принцип Телеметрії",
+        description:
+          "Ми керуємось даними, а не емоціями. Ми ведемо війну спираючись на стріми, дані розвідки та аналітику. Немає даних - немає наказу.",
+      },
+    ],
+  },
+  en: {
+    title: "OUR VALUES",
+    subtitle:
+      "Feniks is a modern combat unit built on the speed, precision, and culture of a Formula 1 team. Our primary mission is the success of the operation, but our foundational value is the preservation of our soldiers' lives.",
+    image: HeaderTrainingImage,
+    values: [
+      {
+        title: "RADICAL HONESTY",
+        description:
+          "We are not afraid of the truth. If a problem exists, it is voiced immediately. Initiative is never punished; it is rewarded. In our team, dishonesty is the ultimate red flag.",
+      },
+      {
+        title: "RESULT-ORIENTED CULTURE",
+        description:
+          "We prioritize outcomes over outdated protocols. If a legacy instruction stands in the way of efficiency or operational success, we bypass it to optimize the process.",
+      },
+      {
+        title: "ANTI-STAGNATION",
+        description:
+          "We operate like a military startup. We learn every day. In this environment, standing still is the same as falling behind. We provide the drive; you provide the momentum.",
+      },
+      {
+        title: "THE ECOSYSTEM OF EXCELLENCE",
+        description:
+          "The drone pilot is the \"driver\" at the peak of our ecosystem, but without a flawless world-class support crew. We value our \"mechanics\" just as much as our \"racers.\" Every role is mission-critical.",
+      },
+      {
+        title: "PIT-STOP SPECIALIZATION",
+        description:
+          "In a race, the mechanic doesn't drive, and the pilot doesn't change the tires. We guarantee that you will be placed where your specific skills are most effective. Focus on your expertise; we'll handle the rest.",
+      },
+      {
+        title: "THE TELEMETRY PRINCIPLE",
+        description:
+          "We are driven by data, not emotions. We conduct warfare based on live streams, signals intelligence, and real-time analytics. If there is no data, there is no order.",
+      },
+    ],
+  },
+};
+
+export const mainStatistic = {
+  title: "FENIKS TODAY",
+  items: [
+    { num: "TOP-2", title: "UNMANNED SYSTEMS DETACHMENTS IN UKRAINE AND WITHIN THE STATE BORDER GUARD SERVICE" },
+    { value: 26500, title: "ENEMY TARGETS DESTROYED & DAMAGED" },
+    { num: "TOP-3", title: "FUNDRAISING INITIATIVE FOR DELTA" },
+    { value: 5130, title: "CIVILIAN DONATIONS TO FPV PRODUCTION" },
+    { value: 2.2, prefix: "$", suffix: " BILLION", decimals: 1, title: "TOTAL ESTIMATED FINANCIAL DAMAGE TO ENEMY ASSETS" },
   ],
 };
 
@@ -206,12 +329,38 @@ export const mainRecruit = {
 };
 
 export const mainCommander = {
-  image: CommanderImage,
-  imageAlt:
-    "Герой України Дмитро Олексюк, командир підрозділу Фенікс, у командному центрі на фоні моніторів керування.",
-  quote:
-    "«перетворюємо службу на високотехнологічну роботу, де цивільний інтелект та навички конвертуються в загальний результат.»",
-  button: { text: "дізнатись більше про фенікс", href: "/about" },
+  ua: {
+    image: CommanderImage,
+    imageAlt:
+      "Герой України Дмитро Олексюк, командир підрозділу Фенікс, у командному центрі на фоні моніторів керування.",
+    quote:
+      "«перетворюємо службу на високотехнологічну роботу, де цивільний інтелект та навички конвертуються в загальний результат.»",
+    button: { text: "дізнатись більше про фенікс", href: "/about" },
+  },
+  en: {
+    title: "COMMANDER",
+    roleTitle: "HERO OF UKRAINE",
+    rank: "COLONEL",
+    name: "DMYTRO OLEKSYUK",
+    image: CommanderImage,
+    imageAlt:
+      "Hero of Ukraine Dmytro Oleksyuk, commander of Feniks unit, in command center with control monitors.",
+    awardsTitle: "MILITARY AWARDS",
+    awards: [
+      "HERO OF UKRAINE WITH THE ORDER OF THE GOLDEN STAR",
+      "ORDER OF BOHDAN KHMELNYTSKY, 2ND CLASS",
+      "MEDAL \"FOR MILITARY SERVICE TO UKRAINE\"",
+    ],
+    bio: (
+      <>
+        <p>A 2013 graduate of the Bohdan Khmelnytsky National Academy of the State Border Guard Service of Ukraine, Colonel began his service at the "Milove" border guard station in the Luhansk Border Guard Detachment.</p>
+        <p>When the full-scale invasion began on February 24, 2022, he was serving as the Head of the "Zolote" border guard station in the Sievierodonetsk district. In the face of overwhelming enemy forces, he demonstrated exemplary leadership, courageously managing the regrouping of subordinate units under artillery fire.</p>
+        <p>From February to July 2022, he led his unit through the most intense defensive operations in Kreminna, Lyman, Svyatohirsk, Horodychne, and Tetianivka. In December 2022, he spearheaded the formation of a new combat element within the Luhansk Border Guard Detachment. Under his command, the unit deployed to the Bakhmut sector, where he integrated various assets - including SPG-9s, 120mm mortars, MANPADs, UAVs, and AGS-17s—into a highly synchronized combat force.</p>
+        <p>In January 2024, he assumed command of the 2nd Rapid Response Command, "Feniks". Under his leadership in the Bakhmut sector, the unit achieved significant tactical successes, neutralizing high-value targets including the "Zoopark-1" radar system and T-90M "Proryv" tanks.</p>
+        <p>As of early 2026, Colonel Oleksyuk continues to lead at the forefront of military innovation, actively implementing new technologies and tactical formats to maximize the unit's operational effectiveness.</p>
+      </>
+    ),
+  },
 };
 
 export const mainFaq = faqDefault;
