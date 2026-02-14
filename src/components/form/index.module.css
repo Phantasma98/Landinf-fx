@@ -14,7 +14,7 @@
 }
 
 .formSection {
-  max-width: 1250px;
+  max-width: var(--content-max);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -24,7 +24,7 @@
 .formHeader {
   display: flex;
   gap: 99px;
-  max-width: 1250px;
+  max-width: var(--content-max);
 }
 
 .formInfo p {

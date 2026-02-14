@@ -26,7 +26,8 @@
 .subtitle {
   margin: 0;
   color: #FBFBFB;
-  width: 720px;
+  width: 100%;
+  max-width: 720px;
   min-height: 44px;
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@
 
 .valuesGridRow {
   display: grid;
-  grid-template-columns: 509px 721px;
+  grid-template-columns: minmax(0, 509px) minmax(0, 721px);
   column-gap: 20px;
   align-items: start;
   width: 100%;
@@ -62,17 +63,17 @@
   display: flex;
   flex-direction: column;
   gap: 60px;
-  width: 509px;
-  min-width: 509px;
+  width: 100%;
+  min-width: 0;
 }
 
 .valuesGridRight {
   display: grid;
-  grid-template-columns: 318px 297px;
+  grid-template-columns: 1fr 1fr;
   column-gap: 106px;
   row-gap: 60px;
-  width: 721px;
-  min-width: 721px;
+  width: 100%;
+  min-width: 0;
 }
 
 .valueCard {
@@ -81,7 +82,7 @@
 }
 
 .valuesGridLeft .valueCard {
-  width: 422px;
+  width: 100%;
   max-width: 422px;
 }
 
@@ -94,25 +95,35 @@
 /* ==================== */
 
 /* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .valuesTitle {
     white-space: normal;
-    width: auto;
+    width: 100%;
     height: auto;
     display: block;
   }
 
   .valuesMain {
-    padding: 100px 0;
+    padding: 120px 0;
   }
 
   .valuesSection {
-    gap: 50px;
+    gap: 60px;
   }
 
+  /* Keep title row as side-by-side at 1024 (Figma: dir row, gap 20) */
+  .valuesSection :global(.content-row) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .valuesSection :global(.content-row) > :global(.col-left),
+  .valuesSection :global(.content-row) > :global(.col-right) {
+    grid-column: 1;
+  }
 
   .valuesContent {
-    gap: 50px;
+    gap: 60px;
   }
 
   .subtitle {
@@ -128,7 +139,7 @@
   .valuesGridLeft {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 50px 24px;
+    gap: 60px 24px;
     width: 100%;
     min-width: 0;
   }
@@ -141,7 +152,7 @@
   .valuesGridRight {
     grid-template-columns: 1fr 1fr;
     column-gap: 24px;
-    row-gap: 50px;
+    row-gap: 60px;
     width: 100%;
     min-width: 0;
   }
@@ -149,12 +160,63 @@
   .valuesGridRow {
     display: flex;
     flex-direction: column;
-    gap: 24px;
+    gap: 60px;
+  }
+}
+
+/* Tablet small */
+@media (max-width: 924px) {
+  .valuesMain {
+    padding: 100px 0;
+  }
+
+  .valuesSection {
+    gap: 50px;
+  }
+
+  /* Reset title row back to column at 744 (Figma: dir col, gap 50) */
+  .valuesSection :global(.content-row) {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .valuesSection :global(.content-row) > :global(.col-left),
+  .valuesSection :global(.content-row) > :global(.col-right) {
+    grid-column: 1;
+  }
+
+  .valuesContent {
+    gap: 50px;
+  }
+
+  .imageWrap {
+    height: 350px;
+  }
+
+  .valuesGridLeft {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 48px 35px;
+  }
+
+  .valuesGridLeft .valueCard {
+    width: calc(50% - 17.5px);
+    max-width: none;
+  }
+
+  .valuesGridRight {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 35px;
+    row-gap: 48px;
+  }
+
+  .valuesGridRow {
+    gap: 48px;
   }
 }
 
 /* Mobile */
-@media (max-width: 744px) {
+@media (max-width: 674px) {
   .valuesMain {
     padding: 80px 0;
   }
@@ -163,6 +225,15 @@
     gap: 40px;
   }
 
+  .valuesSection :global(.content-row) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .valuesSection :global(.content-row) > :global(.col-left),
+  .valuesSection :global(.content-row) > :global(.col-right) {
+    grid-column: 1;
+  }
 
   .valuesContent {
     gap: 40px;
@@ -188,6 +259,6 @@
   }
 
   .valuesGridRow {
-    gap: 20px;
+    gap: 40px;
   }
 }

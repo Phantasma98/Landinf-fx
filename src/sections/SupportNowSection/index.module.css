@@ -131,3 +131,118 @@
   display: flex;
   align-items: flex-start;
 }
+
+/* ==================== */
+/* RESPONSIVE STYLES    */
+/* ==================== */
+
+@media (max-width: 1250px) {
+  .supportMain {
+    padding: 100px 0;
+  }
+
+  .supportSection {
+    gap: 60px;
+  }
+
+  .supportHeader,
+  .supportContent {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .paymentMethods {
+    gap: 24px;
+  }
+
+  .paymentButtons {
+    gap: 16px;
+  }
+
+  .bankInfoContainer {
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 924px) {
+  .supportMain {
+    padding: 80px 0;
+  }
+
+  .supportSection {
+    gap: 40px;
+  }
+
+  .donationImage {
+    height: 280px;
+  }
+
+  .paymentMethods {
+    gap: 20px;
+  }
+
+  .paymentButtons {
+    gap: 14px;
+  }
+
+  .paymentBtn {
+    padding: 12px 18px;
+    min-width: 140px;
+  }
+
+  .bankInfoContainer {
+    padding: 20px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .bankInfoButton {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 674px) {
+  .supportMain {
+    padding: 60px 0;
+  }
+
+  .supportSection {
+    gap: 30px;
+  }
+
+  .donationImage {
+    height: 200px;
+  }
+
+  .paymentMethods {
+    gap: 16px;
+  }
+
+  .paymentButtons {
+    gap: 10px;
+  }
+
+  .paymentBtn {
+    padding: 10px 16px;
+    min-width: 120px;
+    width: 100%;
+  }
+
+  .bankInfoContainer {
+    padding: 16px 14px;
+  }
+
+  .bankInfoTitle {
+    margin-bottom: 10px;
+  }
+
+  .bankInfoSvg {
+    margin-left: 14px;
+  }
+
+  .bankInfo p {
+    margin: 10px 0;
+  }
+}

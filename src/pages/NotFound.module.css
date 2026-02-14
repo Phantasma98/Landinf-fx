@@ -61,7 +61,7 @@
   flex-shrink: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .contentWrap {
     padding-top: 182px;
     padding-bottom: 95px;
@@ -77,7 +77,7 @@
   }
 }
 
-@media (max-width: 744px) {
+@media (max-width: 924px) {
   .contentWrap {
     padding-top: 160px;
     padding-bottom: 70px;
@@ -98,7 +98,7 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 674px) {
   .contentWrap {
     padding-top: 140px;
     padding-bottom: 50px;

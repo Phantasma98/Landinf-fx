@@ -40,7 +40,8 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 40px;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   flex-shrink: 0;
 }
 
@@ -75,29 +76,7 @@
 /* ==================== */
 
 /* 1024px — Tablet Landscape */
-@media (max-width: 1024px) {
-  .section {
-    padding: 220px 0 120px;
-    gap: 60px;
-  }
-
-  .block {
-    gap: 20px;
-  }
-
-  .blockHeader {
-    width: 450px;
-    gap: 40px;
-  }
-
-  .blockVideo {
-    min-height: 254px;
-    aspect-ratio: 451 / 254;
-  }
-}
-
-/* 744px — Tablet Portrait */
-@media (max-width: 744px) {
+@media (max-width: 1250px) {
   .section {
     padding: 200px 0 100px;
     gap: 50px;
@@ -120,11 +99,34 @@
   }
 }
 
-/* 390px — Mobile */
-@media (max-width: 390px) {
+/* 744px — Tablet Portrait */
+@media (max-width: 924px) {
   .section {
-    padding: 160px 0 80px;
+    padding: 200px 0 100px;
+    gap: 50px;
+  }
+
+  .block {
+    flex-direction: column;
     gap: 40px;
+  }
+
+  .blockHeader {
+    width: 100%;
+    gap: 40px;
+  }
+
+  .blockVideo {
+    width: 100%;
+    aspect-ratio: 674 / 379;
+  }
+}
+
+/* 390px — Mobile */
+@media (max-width: 674px) {
+  .section {
+    padding: 200px 0 100px;
+    gap: 50px;
   }
 
   .block {
@@ -132,10 +134,10 @@
   }
 
   .blockHeader {
-    gap: 20px;
+    gap: 40px;
   }
 
   .blockVideo {
-    aspect-ratio: 360 / 202;
+    aspect-ratio: 674 / 379;
   }
 }

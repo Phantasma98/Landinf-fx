@@ -30,7 +30,7 @@
 .arsenalImage {
   position: relative;
   width: 100%;
-  max-width: 1250px;
+  max-width: var(--content-max);
   height: 400px;
   overflow: hidden;
 }
@@ -91,7 +91,7 @@
 /* ==================== */
 
 /* 1024px - Tablet Landscape */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .arsenalMain {
     padding: 120px 0;
   }
@@ -122,7 +122,7 @@
 }
 
 /* 744px - Tablet Portrait */
-@media (max-width: 744px) {
+@media (max-width: 924px) {
   .arsenalMain {
     padding: 100px 0;
   }
@@ -153,7 +153,7 @@
 }
 
 /* 390px - Mobile */
-@media (max-width: 390px) {
+@media (max-width: 674px) {
   .arsenalMain {
     padding: 80px 0;
   }

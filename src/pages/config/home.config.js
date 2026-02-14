@@ -8,6 +8,10 @@ import Commander from "@/sections/CommanderSection/CommanderSection";
 import Values from "@/sections/ValuesSection/ValuesSection";
 import Job from "@/sections/JobsSection/JobsSection";
 import Support from "@/sections/SupportSection/SupportSection";
+import Faq from "@/sections/FaqSection/FaqSection";
+import Recruit from "@/sections/RecruitSection/RecruitSection";
+import SectionForm from "@/sections/FormSection/FormSection";
+import ContactsSection from "@/sections/ContactsSection/ContactsSection";
 import {
   mainHistory,
   mainEcosystem,
@@ -20,15 +24,21 @@ import {
   mainCommander,
   mainStatistic,
   mainAbout,
+  mainFaq,
+  mainRecruit,
 } from "@/data/main";
-import { aboutStatistic } from "@/data/about";
+import {
+  contactsForm,
+} from "@/data/contacts";
+
 
 export const getHomePageConfig = (language = "ua") => {
   const hero = mainHero[language] || mainHero.ua;
   const commander = mainCommander[language] || mainCommander.ua;
   const values = mainValues[language] || mainValues.ua;
   const support = mainSupport[language] || mainSupport.ua;
-
+  const faq = mainFaq[language] || mainFaq.ua;
+  const recruit = mainRecruit[language] || mainRecruit.ua;
   // English version structure
   if (language === "en") {
     return {
@@ -42,6 +52,7 @@ export const getHomePageConfig = (language = "ua") => {
         { id: "commander", Component: Commander, props: commander },
         { id: "values", Component: Values, props: values },
         { id: "support", Component: Support, props: support },
+        { id: "form", Component: SectionForm, props: contactsForm },
       ],
     };
   }
@@ -55,9 +66,12 @@ export const getHomePageConfig = (language = "ua") => {
       { id: "commander", Component: Commander, props: commander },
       { id: "values", Component: Values, props: values },
       { id: "jobs", Component: Job, props: mainJob },
+      { id: "recruit", Component: Recruit, props: recruit },
       { id: "support", Component: Support, props: support },
+      { id: "faq", Component: Faq, props: faq },
+      { id: "form", Component: SectionForm, props: contactsForm },
     ],
-  };
+  };  
 };
 
 // Backward compatibility

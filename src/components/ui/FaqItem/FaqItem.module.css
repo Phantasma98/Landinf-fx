@@ -75,7 +75,7 @@
 .answer p {
   margin: 0;
   padding: 8px 40px 28px 40px;
-  max-width: 1017px;
+  max-width: 100%;
   color: var(--color-text-on-dark);
   opacity: 0;
   transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
@@ -89,11 +89,21 @@
 /* RESPONSIVE STYLES    */
 /* ==================== */
 
-/* 1024px - Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .question {
     padding: 24px 32px;
     gap: 16px;
+  }
+
+  .answer p {
+    padding: 8px 32px 24px 32px;
+  }
+}
+
+@media (max-width: 924px) {
+  .question {
+    padding: 20px 24px;
+    gap: 14px;
   }
 
   .arrow {
@@ -102,45 +112,23 @@
   }
 
   .answer p {
-    padding: 0 32px 24px 32px;
+    padding: 8px 24px 20px 24px;
   }
 }
 
-/* 744px - Tablet Portrait */
-@media (max-width: 744px) {
+/* 390px - Mobile */
+@media (max-width: 674px) {
   .question {
-    padding: 20px 24px;
-    gap: 12px;
-  }
-
-  .arrow {
-    width: 36px;
-    height: 36px;
-  }
-
-  .arrow img {
-    width: 16px;
-    height: 16px;
-  }
-
-  .answer p {
-    padding: 0 24px 20px 24px;
-  }
-}
-
-/* 480px - Mobile */
-@media (max-width: 390px) {
-  .question {
-    padding: 16px 20px;
+    padding: 15px 10px 15px 20px;
     gap: 10px;
   }
 
   .arrow {
-    width: 32px;
-    height: 32px;
+    width: 54px;
+    height: 54px;
   }
 
   .answer p {
-    padding: 0 20px 16px 20px;
+    padding: 8px 20px 15px 20px;
   }
 }

@@ -43,3 +43,24 @@
   padding: 12px 24px;
   font-size: 14px;
 }
+
+@media (max-width: 924px) {
+  .l {
+    padding: 18px 32px;
+  }
+
+  .m {
+    padding: 14px 28px;
+  }
+
+  .s {
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 674px) {
+  .btn {
+    display: flex;
+    width: 100%;
+  }
+}

@@ -120,7 +120,20 @@
 /* RESPONSIVE STYLES    */
 /* ==================== */
 
-@media (max-width: 744px) {
+@media (max-width: 1250px) {
+  .select {
+    padding: 15px 17px;
+    height: 54px;
+    padding-right: 48px;
+    background-position: right 16px center;
+  }
+
+  .option {
+    padding: 17px;
+  }
+}
+
+@media (max-width: 924px) {
   .select {
     padding: 14px 16px;
     height: 52px;
@@ -133,7 +146,7 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 674px) {
   .select {
     padding: 12px 14px;
     height: 48px;

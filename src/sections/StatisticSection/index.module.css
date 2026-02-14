@@ -32,33 +32,45 @@
    Figma: 1024 viewport, 924px content
    ============================ */
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .statisticMain {
     padding: 120px 0;
   }
 
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 40px 99px;
+    gap: 60px;
   }
 }
 
 /* ============================
-   Mobile (≤ 744px)
-   Figma: 390 viewport, 360px content
+   Tablet portrait (≤ 744px)
+   Figma: 744 viewport, 674px content
    ============================ */
 
-@media (max-width: 744px) {
+@media (max-width: 924px) {
   .statisticMain {
-    padding: 60px 0;
+    padding: 100px 0;
   }
 
   .statsGrid {
-    grid-template-columns: 1fr;
-    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+/* ============================
+   Mobile (≤ 390px)
+   Figma: 390 viewport, 360px content
+   ============================ */
+
+@media (max-width: 674px) {
+  .statisticMain {
+    padding: 80px 0;
   }
 
-  .statItem:last-child {
-    grid-column: 1;
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 20px;
   }
 }

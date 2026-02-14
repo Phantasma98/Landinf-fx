@@ -119,7 +119,7 @@
 /* --------------------------------------------------------
    Tablet landscape
    -------------------------------------------------------- */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .hero {
     height: 100dvh;
     min-height: 100dvh;
@@ -150,7 +150,7 @@
 /* --------------------------------------------------------
    Tablet portrait
    -------------------------------------------------------- */
-@media (max-width: 744px) {
+@media (max-width: 924px) {
   .hero {
     height: 100dvh;
     min-height: 100dvh;
@@ -161,7 +161,7 @@
 
   .frameParent {
     width: 100%;
-    max-width: 100%;
+    max-width: var(--content-max);
     gap: 10px;
     justify-content: space-between;
   }
@@ -182,27 +182,34 @@
   }
 
   .heroActions {
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 15px;
-    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
   }
 
   .containerSocials {
-    display: none;
+    display: flex;
   }
 }
 
 /* --------------------------------------------------------
    Phone
    -------------------------------------------------------- */
-@media (max-width: 390px) {
+@media (max-width: 674px) {
   .heroActions {
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     gap: 15px;
     width: 100%;
+  }
+
+  .heroActions :global(.btn-primary),
+  .heroActions :global(.btn-secondary) {
+    width: 100%;
+  }
+
+  .containerSocials {
+    display: none;
   }
 }

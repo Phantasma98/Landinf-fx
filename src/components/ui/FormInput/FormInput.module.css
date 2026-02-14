@@ -66,14 +66,21 @@
 /* RESPONSIVE STYLES    */
 /* ==================== */
 
-@media (max-width: 744px) {
+@media (max-width: 1250px) {
+  .input {
+    padding: 15px 17px;
+    height: 54px;
+  }
+}
+
+@media (max-width: 924px) {
   .input {
     padding: 14px 16px;
     height: 52px;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 674px) {
   .input {
     padding: 12px 14px;
     height: 48px;

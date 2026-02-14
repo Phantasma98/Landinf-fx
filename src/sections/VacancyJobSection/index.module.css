@@ -28,7 +28,7 @@
   line-height: 16px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .vacancyJobMain {
     padding: 80px 0;
   }
@@ -55,7 +55,7 @@
   }
 }
 
-@media (max-width: 744px) {
+@media (max-width: 924px) {
   .vacancyJobMain {
     padding: 60px 0;
   }

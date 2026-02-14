@@ -34,7 +34,7 @@
   margin: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .policy {
     padding: 180px 0 100px;
   }
@@ -44,12 +44,30 @@
   }
 }
 
-@media (max-width: 744px) {
+@media (max-width: 924px) {
   .policy {
     padding: 140px 0 80px;
   }
 
   .container {
     gap: 40px;
+  }
+}
+
+@media (max-width: 674px) {
+  .policy {
+    padding: 110px 0 60px;
+  }
+
+  .container {
+    gap: 30px;
+  }
+
+  .block {
+    gap: 16px;
+  }
+
+  .blockText ul {
+    padding-left: 18px;
   }
 }

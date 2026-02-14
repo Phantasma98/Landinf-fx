@@ -22,7 +22,7 @@
 /* Description text */
 .description {
   margin: 0;
-  max-width: 720px;
+  max-width: 100%;
 }
 
 /* Infinite Carousel */
@@ -102,7 +102,7 @@
   justify-content: space-between;
   flex: 1;
   margin-left: auto;
-  max-width: 723px;
+  max-width: 100%;
 }
 
 .statItem {
@@ -124,25 +124,28 @@
 /* ==================== */
 
 /* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .sectionMain {
-    padding: 100px 0;
-    gap: 50px;
+    padding: 120px 0;
+    gap: 60px;
   }
 
   .headerRow {
-    gap: 80px;
-  }
-
-  .statsRow {
-    flex-wrap: wrap;
     gap: 40px;
   }
 
+  .statsRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
   .statsContainer {
-    max-width: 100%;
-    flex-wrap: wrap;
-    gap: 40px 20px;
+    display: contents;
+  }
+
+  .statItemTop {
+    width: auto;
   }
 
   .statItem {
@@ -158,31 +161,31 @@
   }
 
   .carouselItem {
+    width: 400px;
     height: 320px;
   }
 }
 
-/* Mobile */
-@media (max-width: 744px) {
+/* Tablet portrait */
+@media (max-width: 924px) {
   .sectionMain {
-    padding: 80px 0;
-    gap: 40px;
+    padding: 100px 0;
+    gap: 50px;
   }
 
   .headerRow {
     flex-direction: column;
-    gap: 24px;
+    gap: 50px;
   }
 
   .statsRow {
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
   }
 
   .statsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 40px 20px;
+    display: contents;
   }
 
   .staticImagesTrack {
@@ -194,15 +197,42 @@
   }
 
   .carouselItem {
-    width: 100%;
-    height: 200px;
+    width: 320px;
+    height: 260px;
   }
 
   .statItemTop p {
-    max-width: 170px;
+    max-width: 100%;
   }
 
   .statItem p {
-    max-width: 170px;
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 674px) {
+  .sectionMain {
+    padding: 80px 0;
+    gap: 40px;
+  }
+
+  .headerRow {
+    gap: 40px;
+  }
+
+  .statsRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 20px;
+  }
+
+  .carouselTrack {
+    animation-duration: 24s;
+  }
+
+  .carouselItem {
+    width: 260px;
+    height: 200px;
+    margin-right: 12px;
   }
 }

@@ -73,7 +73,7 @@
   max-width: 100%;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .modalOverlay {
     padding: 0;
     align-items: center;
@@ -89,7 +89,22 @@
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 924px) {
+  .modalContent {
+    padding: 70px 40px 32px;
+    gap: 32px;
+  }
+
+  .modalClose {
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 674px) {
   .modalOverlay {
     padding: 0;
   }

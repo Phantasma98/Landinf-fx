@@ -1,14 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import styles from "./index.module.css";
 import SecondaryBtn from "@/components/ui/SecondaryBtn";
 import { LogoPhoenixTop } from "@/assets";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useModal } from "@/contexts/ModalContext";
-import { headerNav, headerActions, allowedEnPages } from "@/data/header";
+import { headerNav, headerActions, allowedEnPages, headerMobileMenu } from "@/data/header";
+import SocialLinks from "@/components/ui/SocialLinks";
 
 export default function Header({ isVisible = true, isScrolled = false, forceSolid = false }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const { language, setLanguage } = useLanguage();
   const { openModal } = useModal();
   const navigate = useNavigate();
@@ -48,6 +50,39 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
     }
   };
 
+  // Track mobile/tablet viewport (≤924px for tablet portrait + mobile)
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(max-width: 924px)');
+
+    const handleMediaChange = (e) => {
+      setIsMobile(e.matches);
+      // Auto-close menu when switching to desktop
+      if (!e.matches && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    // Set initial value
+    setIsMobile(mediaQuery.matches);
+
+    // Listen for changes
+    mediaQuery.addEventListener('change', handleMediaChange);
+
+    return () => mediaQuery.removeEventListener('change', handleMediaChange);
+  }, [isMenuOpen]);
+
+  // Block body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMenuOpen && isMobile) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMenuOpen, isMobile]);
+
   const getJoinButtonProps = () => {
     if (language === "en") {
       // EN: link to support section
@@ -62,7 +97,7 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
     <header
       className={`${styles.header} ${!isVisible ? styles.headerHidden : ''} ${
         (isScrolled || forceSolid) ? styles.headerSolid : ''
-      }`}
+      } ${isMenuOpen && isMobile ? styles.headerMenuOpen : ''}`}
     >
       <div className={styles.container}>
         <div className={styles.frameParent}>
@@ -76,28 +111,76 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
             />
           </Link>
 
-          <nav className={`${styles.navList} ${isMenuOpen ? styles.open : ""}`}>
-            {navItems.map((item, idx) => (
-              <div key={idx} className={styles.item}>
-                {item.anchor ? (
-                  <a
-                    href={`#${item.anchor}`}
-                    className={`${styles.link2} font-nav`}
-                    onClick={handleNavClick}
-                  >
-                    {item.text}
-                  </a>
-                ) : (
-                  <Link
-                    to={item.href}
-                    className={`${styles.link2} font-nav`}
-                    onClick={handleNavClick}
-                  >
-                    {item.text}
-                  </Link>
-                )}
+          <nav className={`${styles.navList} ${isMenuOpen && isMobile ? styles.open : ""}`}>
+            {/* Desktop/Tablet navigation - direct items */}
+            <div className={styles.desktopNav}>
+              {navItems.map((item, idx) => (
+                <div key={idx} className={styles.item}>
+                  {item.anchor ? (
+                    <a
+                      href={`#${item.anchor}`}
+                      className={`${styles.link2} font-nav`}
+                      onClick={handleNavClick}
+                    >
+                      {item.text}
+                    </a>
+                  ) : (
+                    <Link
+                      to={item.href}
+                      className={`${styles.link2} font-nav`}
+                      onClick={handleNavClick}
+                    >
+                      {item.text}
+                    </Link>
+                  )}
+                </div>
+              ))}
+            </div>
+
+            {/* Mobile-only menu content */}
+            <div className={styles.mobileMenuContent}>
+              <div className={styles.mobileMenuNav}>
+                {navItems.map((item, idx) => (
+                  <div key={idx} className={styles.item}>
+                    {item.anchor ? (
+                      <a
+                        href={`#${item.anchor}`}
+                        className={`${styles.link2} font-nav`}
+                        onClick={handleNavClick}
+                      >
+                        {item.text}
+                      </a>
+                    ) : (
+                      <Link
+                        to={item.href}
+                        className={`${styles.link2} font-nav`}
+                        onClick={handleNavClick}
+                      >
+                        {item.text}
+                      </Link>
+                    )}
+                  </div>
+                ))}
               </div>
-            ))}
+
+              <div className={styles.mobileMenuPhones}>
+                {headerMobileMenu.phones.map((phone, idx) => (
+                  <div key={idx} className={styles.item}>
+                    <a
+                      href={phone.href}
+                      className={`${styles.link2} ${styles.phoneLink} font-nav`}
+                      onClick={handleNavClick}
+                    >
+                      {phone.text}
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              <div className={styles.mobileMenuSocials}>
+                <SocialLinks socials={headerMobileMenu.socials} />
+              </div>
+            </div>
           </nav>
 
           <div className={styles.actions}>
@@ -141,7 +224,7 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
           </div>
 
           <button
-            className={styles.menuBtn}
+            className={`${styles.menuBtn} ${isMenuOpen && isMobile ? styles.menuBtnOpen : ""}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menu"
           >

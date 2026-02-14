@@ -1,6 +1,6 @@
 .jobCard {
-  width: 298px;
-  height: 150px;
+  width: 100%;
+  aspect-ratio: 298 / 150;
   padding: 26px 20px;
   background: #1B1A1F;
   cursor: pointer;
@@ -29,10 +29,12 @@
   align-items: stretch;
   height: 100%;
   gap: 10px;
+  min-width: 0;
 }
 
 .jobCard :global(.arrow-btn-container) {
   align-self: flex-end;
+  flex-shrink: 0;
 }
 
 .jobCardContent {
@@ -40,12 +42,13 @@
   flex-direction: column;
   justify-content: space-between;
   flex: 1;
+  min-width: 0;
 }
 
 .jobTags {
   display: flex;
   gap: 10px;
-  white-space: nowrap;
+  flex-wrap: wrap;
 }
 
 .jobTags span {
@@ -57,21 +60,29 @@
   color: var(--color-text-on-dark);
   text-transform: none;
   margin: 0;
-  max-width: 182px;
+  max-width: 100%;
   transition: none;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 /* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .jobCard {
-    width: 100%;
+    padding: 20px 16px;
+  }
+}
+
+/* Tablet portrait */
+@media (max-width: 924px) {
+  .jobCard {
+    padding: 18px 14px;
   }
 }
 
 /* Mobile */
-@media (max-width: 744px) {
+@media (max-width: 674px) {
   .jobCard {
-    height: auto;
-    min-height: 150px;
+    padding: 14px 12px;
   }
 }
