@@ -29,7 +29,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  max-width: 1250px;
+  max-width: var(--content-max);
   margin: 0 auto;
 }
 .layer1Parent {
@@ -79,7 +79,7 @@
 .navList :hover {
   color: #ff4f18;
 }
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .navList {
     gap: 15px;
   }

@@ -34,14 +34,14 @@
 }
 
 /* Responsive */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
     .formInner {
         grid-template-columns: 1fr;
         gap: 40px;
     }
 }
 
-@media (max-width: 744px) {
+@media (max-width: 924px) {
     .formSection {
         padding: 60px 0;
     }
@@ -51,7 +51,7 @@
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 674px) {
     .formTitle {
         font-size: 40px;
     }

@@ -1,3 +1,21 @@
 .container {
   padding-top: 100px;
 }
+
+@media (max-width: 1250px) {
+  .container {
+    padding-top: 100px;
+  }
+}
+
+@media (max-width: 924px) {
+  .container {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 674px) {
+  .container {
+    padding-top: 80px;
+  }
+}

@@ -14,18 +14,20 @@
 
 .sectionTitle {
   margin: 0;
-  width: 403px;
+  width: 100%;
+  max-width: 403px;
   flex-shrink: 0;
 }
 
 /* Steps grid: fixed desktop columns and gaps */
 .pathSteps {
   display: grid;
-  grid-template-columns: 194px 192px 183px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   column-gap: 76px;
   row-gap: 60px;
   align-items: start;
-  width: 721px;
+  width: 100%;
+  max-width: 721px;
 }
 
 .pathStep {
@@ -52,9 +54,13 @@
 /* ==================== */
 
 /* Tablet (<=1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .recruitmentMain {
     padding: 120px 0;
+  }
+
+  .contentWrapper {
+    gap: 60px;
   }
 
   .sectionTitle {
@@ -62,15 +68,37 @@
   }
 
   .pathSteps {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 91px;
     row-gap: 40px;
     width: 100%;
   }
 }
 
 /* Mobile (<=744px) */
-@media (max-width: 744px) {
+@media (max-width: 924px) {
+  .recruitmentMain {
+    padding: 100px 0;
+  }
+
+  .contentWrapper {
+    gap: 50px;
+  }
+
+  .pathSteps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 10px;
+    row-gap: 20px;
+    width: 100%;
+  }
+
+  .pathStep {
+    gap: 10px;
+  }
+}
+
+/* Mobile small (<=390px) */
+@media (max-width: 674px) {
   .recruitmentMain {
     padding: 80px 0;
   }
@@ -80,9 +108,9 @@
   }
 
   .pathSteps {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 10px;
     row-gap: 40px;
-    width: 100%;
   }
 
   .pathStep {

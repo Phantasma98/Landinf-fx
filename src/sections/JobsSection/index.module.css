@@ -57,7 +57,32 @@
 /* ==================== */
 
 /* Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
+  .jobMain {
+    padding: 120px 0;
+  }
+
+  .jobsSection {
+    gap: 60px;
+  }
+
+  .jobCategories {
+    margin-bottom: 40px;
+  }
+
+  .jobGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .jobsAction {
+    gap: 40px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width: 924px) {
   .jobMain {
     padding: 100px 0;
   }
@@ -65,7 +90,6 @@
   .jobsSection {
     gap: 50px;
   }
-
 
   .jobCategories {
     margin-bottom: 30px;
@@ -82,8 +106,8 @@
 
 }
 
-/* Mobile */
-@media (max-width: 744px) {
+/* Small Mobile */
+@media (max-width: 674px) {
   .jobMain {
     padding: 80px 0;
   }
@@ -92,9 +116,8 @@
     gap: 40px;
   }
 
-
   .jobCategories {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   .jobGrid {
@@ -104,6 +127,10 @@
 
   .jobsAction {
     gap: 40px;
+  }
+
+  .jobsButton {
+    width: 100%;
   }
 
 }

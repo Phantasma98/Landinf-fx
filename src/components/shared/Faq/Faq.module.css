@@ -64,7 +64,21 @@
 }
 
 /* Responsive */
-@media (max-width: 744px) {
+@media (max-width: 1250px) {
+    .faq {
+        padding: 60px 0;
+    }
+
+    .faqHeader {
+        margin-bottom: 40px;
+    }
+
+    .faqQuestion {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 924px) {
     .faq {
         padding: 60px 0;
     }
@@ -79,7 +93,7 @@
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 674px) {
     .faqQuestion {
         font-size: 20px;
         gap: 16px;

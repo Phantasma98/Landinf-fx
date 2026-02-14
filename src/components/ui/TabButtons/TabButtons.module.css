@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   gap: 20px;
+  width: 100%;
 }
 
 .tabBtn {
@@ -39,27 +40,43 @@
   color: var(--color-text-on-dark);
 }
 
-/* Tablet */
-@media (max-width: 1024px) {
+/* Tablet — 2 rows: 5 + 4, each row stretches full width */
+@media (max-width: 1250px) {
   .tabButtons {
     flex-wrap: wrap;
+    gap: 16px;
   }
 
   .tabBtn {
-    flex: 0 0 auto;
+    flex: 1 1 calc((100% - 4 * 16px) / 5);
+    min-width: calc((100% - 4 * 16px) / 5);
   }
 }
 
-/* Mobile */
-@media (max-width: 744px) {
+/* Tablet portrait — 2 rows: 5 + 4 */
+@media (max-width: 924px) {
   .tabButtons {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+    gap: 12px;
   }
 
-  .tabButtons::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+  .tabBtn {
+    flex: 1 1 calc((100% - 4 * 12px) / 5);
+    min-width: calc((100% - 4 * 12px) / 5);
+    padding: 14px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Mobile — 3 rows: 3 + 3 + 3 */
+@media (max-width: 674px) {
+  .tabButtons {
+    gap: 10px;
+  }
+
+  .tabBtn {
+    flex: 1 1 calc((100% - 2 * 10px) / 3);
+    min-width: calc((100% - 2 * 10px) / 3);
+    padding: 12px 8px;
+    font-size: 12px;
   }
 }

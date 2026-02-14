@@ -347,7 +347,7 @@ a.btn-secondary:hover * {
 
 .layout-1250 {
   max-width: var(--content-max);
-  width: min(var(--content-max), calc(100vw - (var(--page-pad) * 2)));
+  width: var(--content-shell-width);
   margin: 0 auto;
   overflow: visible;
 }
@@ -373,7 +373,7 @@ a.btn-secondary:hover * {
 
 .content-509-721 {
   max-width: var(--content-max);
-  width: min(var(--content-max), calc(100vw - (var(--page-pad) * 2)));
+  width: var(--content-shell-width);
   margin: 0 auto;
   padding: 0;
 }
@@ -394,7 +394,6 @@ a.btn-secondary:hover * {
 
 /* Force consistent rails for all standard section headers within main content containers */
 .layout-1250 > .content-row {
-  grid-template-columns: minmax(0, var(--col-left)) minmax(0, var(--col-right));
   align-items: start;
 }
 
@@ -406,9 +405,9 @@ a.btn-secondary:hover * {
   grid-column: 2;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   :root {
-    --main-max: 1024px;
+    --main-max: 1250px;
     --content-max: 924px;
     --page-pad: 50px;
   }
@@ -419,19 +418,42 @@ a.btn-secondary:hover * {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
+  .layout-1250 > .content-row > .col-left,
+  .layout-1250 > .content-row > .col-right {
+    grid-column: auto;
+  }
 }
 
-@media (max-width: 744px) {
+@media (max-width: 924px) {
+  .layout-1250 > .content-row {
+    grid-template-columns: 1fr;
+  }
+
+  .layout-1250 > .content-row > .col-left,
+  .layout-1250 > .content-row > .col-right {
+    grid-column: 1;
+  }
+
   :root {
-    --main-max: 744px;
+    --main-max: 924px;
     --content-max: 674px;
     --page-pad: 35px;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 674px) {
+  .layout-1250 > .content-row {
+    grid-template-columns: 1fr;
+  }
+
+  .layout-1250 > .content-row > .col-left,
+  .layout-1250 > .content-row > .col-right {
+    grid-column: 1;
+  }
+
   :root {
-    --main-max: 390px;
+    --main-max: 674px;
     --content-max: 360px;
     --page-pad: 15px;
   }
@@ -486,7 +508,9 @@ a.btn-secondary:hover * {
 
 /* Hero has its own bg via inline style — remove alternation SVG overlay */
 .start-dark > section:first-of-type,
-.start-surface > section:first-of-type {
+.start-surface > section:first-of-type,
+.start-dark > .section-wrapper:first-of-type > section,
+.start-surface > .section-wrapper:first-of-type > section {
   background-image: none;
   background-color: transparent;
 }
@@ -669,7 +693,7 @@ a.btn-secondary:hover * {
 }
 
 /* Tablet Landscape (<= 1024px) */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .title-l-l {
     font-size: 100px;
     line-height: 90px;
@@ -748,7 +772,7 @@ a.btn-secondary:hover * {
 }
 
 /* Tablet Portrait (<= 744px) */
-@media (max-width: 744px) {
+@media (max-width: 924px) {
   .title-l-l {
     font-size: 60px;
     line-height: 54px;
@@ -827,7 +851,7 @@ a.btn-secondary:hover * {
 }
 
 /* Phone compact (<= 390px) */
-@media (max-width: 390px) {
+@media (max-width: 674px) {
   .title-l-l {
     font-size: 52px;
     line-height: 46.8px;
@@ -846,6 +870,14 @@ a.btn-secondary:hover * {
   .title-l-xs {
     font-size: 22px;
     line-height: 22px;
+  }
+
+  /* Global mobile button full-width rule */
+  .btn-primary,
+  .btn-secondary {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
   }
 }
 

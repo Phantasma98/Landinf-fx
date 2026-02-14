@@ -1,32 +1,34 @@
 import styles from "./index.module.css";
-import PrimaryBtn from "@/components/ui/PrimaryBtn";
+import SecondaryBtn from "@/components/ui/SecondaryBtn";
 
 export default function VacancySection({ title, blocks = [], ctaText, ctaHref }) {
   return (
-    <section className={`${styles.vacancy} full-bleed`}>
-      <div className={`${styles.container} layout-1250`}>
-        <h2 className={`${styles.title} font-title-l title-l-m section-title`}>
+    <section className={styles.vacancyMain}>
+      <div className={`${styles.contentWrapper} layout-1250`}>
+        <h1 className={`${styles.sectionTitle} font-title-l title-l-m section-title`}>
           {title}
-        </h2>
-        {blocks.map((block, blockIdx) => (
-          <div key={`${block.title}-${blockIdx}`} className={styles.block}>
-            <h3 className={`${styles.blockTitle} font-headline-l headline-l-s`}>
-              {block.title}
-            </h3>
-            <ul className={styles.list}>
-              {block.items?.map((item, idx) => (
-                <li key={idx} className={`font-text-l-s ${styles.listItem}`}>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-        {ctaText ? (
+        </h1>
+        <div className={styles.content}>
+          {blocks?.map((block, idx) => (
+            <div key={idx} className={styles.block}>
+              <h2 className={`${styles.blockTitle} font-headline-l headline-l-s`}>
+                {block.title}
+              </h2>
+              <ul className={styles.list}>
+                {block.items?.map((item, i) => (
+                  <li key={i} className={`${styles.listItem} font-text-l-s`}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        {ctaText && (
           <div className={styles.ctaWrap}>
-            <PrimaryBtn text={ctaText} href={ctaHref} className={styles.ctaBtn} />
+            <SecondaryBtn text={ctaText} href={ctaHref} />
           </div>
-        ) : null}
+        )}
       </div>
     </section>
   );

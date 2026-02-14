@@ -7,7 +7,7 @@ export default {
   parameters: {
     layout: "fullscreen",
   },
-  args: mainRecruit,
+  args: mainRecruit.ua,
 };
 
 export const Desktop = {

@@ -24,7 +24,7 @@
   margin: 0;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .row {
     flex-direction: column;
     gap: 24px;
@@ -32,5 +32,17 @@
 
   .title {
     white-space: normal;
+  }
+}
+
+@media (max-width: 924px) {
+  .column {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 674px) {
+  .column {
+    gap: 16px;
   }
 }

@@ -8,7 +8,7 @@
   align-items: center;
 }
 .section {
-  max-width: 1250px;
+  max-width: var(--content-max);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -62,14 +62,14 @@
   display: flex;
   flex-direction: column;
   padding: 80px 0;
-  max-width: 1250px;
+  max-width: var(--content-max);
   gap: 40px;
 }
 
 .jobCategories {
   display: flex;
   justify-content: space-between;
-  max-width: 1250px;
+  max-width: var(--content-max);
 }
 
 .categoryBtn {
@@ -102,7 +102,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 1250px;
+  max-width: var(--content-max);
 }
 
 .jobCard {
@@ -150,7 +150,7 @@
   height: 54;
 }
 .jobsAction {
-  max-width: 1250px;
+  max-width: var(--content-max);
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -189,7 +189,7 @@
 }
 
 .formSection {
-  max-width: 1250px;
+  max-width: var(--content-max);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -199,7 +199,7 @@
 .formHeader {
   display: flex;
   gap: 159px;
-  max-width: 1250px;
+  max-width: var(--content-max);
 }
 
 .formInfo {
@@ -213,7 +213,7 @@
 .formContent {
   display: flex;
   justify-content: flex-end;
-  max-width: 1250px;
+  max-width: var(--content-max);
 }
 
 .formContainer {
@@ -379,7 +379,7 @@
   white-space: nowrap;
 }
 .jobsSection {
-  max-width: 1250px;
+  max-width: var(--content-max);
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -389,7 +389,7 @@
 .jobsHeader {
   display: flex;
   justify-content: space-between;
-  max-width: 1250px;
+  max-width: var(--content-max);
 }
 
 .jobsSubtitle {
@@ -403,14 +403,14 @@
   display: flex;
   flex-direction: column;
   padding: 80px 0;
-  max-width: 1250px;
+  max-width: var(--content-max);
   gap: 40px;
 }
 
 .jobCategories {
   display: flex;
   justify-content: space-between;
-  max-width: 1250px;
+  max-width: var(--content-max);
 }
 
 .categoryBtn {
@@ -443,7 +443,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
-  max-width: 1250px;
+  max-width: var(--content-max);
 }
 
 .jobCard {
@@ -496,7 +496,7 @@
   height: 54;
 }
 .jobsAction {
-  max-width: 1250px;
+  max-width: var(--content-max);
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -538,4 +538,187 @@
 .jobArrowButton:hover .arrowImage {
   filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(0%)
     hue-rotate(0deg);
+}
+
+/* ==================== */
+/* RESPONSIVE STYLES    */
+/* ==================== */
+
+@media (max-width: 1250px) {
+  .main {
+    padding: 180px 0 100px 0;
+  }
+
+  .section {
+    max-width: var(--content-max);
+    gap: 48px;
+  }
+
+  .block {
+    flex-direction: column;
+  }
+
+  .formMain {
+    padding: 100px 0;
+  }
+
+  .formSection {
+    max-width: var(--content-max);
+    gap: 50px;
+  }
+
+  .formHeader {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .formContent {
+    justify-content: flex-start;
+  }
+
+  .jobMain {
+    padding: 100px 0;
+  }
+
+  .jobsSection {
+    max-width: var(--content-max);
+    gap: 60px;
+  }
+
+  .jobsHeader {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .jobCategoriesContainer {
+    padding: 60px 0;
+    max-width: var(--content-max);
+    gap: 32px;
+  }
+
+  .jobCategories {
+    max-width: var(--content-max);
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .jobGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: var(--content-max);
+    gap: 16px;
+  }
+
+  .jobsAction {
+    max-width: var(--content-max);
+    gap: 32px;
+  }
+}
+
+@media (max-width: 924px) {
+  .main {
+    padding: 140px 0 80px 0;
+  }
+
+  .section {
+    gap: 36px;
+  }
+
+  .formMain {
+    padding: 80px 0;
+  }
+
+  .formSection {
+    gap: 40px;
+  }
+
+  .jobMain {
+    padding: 80px 0;
+  }
+
+  .jobsSection {
+    gap: 40px;
+  }
+
+  .jobCategoriesContainer {
+    padding: 40px 0;
+    gap: 24px;
+  }
+
+  .jobGrid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .categoryBtn {
+    padding: 12px 18px;
+  }
+
+  .jobCard {
+    padding: 16px;
+  }
+
+  .jobsAction {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 674px) {
+  .main {
+    padding: 110px 0 60px 0;
+  }
+
+  .section {
+    gap: 30px;
+  }
+
+  .formMain {
+    padding: 60px 0;
+  }
+
+  .formSection {
+    gap: 30px;
+  }
+
+  .formTitle {
+    white-space: normal;
+  }
+
+  .jobMain {
+    padding: 60px 0;
+  }
+
+  .jobsSection {
+    gap: 30px;
+  }
+
+  .sectionTitle {
+    white-space: normal;
+  }
+
+  .jobCategoriesContainer {
+    padding: 30px 0;
+    gap: 20px;
+  }
+
+  .jobCategories {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .categoryBtn {
+    padding: 10px 16px;
+    width: 100%;
+  }
+
+  .jobCard {
+    padding: 14px;
+  }
+
+  .jobsAction {
+    gap: 20px;
+  }
+
+  .paymentBtn {
+    width: 100%;
+  }
 }

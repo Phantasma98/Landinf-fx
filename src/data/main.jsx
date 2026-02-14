@@ -318,15 +318,17 @@ export const mainJob = {
 };
 
 export const mainRecruit = {
-  title: "шлях рекрута",
-  steps: [
-    { num: "01", title: "ЗАПОВНЕННЯ АНКЕТИ" },
-    { num: "02", title: "СПІВБЕСІДА З РЕКРУТЕРАМИ" },
-    { num: "03", title: "ЗАРАХУВАННЯ ДО ПІДРОЗДІЛУ" },
-    { num: "04", title: "БАЗОВА ВІЙСЬКОВА ПІДГОТОВКА" },
-    { num: "05", title: "ФАХОВА ПІДГОТОВКА" },
-    { num: "06", title: "ВИКОНАННЯ ЗАВДАНЬ" },
-  ],
+  ua: {
+    title: "шлях рекрута",
+    steps: [
+      { num: "01", title: "ЗАПОВНЕННЯ АНКЕТИ" },
+      { num: "02", title: "СПІВБЕСІДА З РЕКРУТЕРАМИ" },
+      { num: "03", title: "ЗАРАХУВАННЯ ДО ПІДРОЗДІЛУ" },
+      { num: "04", title: "БАЗОВА ВІЙСЬКОВА ПІДГОТОВКА" },
+      { num: "05", title: "ФАХОВА ПІДГОТОВКА" },
+      { num: "06", title: "ВИКОНАННЯ ЗАВДАНЬ" },
+    ],
+  },
 };
 
 export const mainCommander = {
@@ -425,7 +427,7 @@ export const mainAbout = {
   infiniteCarousel: true,
 };
 
-export const mainFaq = faqDefault;
+export const mainFaq = { ua: faqDefault };
 export const mainForm = formDefault;
 export const mainSocials = socialsDefault;
 export const mainSupportUa = supportDefault;

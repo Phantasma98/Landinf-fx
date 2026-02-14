@@ -33,18 +33,25 @@
 /* ==================== */
 
 /* 1024px - Tablet */
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
   .contentWrapper {
     padding: 120px 0;
     gap: 60px;
   }
 }
 
-/* 744px - Mobile */
-@media (max-width: 744px) {
+/* 744px - Tablet Portrait */
+@media (max-width: 924px) {
+  .contentWrapper {
+    padding: 100px 0;
+    gap: 50px;
+  }
+}
+
+/* 390px - Mobile */
+@media (max-width: 674px) {
   .contentWrapper {
     padding: 80px 0;
     gap: 40px;
   }
-
 }

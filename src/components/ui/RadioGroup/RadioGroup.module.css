@@ -106,14 +106,20 @@
 /* RESPONSIVE STYLES    */
 /* ==================== */
 
-@media (max-width: 744px) {
+@media (max-width: 1250px) {
+  .radioGroup {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 924px) {
   .radioGroup {
     gap: 20px;
     flex-wrap: wrap;
   }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 674px) {
   .radioGroup {
     gap: 16px;
     flex-direction: column;

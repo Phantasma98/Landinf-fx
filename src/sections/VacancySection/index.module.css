@@ -1,90 +1,140 @@
-.vacancy {
+/* Vacancy Section */
+.vacancyMain {
   padding: 120px 0;
-  background: var(--color-dark);
 }
 
-.container {
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.sectionTitle {
+  margin: 0;
+}
+
+.content {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
 
-.title {
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.blockTitle {
   margin: 0;
   color: var(--color-accent);
 }
 
-.block {
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.blockTitle {
-  margin: 0;
-}
-
-.list {
-  list-style: disc;
-  padding-left: 18px;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
 .listItem {
+  position: relative;
+  padding-left: 24px;
   color: var(--color-text-on-dark);
 }
 
+.listItem::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: 700;
+}
+
 .ctaWrap {
-  margin-top: -20px;
+  display: flex;
+  align-items: flex-start;
 }
 
-.ctaBtn {
-  min-width: 312px;
-  min-height: 56px;
-  padding: 16px 24px;
-}
-
-@media (max-width: 1024px) {
-  .vacancy {
-    padding: 80px 0;
+/* Tablet Landscape */
+@media (max-width: 1250px) {
+  .vacancyMain {
+    padding: 120px 0;
   }
 
-  .container {
-    gap: 48px;
+  .contentWrapper {
+    gap: 60px;
   }
 
-  .ctaBtn {
-    min-width: 280px;
-    min-height: 52px;
-  }
-}
-
-@media (max-width: 744px) {
-  .vacancy {
-    padding: 60px 0;
+  .content {
+    gap: 50px;
   }
 
-  .container {
-    gap: 36px;
-  }
-
-  .title {
-    word-break: break-word;
+  .block {
+    gap: 30px;
   }
 
   .list {
-    padding-left: 16px;
+    gap: 16px;
+  }
+}
+
+/* Tablet Portrait */
+@media (max-width: 924px) {
+  .vacancyMain {
+    padding: 100px 0;
+  }
+
+  .contentWrapper {
+    gap: 50px;
+  }
+
+  .content {
+    gap: 40px;
+  }
+
+  .block {
+    gap: 24px;
+  }
+
+  .list {
+    gap: 12px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 674px) {
+  .vacancyMain {
+    padding: 80px 0;
+  }
+
+  .contentWrapper {
+    gap: 40px;
+  }
+
+  .content {
+    gap: 32px;
+  }
+
+  .block {
+    gap: 20px;
+  }
+
+  .list {
+    gap: 10px;
+  }
+
+  .listItem {
+    padding-left: 20px;
   }
 
   .ctaWrap {
-    margin-top: -8px;
+    width: 100%;
   }
 
-  .ctaBtn {
+  .ctaWrap :global(.btn-secondary) {
     width: 100%;
-    min-width: 0;
   }
 }
