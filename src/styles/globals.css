@@ -463,6 +463,18 @@ a.btn-secondary:hover * {
    SECTION BACKGROUNDS (alternating dark/surface)
    ======================================== */
 
+/* Lock scroll when mobile menu is open */
+html.menu-open,
+html.menu-open body {
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+html.menu-open .page-container > .section-wrapper,
+html.menu-open .page-container > footer {
+  pointer-events: none;
+  touch-action: none;
+}
+
 /* Page container with starting background */
 .page-container {
   display: flex;
@@ -771,56 +783,56 @@ a.btn-secondary:hover * {
   }
 }
 
-/* Tablet Portrait (<= 744px) */
+/* Tablet Portrait (<= 744px) — same sizes as Tablet Landscape */
 @media (max-width: 924px) {
   .title-l-l {
+    font-size: 100px;
+    line-height: 90px;
+  }
+
+  .title-l-m {
+    font-size: 80px;
+    line-height: 72px;
+  }
+
+  .title-l-s {
     font-size: 60px;
     line-height: 54px;
   }
 
-  .title-l-m {
+  .title-l-xs {
     font-size: 40px;
     line-height: 36px;
   }
 
-  .title-l-s {
-    font-size: 32px;
-    line-height: 28.8px;
-  }
-
-  .title-l-xs {
-    font-size: 24px;
-    line-height: 24px;
-  }
-
   .headline-l-m {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 40px;
+    line-height: 40px;
   }
 
   .headline-l-s {
-    font-size: 24px;
-    line-height: 24px;
+    font-size: 32px;
+    line-height: 32px;
   }
 
   .font-subtitle-l {
-    font-size: 14px;
-    line-height: 16.8px;
+    font-size: 18px;
+    line-height: 21.6px;
   }
 
   .font-text-l-l {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .font-text-l-m {
     font-size: 24px;
     line-height: 24px;
   }
 
-  .font-text-l-m {
-    font-size: 18px;
-    line-height: 18px;
-  }
-
   .font-text-l-s {
-    font-size: 14px;
-    line-height: 16.8px;
+    font-size: 16px;
+    line-height: 19.2px;
   }
 
   .font-text-l-xs,
@@ -835,18 +847,18 @@ a.btn-secondary:hover * {
   }
 
   .font-button-l {
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 18px;
   }
 
   .font-button-s {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 18px;
   }
 
   .font-text-compact {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 16px;
   }
 }
 
@@ -870,6 +882,11 @@ a.btn-secondary:hover * {
   .title-l-xs {
     font-size: 22px;
     line-height: 22px;
+  }
+
+  .font-text-l-s {
+    font-size: 14px;
+    line-height: 16.8px;
   }
 
   /* Global mobile button full-width rule */

@@ -44,6 +44,7 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
   };
 
   const handleLogoClick = (e) => {
+    setIsMenuOpen(false);
     if (location.pathname === "/") {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -71,15 +72,15 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
     return () => mediaQuery.removeEventListener('change', handleMediaChange);
   }, [isMenuOpen]);
 
-  // Block body scroll when mobile menu is open
+  // Block page scroll when mobile menu is open
   useEffect(() => {
-    if (isMenuOpen && isMobile) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    if (!(isMenuOpen && isMobile)) return;
+    document.documentElement.classList.add("menu-open");
+    // Stop Lenis smooth scroll via same event as modal
+    window.dispatchEvent(new CustomEvent("modal-state", { detail: { open: true } }));
     return () => {
-      document.body.style.overflow = "";
+      document.documentElement.classList.remove("menu-open");
+      window.dispatchEvent(new CustomEvent("modal-state", { detail: { open: false } }));
     };
   }, [isMenuOpen, isMobile]);
 
@@ -94,52 +95,26 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
   };
 
   return (
-    <header
-      className={`${styles.header} ${!isVisible ? styles.headerHidden : ''} ${
-        (isScrolled || forceSolid) ? styles.headerSolid : ''
-      } ${isMenuOpen && isMobile ? styles.headerMenuOpen : ''}`}
-    >
-      <div className={styles.container}>
-        <div className={styles.frameParent}>
-          <Link to="/" className={styles.logoLink} onClick={handleLogoClick}>
-            <img
-              className={styles.layer1Icon}
-              src={LogoPhoenixTop}
-              width={237}
-              height={55}
-              alt="Фенікс"
-            />
-          </Link>
+    <>
+      <header
+        className={`${styles.header} ${!isVisible ? styles.headerHidden : ''} ${
+          (isScrolled || forceSolid) ? styles.headerSolid : ''
+        } ${isMenuOpen && isMobile ? styles.headerMenuOpen : ''}`}
+      >
+        <div className={styles.container}>
+          <div className={styles.frameParent}>
+            <Link to="/" className={styles.logoLink} onClick={handleLogoClick}>
+              <img
+                className={styles.layer1Icon}
+                src={LogoPhoenixTop}
+                width={237}
+                height={55}
+                alt="Фенікс"
+              />
+            </Link>
 
-          <nav className={`${styles.navList} ${isMenuOpen && isMobile ? styles.open : ""}`}>
-            {/* Desktop/Tablet navigation - direct items */}
-            <div className={styles.desktopNav}>
-              {navItems.map((item, idx) => (
-                <div key={idx} className={styles.item}>
-                  {item.anchor ? (
-                    <a
-                      href={`#${item.anchor}`}
-                      className={`${styles.link2} font-nav`}
-                      onClick={handleNavClick}
-                    >
-                      {item.text}
-                    </a>
-                  ) : (
-                    <Link
-                      to={item.href}
-                      className={`${styles.link2} font-nav`}
-                      onClick={handleNavClick}
-                    >
-                      {item.text}
-                    </Link>
-                  )}
-                </div>
-              ))}
-            </div>
-
-            {/* Mobile-only menu content */}
-            <div className={styles.mobileMenuContent}>
-              <div className={styles.mobileMenuNav}>
+            <nav className={styles.navList}>
+              <div className={styles.desktopNav}>
                 {navItems.map((item, idx) => (
                   <div key={idx} className={styles.item}>
                     {item.anchor ? (
@@ -162,78 +137,135 @@ export default function Header({ isVisible = true, isScrolled = false, forceSoli
                   </div>
                 ))}
               </div>
+            </nav>
 
-              <div className={styles.mobileMenuPhones}>
-                {headerMobileMenu.phones.map((phone, idx) => (
-                  <div key={idx} className={styles.item}>
-                    <a
-                      href={phone.href}
-                      className={`${styles.link2} ${styles.phoneLink} font-nav`}
-                      onClick={handleNavClick}
-                    >
-                      {phone.text}
-                    </a>
-                  </div>
-                ))}
-              </div>
-
-              <div className={styles.mobileMenuSocials}>
-                <SocialLinks socials={headerMobileMenu.socials} />
-              </div>
-            </div>
-          </nav>
-
-          <div className={styles.actions}>
-            <div className={styles.langSwitcher}>
-              <button
-                type="button"
-                className={`${styles.langBtn} font-nav`}
-                aria-label="Обрати мову"
-              >
-                <span>{currentLang}</span>
-                <svg
-                  className={styles.langArrow}
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M6.74999 4.94704e-07L6.74999 9.13125L10.95 4.93126L12 6L6.00001 12L-4.29138e-07 6L1.05 4.93125L5.24999 9.13125L5.24999 3.6357e-07L6.74999 4.94704e-07Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button>
-
-              <div className={styles.langMenu}>
+            <div className={styles.actions}>
+              <div className={styles.langSwitcher}>
                 <button
                   type="button"
-                  className={`${styles.langItem} font-nav`}
-                  onClick={() => handleLanguageSelect(nextLang)}
+                  className={`${styles.langBtn} font-nav`}
+                  aria-label="Обрати мову"
                 >
-                  {nextLangLabel}
+                  <span>{currentLang}</span>
+                  <svg
+                    className={styles.langArrow}
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M6.74999 4.94704e-07L6.74999 9.13125L10.95 4.93126L12 6L6.00001 12L-4.29138e-07 6L1.05 4.93125L5.24999 9.13125L5.24999 3.6357e-07L6.74999 4.94704e-07Z"
+                      fill="currentColor"
+                    />
+                  </svg>
                 </button>
+
+                <div className={styles.langMenu}>
+                  <button
+                    type="button"
+                    className={`${styles.langItem} font-nav`}
+                    onClick={() => handleLanguageSelect(nextLang)}
+                  >
+                    {nextLangLabel}
+                  </button>
+                </div>
+              </div>
+
+              <div className={styles.joinBtn}>
+                <SecondaryBtn text={actions.joinText} size="m" {...getJoinButtonProps()} />
               </div>
             </div>
 
-            <div className={styles.joinBtn}>
-              <SecondaryBtn text={actions.joinText} size="m" {...getJoinButtonProps()} />
-            </div>
+            <button
+              className={`${styles.menuBtn} ${isMenuOpen && isMobile ? styles.menuBtnOpen : ""}`}
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      {/* Overlay outside header — avoids backdrop-filter containing block */}
+      <div className={`${styles.mobileOverlay} ${isMenuOpen && isMobile ? styles.overlayOpen : ""}`}>
+        <div className={styles.mobileMenuContent}>
+          <div className={styles.mobileLangSwitcher}>
+            <button
+              type="button"
+              className={`${styles.mobileLangBtn} ${language === 'ua' ? styles.mobileLangActive : ''}`}
+              onClick={() => { handleLanguageSelect('ua'); }}
+            >
+              UA
+            </button>
+            <button
+              type="button"
+              className={`${styles.mobileLangBtn} ${language === 'en' ? styles.mobileLangActive : ''}`}
+              onClick={() => { handleLanguageSelect('en'); }}
+            >
+              EN
+            </button>
           </div>
 
-          <button
-            className={`${styles.menuBtn} ${isMenuOpen && isMobile ? styles.menuBtnOpen : ""}`}
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            aria-label="Menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <div className={styles.mobileMenuNav}>
+            {navItems.map((item, idx) => (
+              <div key={idx} className={styles.item}>
+                {item.anchor ? (
+                  <a
+                    href={`#${item.anchor}`}
+                    className={`${styles.link2} font-nav`}
+                    onClick={handleNavClick}
+                  >
+                    {item.text}
+                  </a>
+                ) : (
+                  <Link
+                    to={item.href}
+                    className={`${styles.link2} font-nav`}
+                    onClick={handleNavClick}
+                  >
+                    {item.text}
+                  </Link>
+                )}
+              </div>
+            ))}
+            {language === 'ua' && (
+              <div className={styles.item}>
+                <Link
+                  to="/donations"
+                  className={`${styles.link2} font-nav`}
+                  onClick={handleNavClick}
+                >
+                  Підтримати Фенікс
+                </Link>
+              </div>
+            )}
+          </div>
+
+          <div className={styles.mobileMenuPhones}>
+            {headerMobileMenu.phones.map((phone, idx) => (
+              <div key={idx} className={styles.item}>
+                <a
+                  href={phone.href}
+                  className={`${styles.link2} ${styles.phoneLink} font-nav`}
+                  onClick={handleNavClick}
+                >
+                  {phone.text}
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <div className={styles.mobileMenuSocials}>
+            <SocialLinks socials={headerMobileMenu.socials} />
+          </div>
         </div>
       </div>
-    </header>
+    </>
   );
 }

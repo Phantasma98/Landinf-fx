@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   z-index: 9999 !important;
-  background: rgba(21, 20, 25, 0.95);
+  background: rgba(21, 20, 25, 0.30);
   backdrop-filter: blur(5px);
   transition: background-color 0.63s ease, transform 0.63s ease;
   display: flex;
@@ -14,7 +14,7 @@
   color: var(--color-text-on-dark);
   font-family: var(--font-kordon);
   height: 100px;
-  --header-bg-current: rgba(21, 20, 25, 0.95);
+  --header-bg-current: rgba(21, 20, 25, 0.30);
 }
 
 .headerSolid {
@@ -51,8 +51,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
-  flex-shrink: 1;
-  min-width: 0;
+  flex-shrink: 0;
   height: 55px;
   box-sizing: border-box;
 }
@@ -61,11 +60,10 @@
   color: inherit;
 }
 
-/* Зображення логотипу — розміри для десктопу */
+/* Зображення логотипу */
 .layer1Icon {
+  width: 220.95px;
   height: 55px;
-  width: auto;
-  max-width: 100%;
 }
 
 /* Навігаційне меню */
@@ -312,20 +310,27 @@
   /* Пункти завжди повністю видимі */
 }
 
-/* Mobile menu content — hidden by default on desktop/tablet */
-.mobileMenuContent {
+/* Mobile overlay — hidden on desktop */
+.mobileOverlay {
   display: none;
 }
 
-/* Tablet landscape - фіксовані значення відносно контент контейнера */
+/* Tablet landscape */
 @media (max-width: 1250px) {
+  .logoLink {
+    height: 56px;
+  }
+
+  .layer1Icon {
+    width: 218.95px;
+    height: 56px;
+  }
+
   .frameParent {
-    /* Tablet gap: 15px */
     gap: 15px;
   }
 
   .desktopNav {
-    /* Tablet gap: 15px */
     gap: 15px;
   }
 }
@@ -342,55 +347,50 @@
     display: flex;
   }
 
-  /* Off-canvas menu for tablet portrait */
-  .navList {
-    display: flex;
+  /* Mobile/Tablet overlay — outside header, own stacking context */
+  .mobileOverlay {
+    display: block;
     position: fixed;
-    top: 100px;
+    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
+    width: 100%;
+    height: 100vh;
     background-image: url('@/assets/images/backgrounds/bg-surface.svg');
     background-color: #1B1A1F;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    padding: 0;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1100;
-    width: 100%;
-    height: calc(100vh - 100px);
-    margin: 0;
-    overflow: hidden;
+    z-index: 9998;
+    overflow-y: auto;
   }
 
-  .navList.open {
+  .overlayOpen {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
   }
 
-  /* Show mobile menu content when open */
+  /* Hide mobile lang switcher on tablet — header bar has its own */
+  .mobileLangSwitcher {
+    display: none;
+  }
+
   .mobileMenuContent {
     display: flex;
-    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
     width: 100%;
     max-width: 768px;
-    height: auto;
-    min-height: calc(100vh - 100px);
-    padding: 0 var(--page-pad);
+    min-height: 100vh;
+    padding: 100px var(--page-pad) 40px;
     margin: 0 auto;
+    box-sizing: border-box;
   }
 
   .mobileMenuNav {
@@ -447,10 +447,11 @@
     font-family: var(--font-kordon-cond);
   }
 
-  /* Block body scroll when menu is open */
+  /* Solid header bg when menu is open */
   .headerMenuOpen {
     position: fixed;
     width: 100%;
+    background: #1B1A1F;
   }
 }
 
@@ -475,14 +476,12 @@
   }
 
   .logoLink {
-    /* Figma spec: Logo + text width ~133px */
-    width: auto;
+    height: 56px;
   }
 
   .layer1Icon {
-    /* Smaller logo for mobile */
-    width: auto;
-    height: 35px;
+    width: 133px;
+    height: 56px;
   }
 
   /* Hide desktop navigation on mobile */
@@ -490,49 +489,12 @@
     display: none;
   }
 
-  /* Навігація — off-canvas menu */
-  .navList {
-    display: flex;
-    position: fixed;
-    top: 80px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    /* Фон surface SVG при активному оверлеї */
-    background-image: url('@/assets/images/backgrounds/bg-surface.svg');
+  /* Mobile overlay overrides */
+  .mobileOverlay {
+    background-image: none;
     background-color: #1B1A1F;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0;
-    padding: 0;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-    z-index: 1100;
-    width: 100%;
-    height: calc(100vh - 80px);
-    margin: 0;
-    overflow: hidden;
   }
 
-  .navList.open {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: auto;
-  }
-
-  /* Блокуємо скрол при відкритому меню */
-  .headerMenuOpen {
-    position: fixed;
-    width: 100%;
-  }
-
-  /* Показуємо бургер-кнопку на мобільному */
   .menuBtn {
     display: flex;
   }
@@ -541,68 +503,87 @@
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: flex-start;
-    padding: 28px 15px;
-    gap: 20px;
+    padding: 15px 20px;
     width: 100%;
-    max-width: 100%;
-    height: auto;
-    min-height: 96px;
+    height: 54px;
   }
 
   .link2 {
     font-family: var(--font-kordon);
     font-weight: 700;
-    /* font-nav: 24px при активному оверлеї */
     font-size: 24px !important;
     line-height: 100%;
     letter-spacing: 0;
     text-align: center;
     text-transform: uppercase;
-    /* Світлий текст на темному SVG фоні */
     color: var(--color-text-on-dark);
-    width: 100%;
+    max-width: 270px;
     display: flex;
     align-items: center;
     justify-content: center;
-  }
-
-  /* Всі link2 з font-nav мають 24px в мобільному меню */
-  .navList .link2.font-nav {
-    font-size: 24px !important;
   }
 
   .mobileMenuContent {
-    /* Show on mobile only */
+    gap: 20px;
+    width: 360px;
+    max-width: 100%;
+    min-height: 100vh;
+    padding: 80px 0 40px;
+  }
+
+  /* Mobile language switcher */
+  .mobileLangSwitcher {
     display: flex;
-    position: relative;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    width: 108px;
+    height: 54px;
+  }
+
+  .mobileLangBtn {
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 50px;
-    width: 100%;
-    max-width: 390px;
-    height: auto;
-    min-height: calc(100vh - 80px);
-    padding: 0 15px;
-    margin: 0 auto;
+    width: 54px;
+    height: 54px;
+    padding: 14px 10px;
+    background: transparent;
+    border: 0;
+    font-family: var(--font-kordon);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 100%;
+    text-transform: uppercase;
+    color: #878787;
+    cursor: pointer;
+    transition: color 0.2s ease;
+  }
+
+  .mobileLangBtn:hover {
+    color: var(--color-accent);
+  }
+
+  .mobileLangActive {
+    color: #FBFBFB;
   }
 
   .mobileMenuNav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 360px;
+    max-width: 100%;
   }
 
   .mobileMenuPhones {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 320px;
+    max-width: 100%;
   }
 
   .phoneLink {
@@ -615,7 +596,7 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    gap: 15px;
+    gap: 10px;
     width: auto;
     height: 44px;
   }
@@ -631,12 +612,10 @@
   .mobileMenuSocials :global(.social-icon img) {
     width: 44px;
     height: 44px;
-    /* Світлі іконки на темному фоні */
     filter: brightness(0) invert(1);
   }
 
   .mobileMenuSocials :global(.social-icon:hover img) {
-    /* Accent колір при hover */
     filter: brightness(0) saturate(100%) invert(44%) sepia(96%) saturate(1640%) hue-rotate(346deg) brightness(100%) contrast(104%);
   }
 
@@ -700,9 +679,7 @@
     color: var(--color-text-on-dark);
   }
 
-  /* При активному оверлеї - також БЕЗ background */
   .headerMenuOpen .joinBtn :global(.btn-secondary) {
-    border: none;
     background: none;
     color: var(--color-text-on-dark);
   }
