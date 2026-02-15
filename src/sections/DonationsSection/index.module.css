@@ -83,19 +83,21 @@
   }
 
   .block {
-    flex-direction: column;
     gap: 40px;
   }
 
   .blockHeader {
-    width: 100%;
+    max-width: 452px;
     gap: 40px;
   }
 
+  .titleHeader {
+    width: 452px;
+    height: 144px;
+  }
+
   .blockVideo {
-    width: 100%;
     aspect-ratio: 674 / 379;
-    flex-grow: 0;
   }
 }
 
@@ -117,6 +119,7 @@
   }
 
   .blockVideo {
+    flex: none;
     width: 100%;
     aspect-ratio: 674 / 379;
   }
@@ -125,19 +128,24 @@
 /* 390px — Mobile */
 @media (max-width: 674px) {
   .section {
-    padding: 200px 0 100px;
-    gap: 50px;
+    padding: 160px 0 80px;
+    gap: 40px;
   }
 
   .block {
+    flex-direction: column;
     gap: 40px;
   }
 
   .blockHeader {
-    gap: 40px;
+    gap: 20px;
+    max-width: 100%;
   }
 
   .blockVideo {
-    aspect-ratio: 674 / 379;
+    flex: none;
+    width: 100%;
+    aspect-ratio: 360 / 202;
+    order: -1;
   }
 }

@@ -8,7 +8,7 @@ export function useHeaderScroll() {
 
   useEffect(() => {
     const recalcSecondSectionTop = () => {
-      const secondSection = document.querySelector('.page-container > section:nth-of-type(2)')
+      const secondSection = document.querySelector('.page-container > .section-wrapper + .section-wrapper')
       secondSectionTopRef.current = secondSection ? secondSection.offsetTop : null
     }
 

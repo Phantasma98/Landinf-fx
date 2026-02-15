@@ -1,6 +1,7 @@
 .jobCard {
-  width: 100%;
-  aspect-ratio: 298 / 150;
+  width: 452px;
+  height: 150px;
+  max-width: 100%;
   padding: 26px 20px;
   background: #1B1A1F;
   cursor: pointer;
@@ -69,6 +70,8 @@
 /* Tablet */
 @media (max-width: 1250px) {
   .jobCard {
+    width: 452px;
+    height: 150px;
     padding: 20px 16px;
   }
 }
@@ -76,6 +79,8 @@
 /* Tablet portrait */
 @media (max-width: 924px) {
   .jobCard {
+    width: 327px;
+    height: 150px;
     padding: 18px 14px;
   }
 }
@@ -83,6 +88,8 @@
 /* Mobile */
 @media (max-width: 674px) {
   .jobCard {
+    width: 360px;
+    height: 100px;
     padding: 14px 12px;
   }
 }
