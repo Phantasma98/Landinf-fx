@@ -27,7 +27,7 @@
 /* Content: QR image + payment methods */
 .supportContent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr var(--col-right);
   align-items: flex-start;
   gap: var(--col-gap);
   width: 100%;
@@ -35,6 +35,7 @@
 
 .donationImage {
   width: 100%;
+  max-width: 423px;
   height: 397px;
 }
 
@@ -51,6 +52,7 @@
   align-items: flex-start;
   gap: 40px;
   width: 100%;
+  max-width: var(--col-right);
   min-width: 0;
 }
 

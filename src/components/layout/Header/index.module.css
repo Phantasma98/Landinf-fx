@@ -32,18 +32,18 @@
   width: 100%;
   display: flex;
   align-items: center;
-  padding-top: 22.5px;
-  padding-bottom: 22.5px;
+  padding: 26px var(--page-pad);
   height: 100%;
 }
 
 /* Головний flex-контейнер — обмежений до content-max, центрований */
 .frameParent {
-  width: var(--content-max);
+  width: 100%;
+  max-width: var(--content-max);
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 /* Посилання на логотип */
@@ -62,7 +62,7 @@
 
 /* Зображення логотипу */
 .layer1Icon {
-  width: 220.95px;
+  width: 237px;
   height: 55px;
 }
 
@@ -71,8 +71,8 @@
   display: flex;
   align-items: center;
   height: 48px;
-  margin: 0;
-  flex-shrink: 1;
+  gap: 50px;
+  margin-left: 140px;
   min-width: 0;
   font-family: var(--font-kordon);
   font-weight: 500;
@@ -87,6 +87,7 @@
   align-items: center;
   height: 48px;
   gap: 15px;
+  margin-left: auto;
   flex-shrink: 0;
   box-sizing: border-box;
 }
@@ -230,6 +231,7 @@
 }
 
 .joinBtn {
+  width: 155px;
   height: 48px;
   flex-shrink: 0;
 }

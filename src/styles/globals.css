@@ -381,7 +381,6 @@ a.btn-secondary:hover * {
 .content-509-721-left,
 .col-left {
   min-width: 0;
-  width: auto;
   max-width: none;
 }
 
@@ -394,6 +393,7 @@ a.btn-secondary:hover * {
 
 /* Force consistent rails for all standard section headers within main content containers */
 .layout-1250 > .content-row {
+  grid-template-columns: minmax(0, var(--col-left)) minmax(0, var(--col-right));
   align-items: start;
 }
 

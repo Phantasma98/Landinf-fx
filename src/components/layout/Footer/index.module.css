@@ -74,7 +74,7 @@
 .navColumn {
   width: 100%;
   max-width: 298px;
-  margin-left: auto;
+  margin-left: 145px;
 }
 
 .sectionTitle {
@@ -138,44 +138,30 @@
 @media (max-width: 1250px) {
   .footerLayout {
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr auto;
-    column-gap: 88px;
-    row-gap: 40px;
+    grid-template-columns: minmax(260px, 386px) minmax(240px, 298px) minmax(260px, 332px);
+    gap: 40px;
   }
 
   .brandColumn {
-    display: contents;
-  }
-
-  .navColumn,
-  .infoColumn {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .brandTop {
     grid-column: 1;
-    grid-row: 1;
-    align-self: start;
-  }
-
-  .brandBottom {
-    grid-column: 1;
-    grid-row: 2;
-    align-self: end;
-    gap: 30px;
-  }
-
-  .infoColumn {
-    grid-column: 2;
-    grid-row: 1;
-    gap: 40px;
+    grid-row: 1 / -1;
   }
 
   .navColumn {
     grid-column: 2;
-    grid-row: 2;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .infoColumn {
+    grid-column: 3;
+    width: 100%;
+    margin-left: 0;
+    gap: 40px;
+  }
+
+  .brandBottom {
+    gap: 30px;
   }
 }
 
@@ -186,7 +172,12 @@
   }
 
   .footerLayout {
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr auto;
+  }
+
+  .brandColumn {
+    display: contents;
   }
 
   .brandTop {
