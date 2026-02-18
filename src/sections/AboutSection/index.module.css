@@ -22,7 +22,7 @@
 /* Description text */
 .description {
   margin: 0;
-  max-width: 100%;
+  max-width: 720px;
 }
 
 /* Infinite Carousel */
@@ -102,7 +102,7 @@
   justify-content: space-between;
   flex: 1;
   margin-left: auto;
-  max-width: 100%;
+  max-width: 723px;
 }
 
 .statItem {

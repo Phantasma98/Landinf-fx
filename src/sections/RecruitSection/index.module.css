@@ -10,24 +10,23 @@
 
 .contentWrapper {
   align-items: flex-start;
+  grid-template-columns: auto 1fr;
 }
 
 .sectionTitle {
   margin: 0;
-  width: 100%;
-  max-width: 403px;
+  width: 403px;
   flex-shrink: 0;
 }
 
 /* Steps grid: fixed desktop columns and gaps */
 .pathSteps {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: 194px 192px 183px;
   column-gap: 76px;
   row-gap: 60px;
   align-items: start;
-  width: 100%;
-  max-width: 721px;
+  width: 721px;
 }
 
 .pathStep {
